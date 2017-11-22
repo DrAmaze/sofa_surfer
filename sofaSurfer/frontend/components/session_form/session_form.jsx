@@ -58,9 +58,13 @@ class SessionForm extends React.Component {
     return (
       <div className="login-form-container">
         <form onSubmit={this.handleSubmit} className="login-form-box">
-          <span className="login-form-close">x</span>
-          <h4>{header}</h4>
-          {this.renderErrors()}
+          <nav className='login-head'>
+            <h4>{header}</h4>
+            <span
+            onClick={() => this.props.history.push('/')}
+            className="login-form-close">x</span>
+            {this.renderErrors()}
+          </nav>
           <div className="login-form">
             <br/>
             <label>
@@ -68,7 +72,7 @@ class SessionForm extends React.Component {
                 value={this.state.username}
                 onChange={this.update('username')}
                 className="login-input"
-                placeholder={'username'}
+                placeholder={'Username'}
               />
             </label>
             <br/>
@@ -95,7 +99,9 @@ class SessionForm extends React.Component {
             <span>or {this.navLink()}</span>
           </div>
         </form>
-        <div className="login-screen"></div>
+        <div
+          className="login-screen"
+          onClick={() => this.props.history.push('/')}></div>
       </div>
     );
   }

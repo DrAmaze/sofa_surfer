@@ -28,13 +28,23 @@ body {
   width: 500px;
 }
 
+.login-head {
+  border-bottom: 1px solid lightgray;
+  display: flex;
+  justify-content: space-between;
+}
+
 .login-form-close {
-  position: absolute;
-  top: 10px;
-  right: 0px;
-  font-size: 36px;
-  line-height: 1;
+  color: gray;
   cursor: pointer;
+  font-size: 26px;
+  font-style: none;
+  line-height: 1;
+  margin-right: 10px;
+  padding: 10px;
+  right: 0px;
+  top: 0px;
+
 }
 
 .login-form-close:hover {
@@ -46,8 +56,9 @@ body {
 }
 
 .login-form-box h4 {
+  display: flex;
   padding: 20px;
-  border-bottom: 1px solid lightgray;
+
   z-index: 10;
 }
 
@@ -62,10 +73,4 @@ body {
   background-color: #2371a3;
   color: white;
   padding: 8px;
-}
-
-.login-form-box span {
-  text-align: center;
-  left: 50%;
-  font-size: 20px;
 }
