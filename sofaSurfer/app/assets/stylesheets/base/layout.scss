@@ -2,17 +2,76 @@ body {
   font-family: 'Lato', sans-serif;
   background-color: #e6e6e6;
   font-size: 14px;
+  z-index: -5;
+}
+// navbar
+.header-container {
+  border-bottom: 2px solid lightgray;
 }
 
-.login-screen {
-  position: fixed;
-  background: rgba(0, 0, 0, 0.7);
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: -1;
+.navbar-headers {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
+
+.logo {
+  font-family: 'Cedarville Cursive', cursive;
+  font-size: 30px;
+  padding: 10px 20px;
+  color: #ed6504;
+}
+
+.logo:hover {
+  cursor: pointer;
+}
+
+.navbar-right {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-transform: uppercase;
+  color: gray;
+  font-weight: lighter;
+;
+}
+
+.navbar-right li {
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.join-button {
+  background-color: #2371a3;
+  color: white;
+  text-transform: capitalize;
+  font-size: 14px;
+  padding: 10px 20px;
+}
+
+.join-button:hover {
+  cursor: pointer;
+  background-color: #6288a5;
+}
+
+.login-button {
+  background-color: #e6e6e6;
+  border: 1px solid #2371a3;
+  text-transform: capitalize;
+  font-size: 14px;
+  padding: 10px 20px;
+  color: #2371a3;
+  font-weight: 500;
+}
+
+.login-button:hover {
+  cursor: pointer;
+  background-color: lightgray;
+}
+
+// login
 
 .login-form-container {
   background-color: white;
@@ -26,6 +85,17 @@ body {
 
   top: 100px;
   width: 500px;
+
+}
+
+.login-screen {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.7);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -3;
 }
 
 .login-head {
@@ -58,8 +128,6 @@ body {
 .login-form-box h4 {
   display: flex;
   padding: 20px;
-
-  z-index: 10;
 }
 
 .login-form input {
@@ -67,10 +135,4 @@ body {
   padding: 10px;
   margin: 5px 40px;
   box-shadow: 0;
-}
-
-.login-form-submit {
-  background-color: #2371a3;
-  color: white;
-  padding: 8px;
 }

@@ -94,14 +94,15 @@ class SessionForm extends React.Component {
               />
             </label>
             <br/>
-            <input className='login-form-submit' type="submit" value="Join with Email" />
+            <input className='join-button' type="submit" value="Join with Email" />
             <br/>
             <span>or {this.navLink()}</span>
           </div>
         </form>
         <div
           className="login-screen"
-          onClick={() => this.props.history.push('/')}></div>
+          onClick={() => this.props.history.push('/')}>
+        </div>
       </div>
     );
   }
