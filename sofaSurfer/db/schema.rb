@@ -20,8 +20,8 @@ ActiveRecord::Schema.define(version: 20171120195233) do
     t.string "email", null: false
     t.string "phone"
     t.integer "age"
-    t.boolean "hosting", null: false
-    t.integer "location_id", null: false
+    t.boolean "hosting"
+    t.string "location_id"
     t.text "about_me"
     t.string "password_digest", null: false
     t.string "session_token", null: false
