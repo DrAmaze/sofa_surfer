@@ -52,45 +52,50 @@ class SessionForm extends React.Component {
   }
 
   render () {
+    const header = this.props.formType === 'login' ? 'Log In to SofaSurfer' : 'Join SofaSurfer for free';
+    const foot = this.props.formType === 'login' ? "Don't have an account?" : 'Already a member?';
+    const button = this.props.formType === 'login' ? 'Join' : 'Log In';
     return (
-      <div className="login-form-conatiner">
+      <div className="login-form-container">
         <form onSubmit={this.handleSubmit} className="login-form-box">
-          Welcome to sofaSurfer!
-          <br/>
-          Please {this.props.formType} or {this.navLink()}
+          <span className="login-form-close">x</span>
+          <h4>{header}</h4>
           {this.renderErrors()}
           <div className="login-form">
             <br/>
             <label>
-              Username
               <input type="text"
                 value={this.state.username}
                 onChange={this.update('username')}
                 className="login-input"
+                placeholder={'username'}
               />
             </label>
             <br/>
             <label>
-              Email
               <input type="text"
                 value={this.state.email}
                 onChange={this.update('email')}
                 className="login-input"
+                placeholder={'Email'}
               />
             </label>
             <br/>
             <label>
-              Password
               <input type="password"
                 value={this.state.password}
                 onChange={this.update('password')}
                 className="login-input"
+                placeholder={'Password'}
               />
             </label>
             <br/>
-            <input type="submit" value="Submit" />
+            <input className='login-form-submit' type="submit" value="Join with Email" />
+            <br/>
+            <span>or {this.navLink()}</span>
           </div>
         </form>
+        <div className="login-screen"></div>
       </div>
     );
   }
