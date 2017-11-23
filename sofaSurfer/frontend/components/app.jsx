@@ -9,7 +9,6 @@ import {
 } from 'react-router-dom';
 
 import GreetingContainer from './greeting/greeting_container';
-import SessionFormContainer from './session_form/session_form_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import HeaderContainer from './header/header_container';
 
@@ -19,9 +18,6 @@ const App = () => (
       <HeaderContainer />
       <GreetingContainer />
     </header>
-
-    <Route path="/login" component={SessionFormContainer} />
-    <Route path="/signup" component={SessionFormContainer} />
   </div>
 );
 

@@ -24,14 +24,6 @@ class SignupForm extends React.Component {
     this.props.processForm({ user }).then(() => this.props.closeModal());
   }
 
-  navLink() {
-    if (this.props.formType === 'login') {
-      return <Link to='/signup'>sign up instead</Link>;
-    } else {
-      return <Link to='/login'>log in instead</Link>;
-    }
-  }
-
   renderErrors () {
     if (this.props.errors) {
       return (

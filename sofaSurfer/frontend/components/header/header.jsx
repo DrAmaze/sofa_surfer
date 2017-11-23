@@ -122,7 +122,6 @@ class Header extends React.Component {
           onRequestClose={this.closeModal}
           shouldCloseOnOverlayClick={true}
           shouldCloseOnEsc={true}
-          closeTimeoutMS={200}
           style={style}>
           {session}
         </Modal>
