@@ -11,12 +11,6 @@ class LoginForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  componentWillReceiveProps (nextProps) {
-    if (nextProps.loggedIn) {
-      this.props.history.push('/');
-    }
-  }
-
   update(field) {
     return e => this.setState({
       [field]: e.currentTarget.value
@@ -26,7 +20,7 @@ class LoginForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const user = this.state;
-    this.props.processForm({ user });
+    this.props.processForm({ user }).then(() => this.props.closeModal());
   }
 
   navLink() {
@@ -84,7 +78,11 @@ class LoginForm extends React.Component {
               />
             </label>
             <br/>
-            <input className='color-button' type="submit" value="Log In" />
+            <input
+              className='color-button'
+              onClick={this.closeModal}
+              type="submit"
+              value="Log In" />
             <br/>
             <span className='login-alternative'>
               Don't have an account?

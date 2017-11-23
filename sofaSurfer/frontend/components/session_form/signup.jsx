@@ -12,12 +12,6 @@ class SignupForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  componentWillReceiveProps (nextProps) {
-    if (nextProps.loggedIn) {
-      this.props.history.push('/');
-    }
-  }
-
   update(field) {
     return e => this.setState({
       [field]: e.currentTarget.value
@@ -27,7 +21,7 @@ class SignupForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const user = this.state;
-    this.props.processForm({ user });
+    this.props.processForm({ user }).then(() => this.props.closeModal());
   }
 
   navLink() {
@@ -95,7 +89,12 @@ class SignupForm extends React.Component {
               />
             </label>
             <br/>
-            <input className='color-button' type="submit" value="Join with Email" />
+            <input
+              className='color-button'
+              onClick={this.closeModal}
+              type="submit"
+              value="Join with Email"
+              />
             <br/>
             <span className='login-alternative'>
               Already a member?
