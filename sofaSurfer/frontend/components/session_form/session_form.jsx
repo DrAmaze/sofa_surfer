@@ -10,17 +10,13 @@ class SessionForm extends React.Component {
       password: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.closeModal = this.closeModal.bind(this);
+
   }
 
   componentWillReceiveProps (nextProps) {
     if (nextProps.loggedIn) {
       this.props.history.push('/');
     }
-  }
-
-  closeModal() {
-    this.setState({ modalOpen: false });
   }
 
   update(field) {
@@ -61,14 +57,14 @@ class SessionForm extends React.Component {
     const header = this.props.formType === 'login' ? 'Log In to SofaSurfer' : 'Join SofaSurfer for free';
     const foot = this.props.formType === 'login' ? "Don't have an account?" : 'Already a member?';
     const button = this.props.formType === 'login' ? 'Join' : 'Log In';
-
+    console.log(this.props);
     return (
       <div className="login-form-container">
         <form onSubmit={this.handleSubmit} className="login-form-box">
           <nav className='login-head'>
             <h4>{header}</h4>
             <span
-            onClick={this.closeModal}
+            onClick={this.props.closeModal}
             className="login-form-close">x</span>
             {this.renderErrors()}
           </nav>

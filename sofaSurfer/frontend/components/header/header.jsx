@@ -18,6 +18,7 @@ class Header extends React.Component {
 
   closeModal() {
     this.setState({ modalOpen: false });
+    debugger
   }
 
   openModal() {
@@ -112,8 +113,10 @@ class Header extends React.Component {
           className='modal'
           isOpen={this.state.modalOpen}
           onRequestClose={this.closeModal}
+
           style={style}>
-          <SessionForm />
+          <SessionForm
+            closeModal={this.closeModal} />
         </Modal>
       </div>
     );
