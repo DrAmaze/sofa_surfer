@@ -18,7 +18,6 @@ class Header extends React.Component {
 
   closeModal() {
     this.setState({ modalOpen: false });
-    debugger
   }
 
   openModal() {
@@ -71,10 +70,10 @@ class Header extends React.Component {
               Safety
             </li>
             <li className='join'>
-              <input className='join-button' type="submit" value="Join" onClick={this.handleSignup} />
+              <input className='color-button' type="submit" value="Join" onClick={this.handleSignup} />
             </li>
             <li className='login'>
-              <input className='login-button' type='submit' value='Log In' onClick={this.handleLogIn}/>
+              <input className='clear-button' type='submit' value='Log In' onClick={this.handleLogIn}/>
             </li>
           </ul>
         </li>

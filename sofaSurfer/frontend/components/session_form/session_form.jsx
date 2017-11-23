@@ -57,7 +57,6 @@ class SessionForm extends React.Component {
     const header = this.props.formType === 'login' ? 'Log In to SofaSurfer' : 'Join SofaSurfer for free';
     const foot = this.props.formType === 'login' ? "Don't have an account?" : 'Already a member?';
     const button = this.props.formType === 'login' ? 'Join' : 'Log In';
-    console.log(this.props);
     return (
       <div className="login-form-container">
         <form onSubmit={this.handleSubmit} className="login-form-box">
@@ -97,7 +96,7 @@ class SessionForm extends React.Component {
               />
             </label>
             <br/>
-            <input className='join-button' type="submit" value="Join with Email" />
+            <input className='color-button' type="submit" value="Join with Email" />
             <br/>
             <span>or {this.navLink()}</span>
           </div>

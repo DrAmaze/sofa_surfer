@@ -43,7 +43,7 @@ body {
   padding-bottom: 10px;
 }
 
-.join-button {
+.color-button {
   background-color: #2371a3;
   color: white;
   text-transform: capitalize;
@@ -51,12 +51,12 @@ body {
   padding: 10px 20px;
 }
 
-.join-button:hover {
+.color-button:hover {
   cursor: pointer;
   background-color: #6288a5;
 }
 
-.login-button {
+.clear-button {
   background-color: #e6e6e6;
   border: 1px solid #2371a3;
   text-transform: capitalize;
@@ -66,7 +66,7 @@ body {
   font-weight: 500;
 }
 
-.login-button:hover {
+.clear-button:hover {
   cursor: pointer;
   background-color: lightgray;
 }
