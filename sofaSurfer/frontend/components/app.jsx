@@ -19,7 +19,10 @@ const App = () => (
       <HeaderContainer />
       <GreetingContainer />
     </header>
-    <Splash />
+    <Switch>
+      <AuthRoute path='/' component={Splash} />
+
+    </Switch>
   </div>
 );
 

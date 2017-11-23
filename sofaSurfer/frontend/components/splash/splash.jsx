@@ -2,6 +2,10 @@ import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 
 class Splash extends React.Component {
+  constructor(props) {
+    super(props);
+
+  }
 
   render () {
     return (
@@ -27,11 +31,15 @@ class Splash extends React.Component {
               <h6>On Surfing</h6>
               <hr className='underline' />
               <p>
-                "SofaSurfer has given me the opportunity to experience life.  It's the journies with the people whom I've met on SofaSurfer that have meant the most. It's give life the places I have visited. With SofaSurfer, friends await me at my dream destination."
+                "SofaSurfer has given me the opportunity to experience life.
+                It's the journies with the people whom I've met on SofaSurfer
+                that have meant the most. It's give life the places I have
+                visited. With SofaSurfer, friends await me at my dream
+                destination."
                 <br/><br/>
-                "-Paul"
+                - Paul
                 <br/>
-                "(Actually left his sofa)"
+                (Actually left his sofa)
               </p>
             </li>
             <li>
@@ -39,11 +47,15 @@ class Splash extends React.Component {
               <h6>On Community</h6>
               <hr className='underline' />
               <p>
-                "We can't begin to tell you how much SofaSurfer has meant to us. It's such a great way to experience places the way a true local would. Not only do you see the sights that matter, but you meet people who along the way who really make these experiences everlasting."
+                "We can't begin to tell you how much SofaSurfer has
+                meant to us. It's such a great way to experience places
+                the way a true local would. Not only do you see the
+                sights that matter, but you meet people who along the
+                way who really make these experiences everlasting."
                 <br/><br/>
-                "-Kate and Winston"
+                - Kate and Winston
                 <br/>
-                "(Traveling around)"
+                (Traveling around)
               </p>
             </li>
             <li>
@@ -51,11 +63,15 @@ class Splash extends React.Component {
               <h6>On Hosting</h6>
               <hr className='underline' />
               <p>
-                "I want to be able to show my family that people, no matter their history or geography, are good. We don't have enough money to travel with our kids, so we've opened our doors and our hearts to the world! A lot of the people we met are now friends for life."
+                "I want to be able to show my family that people,
+                no matter their history or geography, are good. We don't
+                 have enough money to travel with our kids, so we've
+                 opened our doors and our hearts to the world! A lot of
+                 the people we met are now friends for life."
                 <br/><br/>
-                "-Kevin"
+                - Kevin
                 <br/>
-                "(Going places)"
+                (Going places)
               </p>
             </li>
           </ul>
