@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Modal from 'react-modal';
-import SessionForm from '../session_form/session_form_container';
+import LoginForm from '../session_form/login_container';
+import SignupForm from '../session_form/signup_container';
 
 class Header extends React.Component {
   constructor(props) {
@@ -102,6 +103,13 @@ class Header extends React.Component {
         borderRadius    : '5px'
       }
     };
+
+    const session = this.state.formType === 'signup' ? (
+      <SignupForm closeModal={this.closeModal}/>
+      ) : (
+        <LoginForm closeModal={this.closeModal}/>
+      );
+
     return (
 
       <div className='header-container'>
@@ -112,10 +120,10 @@ class Header extends React.Component {
           className='modal'
           isOpen={this.state.modalOpen}
           onRequestClose={this.closeModal}
-
+          shouldCloseOnOverlayClick={true}
+          shouldCloseOnEsc={true}
           style={style}>
-          <SessionForm
-            closeModal={this.closeModal} />
+          {session}
         </Modal>
       </div>
     );

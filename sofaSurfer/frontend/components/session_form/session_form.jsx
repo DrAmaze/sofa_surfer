@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import Modal from 'react-modal';
+import LoginForm from './login_container';
+import SignupForm from './signup_container';
 
 class SessionForm extends React.Component {
   constructor(props) {
@@ -10,7 +12,6 @@ class SessionForm extends React.Component {
       password: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
-
   }
 
   componentWillReceiveProps (nextProps) {
@@ -54,53 +55,10 @@ class SessionForm extends React.Component {
   }
 
   render () {
-    const header = this.props.formType === 'login' ? 'Log In to SofaSurfer' : 'Join SofaSurfer for free';
-    const foot = this.props.formType === 'login' ? "Don't have an account?" : 'Already a member?';
-    const button = this.props.formType === 'login' ? 'Join' : 'Log In';
+
     return (
       <div className="login-form-container">
-        <form onSubmit={this.handleSubmit} className="login-form-box">
-          <nav className='login-head'>
-            <h4>{header}</h4>
-            <span
-            onClick={this.props.closeModal}
-            className="login-form-close">x</span>
-            {this.renderErrors()}
-          </nav>
-          <div className="login-form">
-            <br/>
-            <label>
-              <input type="text"
-                value={this.state.username}
-                onChange={this.update('username')}
-                className="login-input"
-                placeholder={'Username'}
-              />
-            </label>
-            <br/>
-            <label>
-              <input type="text"
-                value={this.state.email}
-                onChange={this.update('email')}
-                className="login-input"
-                placeholder={'Email'}
-              />
-            </label>
-            <br/>
-            <label>
-              <input type="password"
-                value={this.state.password}
-                onChange={this.update('password')}
-                className="login-input"
-                placeholder={'Password'}
-              />
-            </label>
-            <br/>
-            <input className='color-button' type="submit" value="Join with Email" />
-            <br/>
-            <span>or {this.navLink()}</span>
-          </div>
-        </form>
+
       </div>
     );
   }
