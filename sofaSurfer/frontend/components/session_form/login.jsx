@@ -9,6 +9,7 @@ class LoginForm extends React.Component {
       password: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.demoSignin = this.demoSignin.bind(this);
   }
 
   update(field) {
@@ -37,9 +38,20 @@ class LoginForm extends React.Component {
     }
   }
 
+  demoSignin(e) {
+    e.preventDefault();
+    this.state = {
+      username: 'sample',
+      email: 'sample@user.com',
+      password: 'password'
+    };
+    const user = this.state;
+    this.props.processForm({ user }).then(() => this.props.closeModal());
+  }
+
   render () {
     return (
-      <div>
+      <div className='login-form-container'>
         <form onSubmit={this.handleSubmit} className="login-form-box">
           <nav className='login-head'>
             <h4>Log in to SofaSurfer</h4>
@@ -71,7 +83,7 @@ class LoginForm extends React.Component {
             </label>
             <br/>
             <input
-              className='color-button'
+              className='color-button-login'
               onClick={this.closeModal}
               type="submit"
               value="Log In" />
@@ -80,7 +92,13 @@ class LoginForm extends React.Component {
               Don't have an account?
             </span>
             <br/>
-            <input className='clear-button' type="submit" value="Join" />
+            <input
+              className='color-button-login'
+              onClick={this.demoSignin}
+              type='submit'
+              value='Demo Log In' />
+            <br/>
+            <input className='clear-button-login' type="submit" value="Join" />
           </div>
         </form>
       </div>

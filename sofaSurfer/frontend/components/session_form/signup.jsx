@@ -7,6 +7,7 @@ class SignupForm extends React.Component {
     super(props);
     this.state = {
       username: '',
+      email: '',
       password: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -82,7 +83,7 @@ class SignupForm extends React.Component {
             </label>
             <br/>
             <input
-              className='color-button'
+              className='color-button-login'
               onClick={this.closeModal}
               type="submit"
               value="Join with Email"
@@ -92,7 +93,7 @@ class SignupForm extends React.Component {
               Already a member?
             </span>
             <br />
-            <input className='clear-button' type="submit" value="Log in" />
+            <input className='clear-button-login' type="submit" value="Log in" />
           </div>
         </form>
       </div>

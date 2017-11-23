@@ -4,15 +4,23 @@ body {
   font-size: 14px;
   z-index: -5;
 }
+
 // navbar
+
 .header-container {
   border-bottom: 2px solid lightgray;
+  background-color: white;
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
 
 .navbar-headers {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+
 }
 
 .logo {
@@ -27,57 +35,80 @@ body {
 }
 
 .navbar-right {
-  align-items: flex-end;
+  align-items: center;
+  box-sizing: border-box;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   text-transform: uppercase;
-  color: gray;
+  color: #929dad;
   font-weight: lighter;
-;
+
 }
 
 .navbar-right li {
-  padding-right: 20px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  font-size: 14px;
+  padding: 10px 20px;
+
+  display: flex;
 }
+
 
 .color-button {
   background-color: #2371a3;
   color: white;
   text-transform: capitalize;
   font-size: 14px;
-  padding: 10px 20px;
+  padding: 10px 15px;
+  max-width: 100px;
 }
 
+.color-button-login:hover,
 .color-button:hover {
   cursor: pointer;
   background-color: #6288a5;
 }
 
 .clear-button {
-  background-color: #e6e6e6;
+  background-color: white;
   border: 1px solid #2371a3;
   text-transform: capitalize;
-  font-size: 14px;
-  padding: 10px 20px;
   color: #2371a3;
   font-weight: 500;
+  padding: 10px 20px;
+  max-width: 100px;
+
 }
 
-.clear-button:hover {
+
+.clear-button:hover,
+.clear-button-login:hover {
   cursor: pointer;
   background-color: lightgray;
+}
+
+.color-button-login {
+  background-color: #2371a3;
+  color: white;
+}
+
+.clear-button-login {
+  background-color: white;
+  border: 1px solid #2371a3;
 }
 
 // login
 
 .login-form-container {
   border-radius: 8px;
-  font-size:24px;
+  font-size: 22px;
   margin: 0 auto;
   top: 100px;
+  text-align: center;
+}
+
+.login-form {
+  margin-right: 0;
 }
 
 .login-head {
@@ -115,12 +146,53 @@ body {
   position: relative;
   width: 80%;
   padding: 10px;
-  margin: 5px %;
+  margin: 5px 5%;
   box-shadow: 0;
 }
 
 .login-alternative {
   font-size: 14px;
-  color: lightgray;
+  color: gray;
   text-align: center;
+}
+
+.login-alternative span {
+  text-align: center;
+}
+
+// splash page
+
+// title
+
+.clone-screen {
+  display: block;
+  font-size: 20px;
+  padding: 10px;
+}
+
+.splash {
+  background-image: url(https://images.unsplash.com/photo-1446160657592-4782fb76fb99?auto=format&fit=crop&w=1349&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D);
+  height: 900px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.splash-title {
+  justify-content: center;
+}
+
+.splash-title {
+  text-align: center;
+  font-weight: lighter;
+  color: #fb7210;
+  margin: 0.67em;
+}
+
+.splash-title h1 {
+  font-size: 56px;
+}
+
+.splash-title h4 {
+  font-size: 24px;
 }
