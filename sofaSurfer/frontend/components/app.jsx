@@ -12,6 +12,7 @@ import GreetingContainer from './greeting/greeting_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import HeaderContainer from './header/header_container';
 import Splash from './splash/splash';
+import Dashboard from './dashboard/dashboard_container';
 
 const App = () => (
   <div>
@@ -21,7 +22,7 @@ const App = () => (
     </header>
     <Switch>
       <AuthRoute path='/' component={Splash} />
-
+      <ProtectedRoute path='/' component={Dashboard} />
     </Switch>
   </div>
 );
