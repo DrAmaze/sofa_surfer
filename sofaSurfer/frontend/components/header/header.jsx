@@ -41,7 +41,7 @@ class Header extends React.Component {
             SofaSurfer
           </span>
         </li>
-        <li>
+        <li className='navbar-logged-in'>
           <ul className='navbar-right'>
             <li>
               Host

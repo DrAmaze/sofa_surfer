@@ -21,8 +21,9 @@ const App = () => (
       <GreetingContainer />
     </header>
     <Switch>
-      <AuthRoute path='/' component={Splash} />
-      <ProtectedRoute path='/' component={Dashboard} />
+      <AuthRoute path='/signup' component={Splash} />
+      <AuthRoute path='/login' component={Splash} />
+      <ProtectedRoute path='/dashboard' component={Dashboard} />
     </Switch>
   </div>
 );
