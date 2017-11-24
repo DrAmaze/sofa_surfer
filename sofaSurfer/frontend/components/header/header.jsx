@@ -37,7 +37,7 @@ class Header extends React.Component {
     const userInfo = this.props.currentUser ? (
       <ul className='navbar-headers'>
         <li className='logo'>
-          <span onClick={() => this.props.history.push('/')}>
+          <span onClick={() => this.props.history.push('/dashboard')}>
             SofaSurfer
           </span>
         </li>
@@ -51,7 +51,6 @@ class Header extends React.Component {
             </li>
             <li>
               <span onClick={this.props.logout}>Log Out</span>
-
             </li>
           </ul>
         </li>
@@ -59,7 +58,7 @@ class Header extends React.Component {
     ) : (
       <ul className='navbar-headers'>
         <li className='logo'
-          onClick={() => this.props.history.push('/')}>
+          onClick={() => this.props.history.push('/login')}>
           SofaSurfer
         </li>
         <li>

@@ -263,5 +263,45 @@ body {
 // dashboard
 
 .dashboard {
-  font-size: 28px;
+  font-size: 18px;
+  display: flex;
+}
+
+.dashboard h1 {
+  display: inline-block;
+  font-size: 36px;
+}
+
+.dashboard h2 {
+  text-transform: uppercase;
+}
+
+.dashboard h4 {
+  font-weight: lighter;
+}
+
+.dashboard section {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  margin: 2px;
+}
+
+.user {
+  padding: 10px;
+  display: flex;
+  width: 320px;
+  align-items: center;
+  text-transform: capitalize;
+}
+
+.user h3 {
+}
+
+.user div {
+
+}
+
+.information {
+  flex-direction: row;
 }

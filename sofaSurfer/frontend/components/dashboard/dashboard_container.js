@@ -4,6 +4,7 @@ import { withRouter } from 'react-router';
 import Dashboard from './dashboard';
 
 const mapStateToProps = state => ({
+  currentUser: state.session.currentUser
 });
 
 const mapDispatchToProps = dispatch => ({
