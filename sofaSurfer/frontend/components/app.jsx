@@ -8,11 +8,11 @@ import {
   HashRouter
 } from 'react-router-dom';
 
-import GreetingContainer from './greeting/greeting_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import HeaderContainer from './header/header_container';
 import Splash from './splash/splash';
 import Dashboard from './dashboard/dashboard_container';
+import Spot from './spot/spot_container';
 
 const App = () => (
   <div>
@@ -22,9 +22,8 @@ const App = () => (
     </header>
     <Switch>
       <AuthRoute exact path='/' component={Splash} />
-
-
       <ProtectedRoute path='/dashboard' component={Dashboard} />
+      <ProtectedRoute path='/locations' component={Spot} />
     </Switch>
   </div>
 );

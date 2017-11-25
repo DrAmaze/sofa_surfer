@@ -4,13 +4,9 @@ import { Link, withRouter } from 'react-router-dom';
 class Dashboard extends React.Component {
   constructor(props) {
     super(props);
-    console.log('haha');
   }
 
-
-
   render () {
-    console.log('aloha');
     let { username, location, hosting } = this.props.currentUser;
 
     let guests;
