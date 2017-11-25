@@ -25,11 +25,13 @@ class Header extends React.Component {
     this.setState({ modalOpen: true });
   }
 
-  handleSignup() {
+  handleSignup(e) {
+    e.preventDefault();
     this.setState({ modalOpen: true, formType: 'signup' });
   }
 
-  handleLogIn() {
+  handleLogIn(e) {
+    e.preventDefault();
     this.setState({ modalOpen: true, formType: 'login' });
   }
 
@@ -58,7 +60,7 @@ class Header extends React.Component {
     ) : (
       <ul className='navbar-headers'>
         <li className='logo'
-          onClick={() => this.props.history.push('/login')}>
+          onClick={() => this.props.history.push('/')}>
           SofaSurfer
         </li>
         <li>
@@ -70,10 +72,18 @@ class Header extends React.Component {
               Safety
             </li>
             <li className='join'>
-              <input className='color-button' type="submit" value="Join" onClick={this.handleSignup} />
+              <input
+                className='color-button'
+                type="submit"
+                value="Join"
+                onClick={this.handleSignup} />
             </li>
             <li className='login'>
-              <input className='clear-button' type='submit' value='Log In' onClick={this.handleLogIn}/>
+              <input
+                className='clear-button'
+                type='submit'
+                value='Log In'
+                onClick={this.handleLogIn}/>
             </li>
           </ul>
         </li>
@@ -107,9 +117,14 @@ class Header extends React.Component {
     };
 
     const session = this.state.formType === 'signup' ? (
-      <SignupForm closeModal={this.closeModal}/>
+      <SignupForm
+        closeModal={this.closeModal}
+        handleLogIn={this.handleLogIn}/>
+
       ) : (
-        <LoginForm closeModal={this.closeModal}/>
+        <LoginForm
+          closeModal={this.closeModal}
+          handleSignup={this.handleSignup}/>
       );
 
     return (

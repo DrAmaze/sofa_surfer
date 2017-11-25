@@ -1,13 +1,76 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
+import Modal from 'react-modal';
+import LoginForm from '../session_form/login_container';
+import SignupForm from '../session_form/signup_container';
 
 class Splash extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      modalOpen: false
+    };
+    this.closeModal = this.closeModal.bind(this);
+    this.openModal = this.openModal.bind(this);
+    this.handleSignup = this.handleSignup.bind(this);
+    this.handleLogIn = this.handleLogIn.bind(this);
+  }
 
+  closeModal() {
+    this.setState({ modalOpen: false });
+  }
+
+  openModal() {
+    this.setState({ modalOpen: true });
+  }
+
+  handleSignup(e) {
+    e.preventDefault();
+    this.setState({ modalOpen: true, formType: 'signup' });
+  }
+
+  handleLogIn(e) {
+    e.preventDefault();
+    this.setState({ modalOpen: true, formType: 'login' });
   }
 
   render () {
+    const session = this.state.formType === 'signup' ? (
+      <SignupForm
+        closeModal={this.closeModal}
+        handleLogIn={this.handleLogIn}/>
+      ) : (
+        <LoginForm
+          closeModal={this.closeModal}
+          handleSignup={this.handleSignup}/>
+      );
+
+    const style = {
+      overlay : {
+        position        : 'fixed',
+        top             : 0,
+        left            : 0,
+        right           : 0,
+        bottom          : 0,
+        backgroundColor : 'rgba(25, 25, 25, 0.90)',
+        zIndex          : 10
+      },
+      content : {
+        position        : 'relative',
+        top: '100px',
+        border          : '1px solid #ccc',
+        zIndex          : 11,
+        background      : 'white',
+        borderRadius    : '5px',
+        maxWidth        : '500px',
+        minWidth        : '450px',
+        maxHeight       : '450px',
+        minHeight       : '400px',
+        marginLeft      : '20%',
+        marginRight     : '20%',
+      }
+    };
+
     return (
       <div className='splash'>
         <h1 className='clone-screen'>CouchSurfing Clone</h1>
@@ -76,6 +139,16 @@ class Splash extends React.Component {
             </li>
           </ul>
         </section>
+
+        <Modal
+          className='modal'
+          isOpen={this.state.modalOpen}
+          onRequestClose={this.closeModal}
+          shouldCloseOnOverlayClick={true}
+          shouldCloseOnEsc={true}
+          style={style}>
+          {session}
+        </Modal>
       </div>
     );
   }

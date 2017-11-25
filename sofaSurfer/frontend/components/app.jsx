@@ -18,11 +18,12 @@ const App = () => (
   <div>
     <header>
       <HeaderContainer />
-      <GreetingContainer />
+
     </header>
     <Switch>
-      <AuthRoute path='/signup' component={Splash} />
-      <AuthRoute path='/login' component={Splash} />
+      <AuthRoute exact path='/' component={Splash} />
+
+
       <ProtectedRoute path='/dashboard' component={Dashboard} />
     </Switch>
   </div>

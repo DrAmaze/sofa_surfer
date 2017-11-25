@@ -4,15 +4,13 @@ import { Link, withRouter } from 'react-router-dom';
 class Dashboard extends React.Component {
   constructor(props) {
     super(props);
-
+    console.log('haha');
   }
 
-  // TODO:
-  // have to add locations to this page (thumbnails!)
-  // make the guests a dropdown
-  //
+
 
   render () {
+    console.log('aloha');
     let { username, location, hosting } = this.props.currentUser;
 
     let guests;
@@ -23,7 +21,7 @@ class Dashboard extends React.Component {
     }
     return (
       <div>
-        <br/><br/>
+        <br/><br/><br/>
         <div className='dashboard'>
           <section className='user'>
             <h3 className='dashboard'> {username} </h3>

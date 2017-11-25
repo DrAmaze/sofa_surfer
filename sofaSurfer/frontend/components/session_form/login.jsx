@@ -22,6 +22,7 @@ class LoginForm extends React.Component {
     e.preventDefault();
     const user = this.state;
     this.props.processForm({ user }).then(() => this.props.closeModal());
+
   }
 
   renderErrors () {
@@ -50,6 +51,7 @@ class LoginForm extends React.Component {
   }
 
   render () {
+    console.log(this.props);
     return (
       <div className='login-form-container'>
         <form onSubmit={this.handleSubmit} className="login-form-box">
@@ -98,7 +100,11 @@ class LoginForm extends React.Component {
               type='submit'
               value='Demo Log In' />
             <br/>
-            <input className='clear-button-login' type="submit" value="Join" />
+            <input
+              className='clear-button-login'
+              type="button"
+              value="Join"
+              onClick={this.props.handleSignup} />
           </div>
         </form>
       </div>
