@@ -15,11 +15,11 @@ class Api::LocationsController < ApplicationController
   end
 
   def show
-    @location = Location.find(params[:id])
+    render json: Location.find(params[:id])
   end
 
   def index
-    @locations = Location.all
+    render json: Location.all
   end
 
   private
