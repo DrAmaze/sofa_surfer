@@ -13,5 +13,4 @@
 class Location < ApplicationRecord
   validates :street, :neighborhood, :img_url, presence: true
   validates :neighborhood, uniqueness: true
-
 end

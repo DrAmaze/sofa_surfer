@@ -1,8 +1,7 @@
-export const fetchSpots = data => (
+export const fetchSpots = () => (
   $.ajax({
     method: 'GET',
     url: 'api/locations',
-    data
   })
 );
 

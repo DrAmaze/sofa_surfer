@@ -24,7 +24,7 @@ class Api::LocationsController < ApplicationController
 
   private
 
-  def locaitons_params
+  def location_params
     params.require(:location).permit(:street, :neighborhood, :img_url)
   end
 end

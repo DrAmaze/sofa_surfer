@@ -13,8 +13,8 @@ const receiveSpot = spot => ({
   spot
 });
 
-export const fetchSpots = filters => dispatch => (
-  ApiUtil.fetchSpots(filters).then(spots => (
+export const fetchSpots = () => dispatch => (
+  ApiUtil.fetchSpots().then(spots => (
     dispatch(receiveSpots(spots))
   ))
 );

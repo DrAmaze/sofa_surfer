@@ -4,6 +4,7 @@ import configureStore from './store/store';
 import Root from './components/root';
 import Modal from 'react-modal';
 
+
 document.addEventListener('DOMContentLoaded', () => {
   let store;
   if (window.currentUser) {
@@ -16,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // testing
   window.getState = store.getState;
   window.dispatch = store.dispatch;
+
   // end testing
   Modal.setAppElement(document.body);
   const root = document.getElementById('root');

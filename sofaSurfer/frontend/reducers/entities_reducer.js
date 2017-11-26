@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
 
-import spot from './spots_reducer';
+import spots from './spots_reducer';
 
 export default combineReducers({
-  spot
+  spots
 });
