@@ -48,7 +48,6 @@ body {
   text-transform: uppercase;
   color: #929dad;
   font-weight: lighter;
-
 }
 
 .navbar-right li {
@@ -57,14 +56,27 @@ body {
   display: flex;
 }
 
+.navbar-right li span {
+  cursor: pointer;
+}
+
+.navbar-right li span:hover {
+  color: #ed6504;
+}
+
+.color-button,
+.clear-button {
+  text-transform: capitalize;
+  font-size: 14px;
+  padding: 10px 30px;
+  max-width: 100px;
+  border: 1px solid #2371a3;
+
+}
 
 .color-button {
   background-color: #2371a3;
   color: white;
-  text-transform: capitalize;
-  font-size: 14px;
-  padding: 10px 15px;
-  max-width: 100px;
 }
 
 .color-button-login:hover,
@@ -75,12 +87,7 @@ body {
 
 .clear-button {
   background-color: white;
-  border: 1px solid #2371a3;
-  text-transform: capitalize;
   color: #2371a3;
-  font-weight: 500;
-  padding: 10px 20px;
-  max-width: 100px;
 
 }
 
@@ -377,11 +384,14 @@ table.benefits tr:nth-of-type(2n) {
   border-radius: 0 0 4px 4px;
   padding-bottom: 5px;
 }
+
 // dashboard
 
 .dashboard {
   font-size: 18px;
   display: flex;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 .dashboard h1 {
@@ -478,4 +488,13 @@ table.benefits tr:nth-of-type(2n) {
   right: 50px;
   text-shadow: 1px 1px black;
   z-index: 3;
+}
+
+// spot show page
+
+.booking-form {
+  background-color: white;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }

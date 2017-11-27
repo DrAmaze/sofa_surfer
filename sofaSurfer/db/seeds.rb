@@ -5,25 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-require 'csv'
 
-# csv_text = File.read(Rails.root.join('lib', 'seeds', 'USER_DATA.csv'))
-# csv = CSV.parse(csv_text, :headers => true)
-# csv.each do |row|
-#   t = User.create!
-#   t.username = row['username']
-#   t.email = row['email']
-#   t.phone = row['phone']
-#   t.age = row['age']
-#   t.hosting = row['hosting']
-#   t.location_id = row['location_id']
-#   t.about_me = row['about_me']
-#   password = row['password']
-#   t.save
-#   puts "#{t.username} saved"
-# end
-#
-# puts "There are now #{User.count} rows in the Users table"
+# bookings
+
+
 
 # locations
 Location.create!(
@@ -84,4 +69,65 @@ Location.create!(
   street: 'eddy st',
   neighborhood: 'tenderloin',
   img_url: 'http://sfcitizen.com/blog/wp-content/uploads/2013/05/7J7C9263-copy.jpg'
+)
+
+User.create!(
+  username: 'sample',
+  email: 'sample@user',
+  phone: '1234567890',
+  age: 18,
+  hosting: true,
+  location_id: 1,
+  about_me: 'I am a generic user with generic interests and generic friends',
+  password: 'password',
+)
+
+User.create!(
+  username: 'jacob',
+  email: 'jacob@butler',
+  phone: '2403940705',
+  age: 24,
+  hosting: true,
+  location_id: 1,
+  about_me: 'I like to adventure',
+  password: 'password',
+)
+
+User.create!(
+  username: 'garret',
+  email: 'garret@tongue',
+  phone: '111-111-1111',
+  age: 24,
+  hosting: true,
+  location_id: 3,
+  about_me: 'I like to rugby',
+  password: 'password',
+)
+
+require 'csv'
+
+csv_text = File.read(Rails.root.join('lib', 'seeds', 'USER_DATA.csv'))
+csv = CSV.parse(csv_text, :headers => true)
+csv.each do |row|
+  t = User.create!
+  t.username = row['username']
+  t.email = row['email']
+  t.phone = row['phone']
+  t.age = row['age']
+  t.hosting = row['hosting']
+  t.location_id = row['location_id']
+  t.about_me = row['about_me']
+  password = row['password']
+  t.save
+  puts "#{t.username} saved"
+end
+
+puts "There are now #{User.count} rows in the Users table"
+
+Booking.create!(
+  traveler_id: 1,
+  host_id: 12,
+  location_id: 4,
+  arrival: DateTime.parse("02/01/2018"),
+  departure: DateTime.parse("02/04/2018"),
 )

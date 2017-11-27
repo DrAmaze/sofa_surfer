@@ -78,6 +78,7 @@ class Splash extends React.Component {
         <section className='splash-title'>
           <h1>Stay with Locals and Meet Travelers</h1>
           <h4>Share Authentic Travel Experiences</h4>
+          <br/>
           <input className='color-button' type="submit" value="Join" onClick={this.handleSignup} />
         </section>
 

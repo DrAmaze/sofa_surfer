@@ -15,6 +15,29 @@ class SpotShow extends React.Component {
         <div className="single-spot">
           <Link to="/locations"> Back to spots Index </Link>
         </div>
+        <section>
+          <ul className='spot-users'>
+            <li>
+              <span>Hosts</span>
+            </li>
+            <li>
+              <span>Travelers</span>
+            </li>
+          </ul>
+
+          <form className='booking-form'>
+            Booking Form goes here
+
+            <button className='color-button'>
+              Clear Filters
+            </button>
+            <button className='color-button'>
+              Search
+            </button>
+          </form>
+
+
+        </section>
       </div>
     );
   }

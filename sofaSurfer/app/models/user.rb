@@ -26,6 +26,20 @@ class User < ApplicationRecord
 
   attr_reader :password
 
+  belongs_to :location,
+    primary_key: :id,
+    foreign_key: :location_id,
+    class_name: :Location
+
+  has_many :bookings,
+    primary_key: :id,
+    foreign_key: :traveler_id,
+    class_name: :Booking
+
+  has_many :hostings,
+    through: :location,
+    source: :bookings
+
   def self.find_by_credentials(username, pw)
     user = User.find_by(username: username)
     return nil unless user && user.is_password?(pw)

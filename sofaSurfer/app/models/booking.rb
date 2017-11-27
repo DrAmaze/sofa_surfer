@@ -14,4 +14,15 @@
 
 class Booking < ApplicationRecord
   validates :traveler_id, :host_id, :location_id, :arrival, :departure, presence: true
+
+  belongs_to :traveler,
+    primary_key: :id,
+    foreign_key: :traveler_id,
+    class_name: :User
+
+  belongs_to :location,
+    primary_key: :id,
+    foreign_key: :location_id,
+    class_name: :Location
+
 end

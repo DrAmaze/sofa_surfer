@@ -89,7 +89,7 @@ class Header extends React.Component {
               <input
                 className='color-button'
                 type="submit"
-                value="Join"
+                value=" Join "
                 onClick={this.handleSignup} />
             </li>
             <li className='login'>

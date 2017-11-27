@@ -25,8 +25,8 @@ const App = () => (
     <Switch>
       <AuthRoute exact path='/' component={Splash} />
       <ProtectedRoute path='/dashboard' component={Dashboard} />
-      <ProtectedRoute path='/locations' component={SpotIndex} />
       <ProtectedRoute path="/locations/:spotId" component={SpotShow} />
+      <ProtectedRoute path='/locations' component={SpotIndex} />
       <ProtectedRoute path='/bookings' component={Bookings} />
 
 

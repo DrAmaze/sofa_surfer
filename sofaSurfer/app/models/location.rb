@@ -13,4 +13,14 @@
 class Location < ApplicationRecord
   validates :street, :neighborhood, :img_url, presence: true
   validates :neighborhood, uniqueness: true
+
+  has_many :bookings,
+    primary_key: :id,
+    foreign_key: :location_id,
+    class_name: :Booking
+
+  has_many :hosts,
+    primary_key: :id,
+    foreign_key: :location_id,
+    class_name: :User
 end
