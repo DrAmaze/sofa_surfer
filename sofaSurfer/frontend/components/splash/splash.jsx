@@ -140,6 +140,45 @@ class Splash extends React.Component {
           </ul>
         </section>
 
+        <section className='how-it-works'>
+          <br/><br/><br/><br/><br/><br/>
+          <h1>How It Works</h1>
+          <hr className='underline' />
+          <ul>
+            <li>
+              <img src='https://ht-assets.couchsurfing.com/assets/icons/discover-amazing-people-75ec5628b259a817d9389816d8b3b9c8369d87c524f0fc29f5fd81d7bdb462e5.png'/>
+              <h6>Discover Amazing People</h6>
+              <hr className='underline' />
+              <p>
+                "SofaSurfers open their homes and share their lives. Connect and be inspired.."
+              </p>
+            </li>
+            <li>
+              <img src='https://ht-assets.couchsurfing.com/assets/icons/book-a-stay-64b707177c5c69aa958920761cdd560d7ced3edf3ca7c09c91155c2863f5bdc8.png'/>
+              <h6>Find a Host</h6>
+              <hr className='underline' />
+              <p>
+                "Connect with hosts, and confirm your stay through the Couchsurfing platform. Your stay with hosts is free."
+              </p>
+            </li>
+            <li>
+              <img src='https://ht-assets.couchsurfing.com/assets/icons/join-events-23ca802d7e5993838f1122d360dc35b3ef00291507a9a960b435d116baf30979.png'/>
+              <h6>Join Events</h6>
+              <hr className='underline' />
+              <p>
+                "Meet travelers in other cities, or in your own city! There's always something new to join."
+              </p>
+            </li>
+          </ul>
+          <table className='benefits'>
+            <tr>Stay with local hosts</tr>
+            <tr>Host international travelers</tr>
+            <tr>Attend free traveler events</tr>
+            <tr>Ad-free website and mobile apps</tr>
+            <tr>Be highlighted in search results</tr>
+          </table>
+        </section>
+
         <Modal
           className='modal'
           isOpen={this.state.modalOpen}

@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import merge from 'lodash/merge';
+
 import Modal from 'react-modal';
 import LoginForm from '../session_form/login_container';
 import SignupForm from '../session_form/signup_container';
@@ -11,6 +13,7 @@ class Header extends React.Component {
       modalOpen: false
     };
 
+    this.toggleHosting = this.toggleHosting.bind(this);
     this.closeModal = this.closeModal.bind(this);
     this.openModal = this.openModal.bind(this);
     this.handleSignup = this.handleSignup.bind(this);
@@ -35,6 +38,13 @@ class Header extends React.Component {
     this.setState({ modalOpen: true, formType: 'login' });
   }
 
+  toggleHosting(e) {
+    e.preventDefault();
+    merge({}, this.props.currentUser, {
+      hosting: !this.props.currentUser.hosting
+    });
+  }
+
   render () {
     const userInfo = this.props.currentUser ? (
       <ul className='navbar-headers'>
@@ -46,10 +56,14 @@ class Header extends React.Component {
         <li className='navbar-logged-in'>
           <ul className='navbar-right'>
             <li>
-              Host
+              <span onClick={() => this.toggleHosting}>
+                Hosting
+              </span>
             </li>
             <li>
-              Bookings
+              <span onClick={() => this.props.history.push('/bookings')}>
+                Bookings
+              </span>
             </li>
             <li>
               <span onClick={this.props.logout}>Log Out</span>

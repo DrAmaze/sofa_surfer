@@ -132,7 +132,6 @@ body {
   padding: 10px;
   right: 0px;
   top: 0px;
-
 }
 
 .login-form-close:hover {
@@ -176,6 +175,7 @@ body {
 
 .splash {
   background-image: url(https://images.unsplash.com/photo-1446160657592-4782fb76fb99?auto=format&fit=crop&w=1349&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D);
+  background-size: cover;
   height: 900px;
   width: 100%;
   margin: 0;
@@ -231,10 +231,11 @@ body {
 }
 
 .why ul li {
-  margin: 20px;
+  margin: 5px;
   padding: 30px;
   background: #3e99d5;
-  width: 25%;
+  width: 27%;
+  box-shadow: 0 3px 5px rgba(0,0,0,0.2);
 }
 
 .why ul li h6,
@@ -260,6 +261,85 @@ body {
   height: 35%;
   width: 90%;
   margin-right: 0;
+}
+
+// how it works
+
+.how-it-works {
+  background-color: #ed6504;
+  height: 800px;
+}
+
+.how-it-works h1 {
+  justify-content: center;
+  color: white;
+  font-size: 56px;
+  text-align: center;
+  font-weight: lighter;
+}
+
+.underline {
+  width: 50px;
+  color: white;
+  margin-bottom: 1em;
+  height: 2px;
+  background-color: white;
+}
+
+.how-it-works ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: .9em;
+}
+
+.how-it-works ul li {
+  margin: 5px;
+  padding: 30px;
+  background: #ff855c;
+  width: 25%;
+  position: relative;
+  top: 10px;
+  height: 280px;
+  box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+}
+
+.how-it-works ul li h6,
+.how-it-works ul li p {
+  justify-content: center;
+  color: white;
+  font-size: 1em;
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.how-it-works ul li p {
+  font-size: 1em;
+}
+
+.how-it-works ul li img {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  margin-bottom: 1em;
+  right: 5px;
+  height: 30%;
+  width: 36%;
+  align-items: center;
+}
+
+.benefits {
+  color: white;
+  font-weight: lighter;
+  display: table-cell;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 30px;
+}
+
+.benefits tr:nth-of-type(2n) {
+
 }
 
 // dashboard
