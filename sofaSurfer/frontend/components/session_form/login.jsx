@@ -51,7 +51,6 @@ class LoginForm extends React.Component {
   }
 
   render () {
-    console.log(this.props);
     return (
       <div className='login-form-container'>
         <form onSubmit={this.handleSubmit} className="login-form-box">
