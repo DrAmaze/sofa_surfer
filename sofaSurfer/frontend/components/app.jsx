@@ -13,6 +13,8 @@ import HeaderContainer from './header/header_container';
 import Splash from './splash/splash';
 import Dashboard from './dashboard/dashboard_container';
 import SpotIndex from './spot/spot_index_container';
+import SpotShow from './spot/spot_show_container';
+import Bookings from './booking/booking_container';
 
 
 const App = () => (
@@ -24,6 +26,9 @@ const App = () => (
       <AuthRoute exact path='/' component={Splash} />
       <ProtectedRoute path='/dashboard' component={Dashboard} />
       <ProtectedRoute path='/locations' component={SpotIndex} />
+      <ProtectedRoute path="/locations/:spotId" component={SpotShow} />
+      <ProtectedRoute path='/bookings' component={Bookings} />
+
 
     </Switch>
   </div>

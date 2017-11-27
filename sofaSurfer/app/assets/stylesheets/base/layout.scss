@@ -14,6 +14,7 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 15;
 }
 
 .navbar-headers {
@@ -286,6 +287,8 @@ body {
   display: flex;
   flex-direction: column;
   margin: 2px;
+  box-shadow: 2px 2px 2px lightgray;
+  border-radius: 2px;
 }
 
 .box {
@@ -333,13 +336,11 @@ body {
   min-width: 750px;
 }
 
-
 .spots-index > ul {
   display: flex;
   flex-wrap: wrap;
   padding-left: 2%;
 }
-
 
 .spot-index-item {
   width: 45%;
@@ -361,4 +362,5 @@ body {
   top: 50px;
   right: 50px;
   text-shadow: 1px 1px black;
+  z-index: 3;
 }

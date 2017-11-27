@@ -3,19 +3,23 @@ import { Link } from 'react-router-dom';
 
 import { ProtectedRoute } from '../../util/route_util';
 
-const spotShow = ({ spot, spotId, fetchSpot }) => {
-  const spots = {
-    [spotId]: spot
-  };
+class SpotShow extends React.Component {
+  constructor(props) {
+    super(props);
+  }
 
-  return(
-    <div className="single-spot-show">
-      <div className="single-spot">
-        <Link to="/locations"> Back to spots Index </Link>
+  render () {
+    return(
+      <div className="single-spot-show">
+        <br/><br/><br/>
+        <div className="single-spot">
+          <Link to="/locations"> Back to spots Index </Link>
+        </div>
+
+
       </div>
+    );
+  }
+}
 
-    </div>
-  );
-};
-
-export default spotShow;
+export default SpotShow;
