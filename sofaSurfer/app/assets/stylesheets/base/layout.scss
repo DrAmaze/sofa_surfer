@@ -267,7 +267,7 @@ body {
 
 .how-it-works {
   background-color: #ed6504;
-  height: 800px;
+  height: 1000px;
 }
 
 .how-it-works h1 {
@@ -329,19 +329,54 @@ body {
   align-items: center;
 }
 
-.benefits {
+table.benefits {
+  padding-top: 30px;
+  border-collapse: separate;
   color: white;
+  display: block;
   font-weight: lighter;
-  display: table-cell;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 10px 30px;
+  box-sizing: border-box;
+  margin-left: 25%;
+  margin-right: 25%;
+  text-align: center;
 }
 
-.benefits tr:nth-of-type(2n) {
-
+.benefits th {
+  padding: 8px 30px;
 }
 
+.benefits td {
+  padding: 8px 30px;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+.table-left {
+  text-align: left;
+  padding: 8px 30px;
+}
+
+.table-mid-col,
+.table-mid-col-top,
+.table-mid-col-bottom {
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+}
+
+table.benefits tr:nth-of-type(2n) {
+  background-color: #FF7F00;
+}
+
+.table-mid-col-top {
+  border-radius: 4px 4px 0 0;
+  border-top: 1px solid white;
+}
+
+.table-mid-col-bottom {
+  border-bottom: 1px solid white;
+  border-radius: 0 0 4px 4px;
+  padding-bottom: 5px;
+}
 // dashboard
 
 .dashboard {

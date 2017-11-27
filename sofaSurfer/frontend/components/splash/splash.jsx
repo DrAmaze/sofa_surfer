@@ -146,7 +146,9 @@ class Splash extends React.Component {
           <hr className='underline' />
           <ul>
             <li>
-              <img src='https://ht-assets.couchsurfing.com/assets/icons/discover-amazing-people-75ec5628b259a817d9389816d8b3b9c8369d87c524f0fc29f5fd81d7bdb462e5.png'/>
+              <img
+                src='https://ht-assets.couchsurfing.com/assets/icons/discover-amazing-people-75ec5628b259a817d9389816d8b3b9c8369d87c524f0fc29f5fd81d7bdb462e5.png'
+                alt='amazing people image'/>
               <h6>Discover Amazing People</h6>
               <hr className='underline' />
               <p>
@@ -154,7 +156,9 @@ class Splash extends React.Component {
               </p>
             </li>
             <li>
-              <img src='https://ht-assets.couchsurfing.com/assets/icons/book-a-stay-64b707177c5c69aa958920761cdd560d7ced3edf3ca7c09c91155c2863f5bdc8.png'/>
+              <img
+                src='https://ht-assets.couchsurfing.com/assets/icons/book-a-stay-64b707177c5c69aa958920761cdd560d7ced3edf3ca7c09c91155c2863f5bdc8.png'
+                alt='host image'/>
               <h6>Find a Host</h6>
               <hr className='underline' />
               <p>
@@ -162,7 +166,9 @@ class Splash extends React.Component {
               </p>
             </li>
             <li>
-              <img src='https://ht-assets.couchsurfing.com/assets/icons/join-events-23ca802d7e5993838f1122d360dc35b3ef00291507a9a960b435d116baf30979.png'/>
+              <img
+                src='https://ht-assets.couchsurfing.com/assets/icons/join-events-23ca802d7e5993838f1122d360dc35b3ef00291507a9a960b435d116baf30979.png'
+                alt='Events image'/>
               <h6>Join Events</h6>
               <hr className='underline' />
               <p>
@@ -171,11 +177,97 @@ class Splash extends React.Component {
             </li>
           </ul>
           <table className='benefits'>
-            <tr>Stay with local hosts</tr>
-            <tr>Host international travelers</tr>
-            <tr>Attend free traveler events</tr>
-            <tr>Ad-free website and mobile apps</tr>
-            <tr>Be highlighted in search results</tr>
+            <tr>
+              <th></th>
+              <th className='table-mid-col-top'>
+                Free
+              </th>
+              <th>
+                Verified<br/>
+                Members
+              </th>
+            </tr>
+            <tr>
+              <td className='table-left'>
+                Stay with local hosts
+              </td>
+              <td className='table-mid-col'>
+                <span
+                  aria-hidden="true"
+                  data-icon="" >
+                  check
+                </span>
+              </td>
+              <td>
+                <span>
+
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <td className='table-left'>
+                Host international travelers
+              </td>
+              <td className='table-mid-col'>
+                <span
+                  aria-hidden="true"
+                  data-icon="" >
+                </span>
+              </td>
+            <td>
+              <span>
+
+              </span>
+            </td>
+            </tr>
+            <tr>
+              <td className='table-left'>
+                Attend free traveler events
+              </td>
+              <td className='table-mid-col'>
+                <span
+                  aria-hidden="true"
+                  data-icon="" >
+                </span>
+              </td>
+              <td>
+                <span>
+
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <td className='table-left'>
+                Ad-free website and mobile apps
+              </td>
+              <td className='table-mid-col'>
+                <span
+                  aria-hidden="true"
+                  data-icon="" >
+                </span>
+              </td>
+              <td>
+                <span>
+
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <td className='table-left'>
+                Be highlighted in search results
+              </td>
+              <td className='table-mid-col-bottom'>
+                <span
+                  aria-hidden="true"
+                  data-icon="" >
+                </span>
+              </td>
+              <td>
+                <span>
+
+                </span>
+              </td>
+            </tr>
           </table>
         </section>
 

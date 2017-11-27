@@ -15,8 +15,6 @@ class SpotShow extends React.Component {
         <div className="single-spot">
           <Link to="/locations"> Back to spots Index </Link>
         </div>
-
-
       </div>
     );
   }
