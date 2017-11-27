@@ -7,7 +7,6 @@ import { selectAllSpots } from '../../reducers/selectors';
 import { fetchSpots, fetchSpot } from '../../actions/spot_actions';
 
 const mapStateToProps = state => {
-  console.log(state);
   return {
     spots: selectAllSpots(state),
   };
@@ -15,7 +14,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => ({
   fetchSpots: () => dispatch(fetchSpots()),
-  fetchSpot: spot => dispatch(fetchSpot())
+  fetchSpot: spot => dispatch(fetchSpot(spot))
 });
 
 export default withRouter(connect(

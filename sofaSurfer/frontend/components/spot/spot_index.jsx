@@ -9,7 +9,7 @@ class SpotIndex extends React.Component {
   }
 
   render () {
-    console.log(this.props);
+
     let { spots } = this.props;
 
     if (this.props.spots) {
@@ -18,15 +18,15 @@ class SpotIndex extends React.Component {
       spots = [];
     }
 
-    console.log(spots);
     return (
-      <div>
+      <div className='locations'>
         <br/><br/><br/>
+        <h1> Choose your adventure ... </h1>
         <section className='spots-index'>
           <ul>
             {spots}
           </ul>
-        </section>;
+        </section>
       </div>
     );
   }

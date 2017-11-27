@@ -29,7 +29,7 @@ require 'csv'
 Location.create!(
   street: 'pershing dr',
   neighborhood: 'presidio',
-  img_url: 'https://bartable.bart.gov/files/images/discoveries/GGBridge_Old_Coast_Guard_Station.'
+  img_url: 'http://greatruns.com/wp-content/uploads/2016/11/SanFran4.jpg'
 )
 
 Location.create!(
