@@ -8,3 +8,5 @@ export const selectSpot = ({ spots }, id) => {
 };
 
 export const selectAllBookings = state => values(state.entities.bookings);
+
+export const selectAllUsers = state => values(state.entities.users);

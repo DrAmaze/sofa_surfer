@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 import { ProtectedRoute } from '../../util/route_util';
 import BookingForm from '../booking/booking_form_container';
+import UserList from '../user/user_list_container';
 
 class SpotShow extends React.Component {
   constructor(props) {
@@ -18,6 +19,8 @@ class SpotShow extends React.Component {
         </div>
 
         <BookingForm />
+
+        <UserList />
       </div>
     );
   }
