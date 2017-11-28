@@ -105,10 +105,7 @@ class BookingForm extends React.Component {
           </div>
 
           <div className='booking-form-button'>
-            <button className='color-button'>
-              Clear Filters
-            </button>
-            <button className='color-button'>
+            <button className='search-color-button'>
               Search
             </button>
           </div>

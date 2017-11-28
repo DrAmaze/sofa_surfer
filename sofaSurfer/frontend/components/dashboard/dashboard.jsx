@@ -8,7 +8,6 @@ class Dashboard extends React.Component {
     this.props.fetchSpots();
   }
 
-
   render () {
     let { username, location, hosting } = this.props.currentUser;
 
@@ -40,9 +39,9 @@ class Dashboard extends React.Component {
         <br/><br/><br/>
         <div className='dashboard'>
           <section className='user'>
-            <h3 className='dashboard'> {username} </h3>
+            <h3 className='user-dashboard'> {username} </h3>
             <br/>
-            <h3> San Francisco, CA, USA </h3>
+            <h3 className='home'> San Francisco, CA, USA </h3>
             <br/>
             <div> {guests} </div>
           </section>
