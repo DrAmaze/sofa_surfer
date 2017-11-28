@@ -12,6 +12,7 @@ class SignupForm extends React.Component {
       location_id: 0
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.renderErrors = this.renderErrors.bind(this);
   }
 
   update(field) {
@@ -27,6 +28,7 @@ class SignupForm extends React.Component {
   }
 
   renderErrors () {
+    debugger
     if (this.props.errors) {
       return (
         <ul>
