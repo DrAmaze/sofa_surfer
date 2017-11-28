@@ -444,11 +444,9 @@ table.benefits tr:nth-of-type(2n) {
   font-size: 36px;
 }
 
-
 .dashboard h4 {
   font-weight: lighter;
 }
-
 
 .home {
   border-bottom: 1px solid gray;
@@ -469,7 +467,7 @@ table.benefits tr:nth-of-type(2n) {
   text-transform: uppercase;
   border-bottom: 1px solid #e6e6e6;
   width: 100%;
-  padding: 15px 25px;
+  padding: 15px  0 15px 25px;
 }
 
 .dashboard:nth-child(n+1) {
@@ -492,7 +490,7 @@ table.benefits tr:nth-of-type(2n) {
 .user h3:nth-of-type(2) {
   text-align: center;
   border-bottom: 1px solid #e6e6e6;
-  width: 150%;
+  width: 100%;
   padding: 0 0 25px 0;
 }
 
@@ -504,6 +502,66 @@ table.benefits tr:nth-of-type(2n) {
   display: block;
   width: 100%;
   flex: 3 0 0;
+}
+
+.information section {
+  height: 220px;
+  list-style: none;
+}
+
+.spot-preview {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  padding:  0 20px;
+  font-size: 1em;
+  color: white;
+  bottom: 40px;
+}
+
+.spot-preview li span {
+  position: relative;
+  color: white;
+  top: 50px;
+  text-decoration: none;
+  width: 50%;
+}
+
+.spot-preview li {
+  height: 120px;
+  padding: 20px;
+}
+
+.grid-items {
+
+}
+
+.spot-preview-item {
+  width: 30%;
+}
+
+.spot-preview-item img {
+  height: 100%;
+  top: 50px;
+}
+
+.hosts-list {
+  margin: 10px 70px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  min-width: 400px;
+}
+
+.hosts-list li {
+  background-color: white;
+  width: 49%;
+  margin-bottom: 2%;
+  box-shadow: 2px 2px 2px lightgray;
+}
+
+.hosts-list li:nth-of-type(2n) {
+  margin-left: 2%;
 }
 
 //Locations
@@ -555,18 +613,22 @@ table.benefits tr:nth-of-type(2n) {
 }
 
 // spot show page
-
-.single-spot-show h1 {
-
+// .spot-name {
+//   background-image: url(https://images.unsplash.com/photo-1495579525815-b742aa69eaf1?auto=format&fit=crop&w=963&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D);
+//   background-size: cover;
+//   height: 300px;
+// }
+.single-spot-show {
 }
 
-.new-booking {
+.new-booking, .user-count {
   background-color: white;
   box-shadow: 2px 2px 2px lightgray;
   display: block;
   margin-left: 70px;
   margin-right: 70px;
   height: 320px;
+  min-width: 400px;
 }
 
 .new-booking-header {
@@ -655,6 +717,7 @@ table.benefits tr:nth-of-type(2n) {
   cursor: pointer;
   background-color: #6288a5;
 }
+
 // .grey-color-button {
 //   text-transform: capitalize;
 //   font-size: 14px;
@@ -670,3 +733,13 @@ table.benefits tr:nth-of-type(2n) {
 //   cursor: pointer;
 //   background-color: gray;
 // }
+
+// number of people
+
+.user-count {
+  background-color: #f9f9f9;
+  height: 30px;
+  font-size: 16px;
+  color: gray;
+  padding: 10px 20px;
+}

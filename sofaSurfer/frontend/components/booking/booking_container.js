@@ -4,7 +4,7 @@ import { withRouter } from 'react-router';
 import BookingIndex from './booking';
 
 import { fetchSpot } from '../../actions/spot_actions';
-import { selectAllBookings } from '../../reducers/selectors';
+import { selectMyBookings } from '../../reducers/selectors';
 import {
   fetchBookings,
   fetchBooking
@@ -13,7 +13,7 @@ import {
 
 const mapStateToProps = state => {
   return {
-    spots: selectAllBookings(state),
+    spots: selectMyBookings(state),
   };
 };
 

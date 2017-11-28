@@ -11,11 +11,10 @@ class SpotShow extends React.Component {
   }
 
   render () {
-    const { spot } = this.props.spot;
+    let { spot } = this.props.spot;
     return(
       <div className="single-spot-show">
         <br/><br/><br/>
-
 
         <div className="single-spot">
           <Link to="/locations"> Back to spots Index </Link>

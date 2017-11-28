@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 
 import SpotPreviewItem from './dashboard_spot_preview';
+import BookingPreviewItem from './dashboard_booking_preview';
 
 class Dashboard extends React.Component {
   componentDidMount() {
@@ -20,18 +21,28 @@ class Dashboard extends React.Component {
 
     let { spots } = this.props;
     let spotsPreview;
-    if (this.props.spots) {
-      let spot1 = spots[0];
-      let spot2 = spots[1];
-      let spot3 = spots[2];
+    if (this.props.spots.length > 0) {
+      let previews = parseInt(Math.random() * 8);
+      let spot1 = spots[previews];
+      let spot2 = spots[previews+1];
+      let spot3 = spots[previews+2];
+
       spotsPreview =
-        <div>
+        <div className='spot-preview'>
             <SpotPreviewItem key={spot1.id} spot={spot1}/>
             <SpotPreviewItem key={spot2.id} spot={spot2} />
-            <SpotPreviewItem key={spot3.id} spot={spot3} />
+            <SpotPr
+              eviewItem key={spot3.id} spot={spot3} />
         </div>;
-    } else {
-      spots = [];
+    }
+
+    let { bookings } = this.props;
+    let bookingPreview;
+    if (this.props.bookings.length > 0) {
+      bookingPreview =
+        <div className='spot-preview'>
+          <BookingPreviewItem key={bookings[0].id} booking={bookings[0]}/>
+        </div>;
     }
 
     return (
@@ -48,18 +59,21 @@ class Dashboard extends React.Component {
 
           <div className='information'>
             <section className='box' id='locations'>
-              <h2> Explore the city's best spots with locals... </h2>
-              <div className='grid-items'>
-                { spotsPreview }
-              </div>
-              <Link to='/locations'>
-                locations
+              <Link to='/locations'
+                style={{ textDecoration: 'none', color: 'inherit'}}>
+                <h2> Explore the city's best spots with locals... </h2>
               </Link>
+              <ul className='grid-items'>
+                { spotsPreview }
+              </ul>
             </section>
 
             <section className='box' id='bookings'>
               <h2> My Travel Plans </h2>
                 <Link to='/bookings'>
+                  <div className='booking-preview-item'>
+                    { bookingPreview }
+                  </div>
                   bookings
                 </Link>
             </section>

@@ -7,6 +7,6 @@ export const selectSpot = ({ spots }, id) => {
    return spot;
 };
 
-export const selectAllBookings = state => values(state.entities.bookings);
+export const selectMyBookings = state => values(state.entities.bookings);
 
 export const selectAllUsers = state => values(state.entities.users);

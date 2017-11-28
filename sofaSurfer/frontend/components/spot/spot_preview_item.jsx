@@ -5,12 +5,13 @@ const SpotPreviewItem = ({ spot }) => (
   <li className="spot-preview-item">
     <Link
       to={`/locations/${spot.id}`}
-      style={{textDecoration: 'none'}}>
-      <span className='spot-preview' >
-        {spot.neighborhood}
-      </span>
+      style={{ textDecoration: 'inherit', color: 'inherit' }}>
+      <span className='spot-index-item-location'>{spot.neighborhood} district</span>
+      <img
+        src={spot.img_url}
+        alt={`image of ${spot.neighborhood}`}
+        />
     </Link>
-    <img src={spot.img_url} />
   </li>
 );
 

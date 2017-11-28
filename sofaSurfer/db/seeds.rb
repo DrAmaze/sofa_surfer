@@ -19,7 +19,7 @@ Location.create!(
 
 Location.create!(
   street: 'beach st',
-  neighborhood: "fisherman's wharf",
+  neighborhood: "wharf",
   img_url: 'http://www.visitcalifornia.com/sites/default/files/styles/welcome_image/public/VCW_D_SFcity_FishermanWharf_1280x642_sized.jpg'
 )
 
