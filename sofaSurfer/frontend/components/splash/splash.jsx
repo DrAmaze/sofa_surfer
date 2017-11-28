@@ -64,7 +64,7 @@ class Splash extends React.Component {
         borderRadius    : '5px',
         maxWidth        : '33%',
         minWidth        : '450px',
-        maxHeight       : '450px',
+        maxHeight       : '500px',
         minHeight       : '450px',
         marginLeft      : 'auto',
         marginRight     : 'auto',
@@ -91,7 +91,10 @@ class Splash extends React.Component {
           <hr className='underline' />
           <ul>
             <li>
-              <img src='https://images.unsplash.com/photo-1501631957818-9f4b96ca2b0f?auto=format&fit=crop&w=1050&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D'/>
+              <img
+                src='https://images.unsplash.com/photo-1501631957818-9f4b96ca2b0f?auto=format&fit=crop&w=1050&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D'
+                alt='experiencing life image'/>
+
               <h6>On Surfing</h6>
               <hr className='underline' />
               <p>
@@ -107,7 +110,9 @@ class Splash extends React.Component {
               </p>
             </li>
             <li>
-              <img src='https://images.unsplash.com/photo-1508956225111-e10f3ac4a5a8?auto=format&fit=crop&w=1350&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D'/>
+              <img
+                src='https://images.unsplash.com/photo-1508956225111-e10f3ac4a5a8?auto=format&fit=crop&w=1350&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D'
+                alt='community image'/>
               <h6>On Community</h6>
               <hr className='underline' />
               <p>
@@ -123,7 +128,9 @@ class Splash extends React.Component {
               </p>
             </li>
             <li>
-              <img src='https://images.unsplash.com/photo-1505064192571-30990810d732?auto=format&fit=crop&w=1350&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D'/>
+              <img
+                src='https://images.unsplash.com/photo-1505064192571-30990810d732?auto=format&fit=crop&w=1350&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D'
+                alt='hosting image'/>
               <h6>On Hosting</h6>
               <hr className='underline' />
               <p>

@@ -15,6 +15,10 @@ class SignupForm extends React.Component {
     this.renderErrors = this.renderErrors.bind(this);
   }
 
+  componentWillMount () {
+    this.props.clearSessionErrors();
+  }
+
   update(field) {
     return e => this.setState({
       [field]: e.currentTarget.value
@@ -47,13 +51,17 @@ class SignupForm extends React.Component {
       <div className="signup-form-container">
         <form onSubmit={this.handleSubmit} className="login-form-box">
           <nav className='login-head'>
-            <h4>Join SofaSurfer for free</h4>
-            <span
-              onClick={this.props.closeModal}
-              className="login-form-close">
-              x
-            </span>
-            {this.renderErrors()}
+            <div>
+              <h4>Join SofaSurfer for free</h4>
+              <span
+                onClick={this.props.closeModal}
+                className="login-form-close">
+                x
+              </span>
+            </div>
+            <div className='session-errors'>
+              {this.renderErrors()}
+            </div>
           </nav>
           <div className="login-form">
             <br/>

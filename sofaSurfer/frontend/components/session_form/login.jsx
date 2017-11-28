@@ -13,6 +13,10 @@ class LoginForm extends React.Component {
     this.renderErrors = this.renderErrors.bind(this);
   }
 
+  componentWillMount () {
+    this.props.clearSessionErrors();
+  }
+
   update(field) {
     return e => this.setState({
       [field]: e.currentTarget.value
@@ -22,7 +26,9 @@ class LoginForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const user = this.state;
-    this.props.processForm({ user }).then(() => this.props.closeModal());
+    this.props.processForm({ user }).then(
+      () => this.props.closeModal()
+    );
   }
 
   renderErrors () {
@@ -55,13 +61,17 @@ class LoginForm extends React.Component {
       <div className='login-form-container'>
         <form onSubmit={this.handleSubmit} className="login-form-box">
           <nav className='login-head'>
-            <h4>Log in to SofaSurfer</h4>
-            <span
-              onClick={this.props.closeModal}
-              className="login-form-close">
-              x
-            </span>
-            {this.renderErrors()}
+            <div>
+              <h4>Log in to SofaSurfer</h4>
+              <span
+                onClick={this.props.closeModal}
+                className="login-form-close">
+                x
+              </span>
+            </div>
+            <div className='session-errors'>
+              {this.renderErrors()}
+            </div>
           </nav>
           <div className="login-form">
             <br/>

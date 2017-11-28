@@ -66,7 +66,7 @@ class Header extends React.Component {
         borderRadius    : '5px',
         maxWidth        : '33%',
         minWidth        : '450px',
-        maxHeight       : '450px',
+        maxHeight       : '500px',
         minHeight       : '450px',
         marginLeft      : 'auto',
         marginRight     : 'auto',
