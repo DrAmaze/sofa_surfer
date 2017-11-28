@@ -10,6 +10,7 @@ class LoginForm extends React.Component {
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.demoSignin = this.demoSignin.bind(this);
+    this.renderErrors = this.renderErrors.bind(this);
   }
 
   update(field) {
@@ -22,7 +23,6 @@ class LoginForm extends React.Component {
     e.preventDefault();
     const user = this.state;
     this.props.processForm({ user }).then(() => this.props.closeModal());
-
   }
 
   renderErrors () {

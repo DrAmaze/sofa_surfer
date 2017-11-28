@@ -178,97 +178,99 @@ class Splash extends React.Component {
             </li>
           </ul>
           <table className='benefits'>
-            <tr>
-              <th></th>
-              <th className='table-mid-col-top'>
-                Free
-              </th>
-              <th>
-                Verified<br/>
-                Members
-              </th>
-            </tr>
-            <tr>
-              <td className='table-left'>
-                Stay with local hosts
-              </td>
-              <td className='table-mid-col'>
-                <span
-                  aria-hidden="true"
-                  data-icon="" >
-                  check
-                </span>
-              </td>
+            <tbody>
+              <tr>
+                <th></th>
+                <th className='table-mid-col-top'>
+                  Free
+                </th>
+                <th>
+                  Verified<br/>
+                  Members
+                </th>
+              </tr>
+              <tr>
+                <td className='table-left'>
+                  Stay with local hosts
+                </td>
+                <td className='table-mid-col'>
+                  <span
+                    aria-hidden="true"
+                    data-icon="" >
+                    check
+                  </span>
+                </td>
+                <td>
+                  <span>
+
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td className='table-left'>
+                  Host international travelers
+                </td>
+                <td className='table-mid-col'>
+                  <span
+                    aria-hidden="true"
+                    data-icon="" >
+                  </span>
+                </td>
               <td>
                 <span>
 
                 </span>
               </td>
-            </tr>
-            <tr>
-              <td className='table-left'>
-                Host international travelers
-              </td>
-              <td className='table-mid-col'>
-                <span
-                  aria-hidden="true"
-                  data-icon="" >
-                </span>
-              </td>
-            <td>
-              <span>
+              </tr>
+              <tr>
+                <td className='table-left'>
+                  Attend free traveler events
+                </td>
+                <td className='table-mid-col'>
+                  <span
+                    aria-hidden="true"
+                    data-icon="" >
+                  </span>
+                </td>
+                <td>
+                  <span>
 
-              </span>
-            </td>
-            </tr>
-            <tr>
-              <td className='table-left'>
-                Attend free traveler events
-              </td>
-              <td className='table-mid-col'>
-                <span
-                  aria-hidden="true"
-                  data-icon="" >
-                </span>
-              </td>
-              <td>
-                <span>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td className='table-left'>
+                  Ad-free website and mobile apps
+                </td>
+                <td className='table-mid-col'>
+                  <span
+                    aria-hidden="true"
+                    data-icon="" >
+                  </span>
+                </td>
+                <td>
+                  <span>
 
-                </span>
-              </td>
-            </tr>
-            <tr>
-              <td className='table-left'>
-                Ad-free website and mobile apps
-              </td>
-              <td className='table-mid-col'>
-                <span
-                  aria-hidden="true"
-                  data-icon="" >
-                </span>
-              </td>
-              <td>
-                <span>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td className='table-left'>
+                  Be highlighted in search results
+                </td>
+                <td className='table-mid-col-bottom'>
+                  <span
+                    aria-hidden="true"
+                    data-icon="" >
+                  </span>
+                </td>
+                <td>
+                  <span>
 
-                </span>
-              </td>
-            </tr>
-            <tr>
-              <td className='table-left'>
-                Be highlighted in search results
-              </td>
-              <td className='table-mid-col-bottom'>
-                <span
-                  aria-hidden="true"
-                  data-icon="" >
-                </span>
-              </td>
-              <td>
-                <span>
-
-                </span>
-              </td>
-            </tr>
+                  </span>
+                </td>
+              </tr>
+            </tbody>
           </table>
         </section>
 
