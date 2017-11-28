@@ -6,6 +6,7 @@ import Modal from 'react-modal';
 import LoginForm from '../session_form/login_container';
 import SignupForm from '../session_form/signup_container';
 
+
 class Header extends React.Component {
   constructor(props) {
     super(props);
@@ -46,6 +47,32 @@ class Header extends React.Component {
   }
 
   render () {
+    const style = {
+      overlay : {
+        position        : 'fixed',
+        top             : 0,
+        left            : 0,
+        right           : 0,
+        bottom          : 0,
+        backgroundColor : 'rgba(25, 25, 25, 0.90)',
+        zIndex          : 10
+      },
+      content : {
+        position        : 'relative',
+        top             : '100px',
+        border          : '1px solid #ccc',
+        zIndex          : 11,
+        background      : 'white',
+        borderRadius    : '5px',
+        maxWidth        : '33%',
+        minWidth        : '450px',
+        maxHeight       : '450px',
+        minHeight       : '450px',
+        marginLeft      : 'auto',
+        marginRight     : 'auto',
+      }
+    };
+
     const userInfo = this.props.currentUser ? (
       <ul className='navbar-headers'>
         <li className='logo'>
@@ -104,31 +131,6 @@ class Header extends React.Component {
       </ul>
     );
 
-    const style = {
-      overlay : {
-        position        : 'fixed',
-        top             : 0,
-        left            : 0,
-        right           : 0,
-        bottom          : 0,
-        backgroundColor : 'rgba(25, 25, 25, 0.90)',
-        zIndex          : 10
-      },
-      content : {
-        position        : 'relative',
-        top: '100px',
-        border          : '1px solid #ccc',
-        zIndex          : 11,
-        background      : 'white',
-        borderRadius    : '5px',
-        maxWidth        : '500px',
-        minWidth        : '450px',
-        maxHeight       : '450px',
-        minHeight       : '400px',
-        marginLeft      : '20%',
-        marginRight     : '20%',
-      }
-    };
 
     const session = this.state.formType === 'signup' ? (
       <SignupForm
@@ -142,7 +144,6 @@ class Header extends React.Component {
       );
 
     return (
-
       <div className='header-container'>
         <header className='header'>
           { userInfo }

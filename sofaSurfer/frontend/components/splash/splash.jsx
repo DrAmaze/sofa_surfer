@@ -57,17 +57,17 @@ class Splash extends React.Component {
       },
       content : {
         position        : 'relative',
-        top: '100px',
+        top             : '100px',
         border          : '1px solid #ccc',
         zIndex          : 11,
         background      : 'white',
         borderRadius    : '5px',
-        maxWidth        : '500px',
+        maxWidth        : '33%',
         minWidth        : '450px',
         maxHeight       : '450px',
-        minHeight       : '400px',
-        marginLeft      : '20%',
-        marginRight     : '20%',
+        minHeight       : '450px',
+        marginLeft      : 'auto',
+        marginRight     : 'auto',
       }
     };
 

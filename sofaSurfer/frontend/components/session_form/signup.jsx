@@ -8,7 +8,8 @@ class SignupForm extends React.Component {
     this.state = {
       username: '',
       email: '',
-      password: ''
+      password: '',
+      location_id: 0
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -42,7 +43,7 @@ class SignupForm extends React.Component {
   render () {
 
     return (
-      <div className="login-form-container">
+      <div className="signup-form-container">
         <form onSubmit={this.handleSubmit} className="login-form-box">
           <nav className='login-head'>
             <h4>Join SofaSurfer for free</h4>
@@ -82,6 +83,26 @@ class SignupForm extends React.Component {
               />
             </label>
             <br/>
+            <label>
+              <select
+                className='user-location'
+                value={this.state.location_id}
+                onChange={this.update('location_id')}>
+                <option selected='selected' value='0'>
+                  Please select your location
+                </option>
+                <option value='1'>presidio</option>
+                <option value='2'>fisherman's wharf</option>
+                <option value='3'>chinatown</option>
+                <option value='4'>mission</option>
+                <option value='5'>castro</option>
+                <option value='6'>financial</option>
+                <option value='7'>sunset</option>
+                <option value='8'>richmond</option>
+                <option value='9'>haight</option>
+                <option value='10'>tenderloin</option>
+              </select>
+            </label>
             <input
               className='color-button-login'
               onClick={this.closeModal}

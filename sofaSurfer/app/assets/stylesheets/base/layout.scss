@@ -71,12 +71,12 @@ body {
   font-size: 14px;
   padding: 10px 30px;
   max-width: 100px;
-  border: 1px solid #2371a3;
+  border: 1px solid #287fb8;
 
 }
 
 .color-button {
-  background-color: #2371a3;
+  background-color: #287fb8;
   color: white;
 }
 
@@ -88,7 +88,7 @@ body {
 
 .clear-button {
   background-color: white;
-  color: #2371a3;
+  color: #287fb8;
 
 }
 
@@ -100,23 +100,35 @@ body {
 }
 
 .color-button-login {
-  background-color: #2371a3;
+  background-color: #287fb8;
   color: white;
 }
 
 .clear-button-login {
   background-color: white;
-  border: 1px solid #2371a3;
+  border: 1px solid #287fb8;
+  color: #287fb8;
+  font-weight: bold;
 }
 
 // login
 
-.login-form-container {
+.errors {
+  font-size: 50px;
+}
+
+.login-form-container,
+.signup-form-container {
   border-radius: 8px;
   font-size: 22px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   top: 100px;
   text-align: center;
+}
+
+.signup-form-container {
+  height: 400px;
 }
 
 .login-form {
@@ -153,12 +165,27 @@ body {
 
 
 .login-form input {
-
   position: relative;
   width: 80%;
   padding: 10px;
   margin: 5px 5%;
+  border: 1px solid lightgray;
+}
+
+.login-form input:hover {
+  border-radius: 1px solid lightgray;
+}
+
+.user-location {
+  -webkit-appearance: none;
+  width: 85%;
+  padding: 10px;
+  margin: 5px 5%;
   box-shadow: 0;
+  border: 1px solid lightgray;
+  border-radius: none;
+  color: gray;
+  background-color: white;
 }
 
 .login-alternative {
