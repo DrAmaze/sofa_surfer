@@ -3,6 +3,7 @@ import { Link, withRouter } from 'react-router-dom';
 
 import BookingIndexItem from './booking_index_item';
 
+
 class Booking extends React.Component {
   componentDidMount() {
     this.props.fetchBookings();

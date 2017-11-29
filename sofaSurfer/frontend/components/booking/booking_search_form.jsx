@@ -67,7 +67,7 @@ class BookingSearchForm extends React.Component {
                 <label> Arrive </label>
               </span>
               <input
-                type='text'
+                type='date'
                 className='booking-date'
                 placeholder='yy-mm-dd'
                 onChange={this.update('arrival')} />
@@ -78,7 +78,7 @@ class BookingSearchForm extends React.Component {
                 <label> Depart </label>
               </span>
               <input
-                type='text'
+                type='date'
                 className='booking-date'
                 placeholder='yy-mm-dd'
                 onChange={this.update('departure')} />

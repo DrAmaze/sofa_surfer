@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
-import BookingIndex from './booking';
+import BookingIndex from './booking_index';
 
 import { fetchSpot } from '../../actions/spot_actions';
 import { selectMyBookings } from '../../reducers/selectors';

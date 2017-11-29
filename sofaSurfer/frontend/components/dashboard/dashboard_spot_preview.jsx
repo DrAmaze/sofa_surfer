@@ -10,7 +10,9 @@ const SpotPreviewItem = ({ spot }) => (
         {spot.neighborhood}
       </span>
     </Link>
-    <img src={spot.img_url} />
+    <Link to={`/locations/${spot.id}`}>
+      <img src={spot.img_url} />
+    </Link>
   </li>
 );
 

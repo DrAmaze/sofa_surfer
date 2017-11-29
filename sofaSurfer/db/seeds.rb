@@ -9,7 +9,6 @@
 # bookings
 
 
-
 # locations
 Location.create!(
   street: 'pershing dr',
@@ -19,7 +18,7 @@ Location.create!(
 
 Location.create!(
   street: 'beach st',
-  neighborhood: "wharf",
+  neighborhood: "fisherman's wharf",
   img_url: 'http://www.visitcalifornia.com/sites/default/files/styles/welcome_image/public/VCW_D_SFcity_FishermanWharf_1280x642_sized.jpg'
 )
 
