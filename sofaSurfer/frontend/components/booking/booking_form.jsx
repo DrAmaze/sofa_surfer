@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
-import Modal from 'react-modal';
+
 
 class BookingForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      traveler_id: this.props.currentUser.id,
+      traveler_id: 1,
       host_id: 0,
       location_id: 0,
       arrival: '',
@@ -16,9 +16,6 @@ class BookingForm extends React.Component {
     this.renderErrors = this.renderErrors.bind(this);
   }
 
-  componentWillMount () {
-    this.props.clearSessionErrors();
-  }
 
   update(field) {
     return e => this.setState({
@@ -51,7 +48,7 @@ class BookingForm extends React.Component {
     return (
       <div className="booking-form-container">
         <form onSubmit={this.handleSubmit} className="booking-form-box">
-          <nav className='booking-head'>
+          <nav className='login-head'>
             <div>
               <h4>Create a Trip</h4>
               <span
@@ -64,15 +61,16 @@ class BookingForm extends React.Component {
               {this.renderErrors()}
             </div>
           </nav>
-          <div className="login-form">
+          <div className="booking-form">
             <br/>
             <label>
+              Where are you going?
+              <br/>
               <select
-                className='user-location'
+                className='booking-location'
                 value={this.state.location_id}
                 onChange={this.update('location_id')}>
-                <option selected='selected' value='0'>
-                  Where are you going?
+                <option selected='selected'> e.g. Presidio
                 </option>
                 <option value='1'>presidio</option>
                 <option value='2'>fisherman's wharf</option>
@@ -86,45 +84,61 @@ class BookingForm extends React.Component {
                 <option value='10'>tenderloin</option>
               </select>
             </label>
-            <br/>
+            <br/><br/>
             <label>
               Arriving on
+              <br/>
               <input type="date"
                 value={this.state.arrival}
                 onChange={this.update('arrival')}
-                className="login-input"
-                placeholder={'e.g. '}
+                className="booking-input"
+                placeholder={'e.g. MM-DD-YYYY'}
               />
             </label>
+            <br/><br/>
             <label>
               Leaving on
+              <br/>
               <input type="date"
                 value={this.state.departure}
                 onChange={this.update('departure')}
-                className="login-input"
-                placeholder={'e.g. '}
+                className="booking-input"
+                placeholder={'e.g. MM-DD-YYYY'}
+              />
+            </label>
+            <br/><br/>
+            <label>
+              Guests
+              <br/>
+              <input type="number"
+                min='1'
+                placeholder={'1'}
+                className="booking-input"/>
+            </label>
+            <br/><br/>
+            <label>
+              Trip Description
+              <br/>
+              <input type="text"
+                className="booking-input"
+                placeholder={'Tell locals about your trip and why they should meet or host you'}
               />
             </label>
             <br/>
 
             <br/>
-            <input
-              className='color-button-login'
+          </div>
+          <footer className='booking-submit'>
+            <button
+              className='create-button'
               onClick={this.closeModal}
               type="submit"
-              value="Join with Email"
-              />
-            <br/>
-            <span className='login-alternative'>
-              Already a member?
-            </span>
-            <br />
-            <input
+              value="Create">Create</button>
+            <button className='booking-cancel'
               className='clear-button-login'
               type="button"
-              value="Log in"
-              onClick={this.props.handleLogIn} />
-          </div>
+              onClick={this.closeModal}>Cancel</button>
+          </footer>
         </form>
       </div>
     );

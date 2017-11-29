@@ -760,3 +760,61 @@ table.benefits tr:nth-of-type(2n) {
   color: gray;
   padding: 10px 20px;
 }
+
+.booking-form-box nav {
+  background-color: lightgray;
+  font-size: 18px;
+}
+
+.booking-form-box nav h4 {
+  margin: 10px 0 0 5px;
+}
+
+.booking-form {
+  padding: 0 20px;
+}
+.booking-location {
+  width: 97%;
+  padding: 10px 5px;
+  border: 1px solid lightgray;
+  border-radius: 3px;
+}
+
+.booking-form label {
+  font-size: 16px;
+}
+
+.booking-location {
+
+}
+
+.booking-input {
+  width: 96%;
+  color: gray;
+  border: 1px solid lightgray;
+  border-radius: 3px;
+  padding: 10px 5px;
+}
+
+.booking-submit {
+  background-color: #ecf0f1;
+  width: 100%;
+  position: relative;
+  display: block;
+}
+
+.booking-submit button {
+  padding: 10px;
+  font-size: 16px;
+  margin: 15px 20px;
+}
+
+.create-button {
+  color: #444;
+  background-color: #41b866;
+
+}
+
+.booking-cancel {
+  color: white;
+}

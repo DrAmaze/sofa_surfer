@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 
 import BookingForm from './booking_form';
-import { createBooking } from '../../actions/booking_actions';
+import { createBooking, updateBooking } from '../../actions/booking_actions';
 import { fetchUser } from '../../actions/user_actions';
 import { clearSessionErrors } from '../../actions/error_actions';
 
@@ -11,6 +11,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   createBooking: booking => dispatch(createBooking(booking)),
+  updateBooking: booking => dispatch(updateBooking(booking)),
   fetchUser: id => dispatch(fetchUser(id)),
   clearSessionErrors: () => dispatch(clearSessionErrors()),
 });
