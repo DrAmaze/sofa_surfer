@@ -38,7 +38,8 @@ class Api::BookingsController < ApplicationController
       :host_id,
       :location_id,
       :arrival,
-      :departure
+      :departure,
+      :descriptions
     )
   end
 end

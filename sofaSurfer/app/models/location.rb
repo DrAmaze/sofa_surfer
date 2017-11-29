@@ -11,7 +11,7 @@
 #
 
 class Location < ApplicationRecord
-  validates :street, :neighborhood, :img_url, presence: true
+  validates :neighborhood, :img_url, presence: true
   validates :neighborhood, uniqueness: true
 
   has_many :bookings,
@@ -23,4 +23,10 @@ class Location < ApplicationRecord
     primary_key: :id,
     foreign_key: :location_id,
     class_name: :User
+
+  def self.top_five_results(query_param)
+    param = '%' + query_param.downcase ='%'
+    Spot.where('lower(neighborhood) LIKE ?', param).limit(5)
+  end
+
 end

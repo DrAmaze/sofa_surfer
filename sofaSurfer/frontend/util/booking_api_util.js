@@ -12,19 +12,19 @@ export const fetchBooking = id => (
   })
 );
 
-export const createBooking = data => (
+export const createBooking = booking => (
   $.ajax({
     method: 'POST',
     url: 'api/bookings',
-    data
+    data: booking
   })
 );
 
-export const updateBooking = data => (
+export const updateBooking = booking => (
   $.ajax({
     method: 'PATCH',
-    url: `api/bookings/${data.id}`,
-    data
+    url: `api/bookings/${booking.id}`,
+    data: booking
   })
 );
 

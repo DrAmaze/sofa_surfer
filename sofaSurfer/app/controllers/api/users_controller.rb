@@ -24,7 +24,14 @@ class Api::UsersController < ApplicationController
       :username,
       :password,
       :email,
-      :location_id
+      :location_id,
+      :phone,
+      :age,
+      :hosting,
+      :location_id,
+      :about_me,
+      :street,
+      :img_url
     )
   end
 end

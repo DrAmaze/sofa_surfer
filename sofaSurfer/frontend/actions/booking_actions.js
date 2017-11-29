@@ -4,12 +4,12 @@ export const RECEIVE_BOOKINGS = 'RECEIVE_BOOKINGS';
 export const RECEIVE_BOOKING = 'RECEIVE_BOOKING';
 export const REMOVE_BOOKING = 'REMOVE_BOOKING';
 
-const receiveBookings = bookings => ({
+export const receiveBookings = bookings => ({
   type: RECEIVE_BOOKINGS,
   bookings
 });
 
-const receiveBooking = booking => ({
+export const receiveBooking = booking => ({
   type: RECEIVE_BOOKING,
   booking
 });

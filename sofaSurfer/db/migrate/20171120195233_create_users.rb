@@ -8,6 +8,8 @@ class CreateUsers < ActiveRecord::Migration[5.1]
       t.boolean :hosting
       t.string :location_id
       t.text :about_me
+      t.string :street
+      t.string :img_url
       t.string :password_digest, null: false
       t.string :session_token, null: false
 

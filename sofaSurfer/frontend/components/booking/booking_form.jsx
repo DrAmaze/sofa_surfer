@@ -11,6 +11,7 @@ class BookingForm extends React.Component {
       location_id: 0,
       arrival: '',
       departure: '',
+      description: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.renderErrors = this.renderErrors.bind(this);
@@ -19,13 +20,14 @@ class BookingForm extends React.Component {
 
   update(field) {
     return e => this.setState({
-      [field]: e.currentTarget.value
+      [field]: e.target.value
     });
   }
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.createBooking(this.state)
+    const booking = this.state;
+    this.props.createBooking({ booking })
     .then(() => this.props.closeModal());
   }
 
@@ -108,10 +110,11 @@ class BookingForm extends React.Component {
             </label>
             <br/><br/>
             <label>
-              Guests
+              Host
               <br/>
               <input type="number"
                 min='1'
+                onChange={this.update('host_id')}
                 placeholder={'1'}
                 className="booking-input"/>
             </label>
@@ -121,6 +124,7 @@ class BookingForm extends React.Component {
               <br/>
               <input type="text"
                 className="booking-input"
+                onChange={this.update('description')}
                 placeholder={'Tell locals about your trip and why they should meet or host you'}
               />
             </label>
@@ -136,7 +140,7 @@ class BookingForm extends React.Component {
               value="Create">Create</button>
             <button className='booking-cancel'
               className='clear-button-login'
-              type="button"
+              type="reset"
               onClick={this.closeModal}>Cancel</button>
           </footer>
         </form>
@@ -145,4 +149,4 @@ class BookingForm extends React.Component {
   }
 }
 
-export default BookingForm;
+export default withRouter(BookingForm);

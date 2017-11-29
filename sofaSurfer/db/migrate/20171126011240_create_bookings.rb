@@ -6,6 +6,7 @@ class CreateBookings < ActiveRecord::Migration[5.1]
       t.integer :location_id, null: false
       t.datetime :arrival, null: false
       t.datetime :departure, null: false
+      t.text :description
 
       t.timestamps
     end

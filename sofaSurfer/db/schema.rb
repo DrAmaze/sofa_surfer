@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171126011240) do
+ActiveRecord::Schema.define(version: 20171129070131) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20171126011240) do
     t.integer "location_id", null: false
     t.datetime "arrival", null: false
     t.datetime "departure", null: false
+    t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["host_id"], name: "index_bookings_on_host_id"
@@ -28,13 +29,23 @@ ActiveRecord::Schema.define(version: 20171126011240) do
   end
 
   create_table "locations", force: :cascade do |t|
-    t.string "street", null: false
     t.string "neighborhood", null: false
     t.string "img_url", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["neighborhood"], name: "index_locations_on_neighborhood"
-    t.index ["street"], name: "index_locations_on_street"
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "author_id", null: false
+    t.boolean "recommendation", null: false
+    t.integer "rating"
+    t.text "body"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["author_id"], name: "index_reviews_on_author_id"
+    t.index ["user_id"], name: "index_reviews_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -45,6 +56,8 @@ ActiveRecord::Schema.define(version: 20171126011240) do
     t.boolean "hosting"
     t.string "location_id"
     t.text "about_me"
+    t.string "street"
+    t.string "img_url"
     t.string "password_digest", null: false
     t.string "session_token", null: false
     t.datetime "created_at", null: false
