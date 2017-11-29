@@ -49,7 +49,13 @@ class Dashboard extends React.Component {
         <br/><br/><br/>
         <div className='dashboard'>
           <section className='user'>
-            <h3 className='user-dashboard'> {username} </h3>
+            <h3 className='user-dashboard'>
+              <Link
+                to='/profile'
+                style={{ textDecoration: 'none', color: 'inherit'}}>
+                {username}
+              </Link>
+            </h3>
             <br/>
             <h3 className='home'> San Francisco, CA, USA </h3>
             <br/>

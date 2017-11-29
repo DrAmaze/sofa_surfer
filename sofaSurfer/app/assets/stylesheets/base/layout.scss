@@ -566,6 +566,39 @@ table.benefits tr:nth-of-type(2n) {
 
 // spot show hosts
 
+.single-spot-show {
+  display: flex;
+  flex-direction: column;
+}
+
+.spot-show-image {
+  width: 100%;
+  position: relative;
+  height: 200px;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  opacity: .9;
+}
+
+.single-spot-show h1 {
+  position:absolute;
+  top: 130px;
+  color: white;
+  font-size: 4em;
+  text-shadow: 1px 1px  5px black;
+  text-transform: uppercase;
+  margin-left: 70px;
+}
+
+.spot-index-link {
+  background: rgba(0,0,0,.3);
+  position: relative;
+  bottom: 30px;
+  text-align: right;
+  padding: 5px 10px;
+}
+
 .hosts-list {
   margin: 10px 70px;
   display: flex;
@@ -844,6 +877,7 @@ table.benefits tr:nth-of-type(2n) {
   padding: 10px;
   font-size: 16px;
   margin: 15px 20px;
+  color: white;
 }
 
 .create-button {
@@ -851,6 +885,16 @@ table.benefits tr:nth-of-type(2n) {
   background-color: #41b866;
 }
 
+.create-button:hover {
+  background-color: #64c883;
+  cursor: pointer;
+}
+
 .booking-cancel {
-  color: white;
+  background-color: #bfcad2;
+}
+
+.booking-cancel:hover {
+  background-color: #e6e6e6;
+  cursor: pointer;
 }

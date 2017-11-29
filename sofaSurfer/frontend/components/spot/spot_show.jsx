@@ -6,28 +6,48 @@ import BookingSearchForm from '../booking/booking_search_form_container';
 import UserList from '../user/user_list_container';
 
 class SpotShow extends React.Component {
-  constructor(props) {
-    super(props);
-    let { spotId } = this.props;
-    let spot = this.props.fetchSpot(spotId);
+  componentDidMount () {
+    this.props.fetchSpot(this.props.spotId);
+  }
+
+  componentWillReceiveProps (nextProps) {
+    if (this.props.spotId !== nextProps.spotId) {
+      this.props.fetchSpot(nextProps.spotId);
+    }
   }
 
   render () {
-    let { spotId, spot } = this.props;
-    return(
-      <div className="single-spot-show">
-        <br/><br/><br/>
+    let { spot } = this.props;
 
-        <div className="single-spot">
-          <Link to="/locations"> Back to spots Index </Link>
+    if (spot) {
+      return (
+        <div className="single-spot-show">
+          <br/><br/><br/>
+
+          <div className='spot-show-image'>
+            <img src={spot.img_url} />
+          </div>
+
+          <h1 className='spot-title'> { spot.neighborhood } </h1>
+          <div className="spot-index-link">
+            <Link
+              to="/locations"
+              style={{ textDecoration: 'none', color: 'darkgray' }}>
+              Back to San Francisco ...
+            </Link>
+          </div>
+          <BookingSearchForm />
+
+          <UserList />
         </div>
-
-        <h1> { spotId } </h1>
-        <BookingSearchForm />
-
-        <UserList />
-      </div>
-    );
+      );
+    } else {
+      return (
+        <div>
+          loading...
+        </div>
+      );
+    }
   }
 }
 

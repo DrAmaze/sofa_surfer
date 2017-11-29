@@ -16,9 +16,14 @@ import SpotIndex from './spot/spot_index_container';
 import SpotShow from './spot/spot_show_container';
 import Bookings from './booking/booking_container';
 
+const ScrollToTop = () => {
+  window.scrollTo(0, 0);
+  return null;
+};
 
 const App = () => (
   <div>
+    <Route component={ScrollToTop} />
     <header>
       <HeaderContainer />
     </header>

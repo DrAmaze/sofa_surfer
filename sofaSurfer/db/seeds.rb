@@ -17,6 +17,14 @@ Booking.create!(
   departure: DateTime.parse("02/04/2018"),
 )
 
+Booking.create!(
+  traveler_id: 1,
+  host_id: 12,
+  location_id: 7,
+  arrival: DateTime.parse("02/06/2018"),
+  departure: DateTime.parse("02/09/2018"),
+)
+
 require 'csv'
 
 csv_text = File.read(Rails.root.join('lib', 'seeds', 'USER_DATA.csv'))

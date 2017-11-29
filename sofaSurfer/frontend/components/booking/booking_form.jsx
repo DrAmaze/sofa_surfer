@@ -139,7 +139,6 @@ class BookingForm extends React.Component {
               type="submit"
               value="Create">Create</button>
             <button className='booking-cancel'
-              className='clear-button-login'
               type="reset"
               onClick={this.closeModal}>Cancel</button>
           </footer>

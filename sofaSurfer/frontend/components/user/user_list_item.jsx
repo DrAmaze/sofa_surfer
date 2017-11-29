@@ -14,9 +14,9 @@ class UserListItem extends React.Component {
 
     let image;
     if (img_url) {
-      image = <img src={img_url} alt='user image' />
+      image = <img src={img_url} alt='user image' />;
     } else {
-      image = <img src='https://staticcdn.selio.com/adoos-static/img/user_default.png' alt='blank image' />
+      image = <img src='https://staticcdn.selio.com/adoos-static/img/user_default.png' alt='blank image' />;
     }
 
     return (

@@ -3,21 +3,19 @@ import React from 'react';
 import UserListItem from './user_list_item.jsx';
 
 class UserList extends React.Component {
-  constructor(props) {
-    super(props);
 
-  }
   componentDidMount () {
     this.props.fetchUsers();
+    this.props.fetchSpot(this.props.spotId);
   }
 
   render () {
-    let { users, spot } = this.props;
+    let { users } = this.props;
     let userItems;
     let hosts = [];
     if (users.length > 0) {
       hosts = users.filter(user =>
-        user.hosting
+        user.hosting && parseInt(user.location_id) === this.props.spotId
       );
       userItems = hosts.map(host => (
         <UserListItem

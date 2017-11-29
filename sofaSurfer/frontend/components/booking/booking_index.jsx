@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import Modal from 'react-modal';
 import BookingIndexItem from './booking_index_item';
-import BookingForm from './booking_form';
+import BookingFormContainer from './booking_form_container';
 
 
 class Booking extends React.Component {
@@ -70,7 +70,7 @@ class Booking extends React.Component {
       }
     };
 
-    const book = <BookingForm
+    const book = <BookingFormContainer
       closeModal={this.closeModal}
       handleNewBooking={this.handleNewBooking} />;
 
