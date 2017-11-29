@@ -6,7 +6,7 @@ import {
   deleteBooking
 } from '../../actions/booking_actions';
 
-import BookingForm from './booking_form';
+import BookingSearchForm from './booking_search_form';
 
 const mapStateToProps = (state) => ({
   errors: state.errors.session_errors
@@ -21,4 +21,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(BookingForm);
+)(BookingSearchForm);

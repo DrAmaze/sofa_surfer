@@ -1,7 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router';
 
-class BookingForm extends React.Component {
+class BookingSearchForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -115,4 +115,4 @@ class BookingForm extends React.Component {
   }
 }
 
-export default withRouter(BookingForm);
+export default withRouter(BookingSearchForm);

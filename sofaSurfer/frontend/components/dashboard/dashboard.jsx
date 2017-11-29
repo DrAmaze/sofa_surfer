@@ -31,8 +31,7 @@ class Dashboard extends React.Component {
         <div className='spot-preview'>
             <SpotPreviewItem key={spot1.id} spot={spot1}/>
             <SpotPreviewItem key={spot2.id} spot={spot2} />
-            <SpotPr
-              eviewItem key={spot3.id} spot={spot3} />
+            <SpotPreviewItem key={spot3.id} spot={spot3} />
         </div>;
     }
 
@@ -59,23 +58,28 @@ class Dashboard extends React.Component {
 
           <div className='information'>
             <section className='box' id='locations'>
-              <Link to='/locations'
-                style={{ textDecoration: 'none', color: 'inherit'}}>
-                <h2> Explore the city's best spots with locals... </h2>
-              </Link>
+              <div className='dash-title'>
+                <Link to='/locations'
+                  style={{ textDecoration: 'none', color: 'inherit'}}>
+                  Explore the city's best spots with locals...
+                </Link>
+              </div>
               <ul className='grid-items'>
                 { spotsPreview }
               </ul>
             </section>
 
             <section className='box' id='bookings'>
-              <h2> My Travel Plans </h2>
-                <Link to='/bookings'>
-                  <div className='booking-preview-item'>
-                    { bookingPreview }
-                  </div>
-                  bookings
+              <div className='dash-title'>
+                <Link
+                  to='/bookings'
+                  style={{ textDecoration: 'none', color: 'inherit'}}>
+                  My Travel Plans
                 </Link>
+              </div>
+              <div className='booking-preview-item'>
+                { bookingPreview }
+              </div>
             </section>
           </div>
         </div>

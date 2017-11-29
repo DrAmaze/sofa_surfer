@@ -437,6 +437,7 @@ table.benefits tr:nth-of-type(2n) {
   justify-content: space-around;
   margin-left: 10px;
   margin-right: 10px;
+  width: 100%;
 }
 
 .dashboard h1 {
@@ -507,22 +508,33 @@ table.benefits tr:nth-of-type(2n) {
 .information section {
   height: 220px;
   list-style: none;
+  font-size: 20px;
+
+}
+
+.information section:nth-child(n) {
+  border-bottom: 1px solid #e6e6e6;
+}
+
+
+.dash-title {
+  border-bottom: 1px solid #e6e6e6;
+  width: 110%;
+  padding: 10px 30px;
 }
 
 .spot-preview {
-  position: relative;
+  position: absolute;
   display: flex;
   flex-direction: row;
-  padding:  0 20px;
   font-size: 1em;
   color: white;
-  bottom: 40px;
 }
 
 .spot-preview li span {
-  position: relative;
+  position: absolute;
   color: white;
-  top: 50px;
+  padding: 10px 15px;
   text-decoration: none;
   width: 50%;
 }
@@ -530,6 +542,7 @@ table.benefits tr:nth-of-type(2n) {
 .spot-preview li {
   height: 120px;
   padding: 20px;
+  top: 0px;
 }
 
 .grid-items {
@@ -538,12 +551,15 @@ table.benefits tr:nth-of-type(2n) {
 
 .spot-preview-item {
   width: 30%;
+  text-align: center;
 }
 
 .spot-preview-item img {
   height: 100%;
-  top: 50px;
+  bottom: 50px;
 }
+
+// spot show hosts
 
 .hosts-list {
   margin: 10px 70px;
