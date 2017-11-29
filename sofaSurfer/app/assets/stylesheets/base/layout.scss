@@ -579,10 +579,41 @@ table.benefits tr:nth-of-type(2n) {
   width: 49%;
   margin-bottom: 2%;
   box-shadow: 2px 2px 2px lightgray;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .hosts-list li:nth-of-type(2n) {
   margin-left: 2%;
+}
+
+.hosts-list li img {
+  height: 100%;
+  width:  100%;
+}
+
+.user-image {
+  height: 150px;
+  width: 150px;
+}
+
+.hosts-list li div {
+  width: 45%;
+}
+
+.host-info {
+  padding: 10px;
+}
+
+.host-info h3 {
+  font-weight: bold;
+}
+
+.host-about-me p {
+  position: relative;
+  width: 200%;
+  padding: 10px 10%;
 }
 
 //Locations
@@ -764,6 +795,8 @@ table.benefits tr:nth-of-type(2n) {
   color: gray;
   padding: 10px 20px;
 }
+
+// user list
 
 .booking-form-box nav {
   background-color: lightgray;
