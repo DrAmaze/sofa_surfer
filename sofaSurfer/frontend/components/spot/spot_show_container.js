@@ -2,12 +2,14 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 
 import { fetchSpot } from '../../actions/spot_actions';
-import { selectSpot } from '../../reducers/selectors';
+import { selectSpot, selectAllSpots } from '../../reducers/selectors';
 import SpotShow from './spot_show';
 
 const mapStateToProps = (state, { match }) => {
   const spotId = parseInt(match.params.spotId);
-  const spot = selectSpot(state.entities, match.params.spotId);
+  const spots = selectAllSpots(state);
+  const spot = selectSpot(state.entities, spotId);
+
   return {
     spotId,
     spot

@@ -29,9 +29,9 @@ class Dashboard extends React.Component {
 
       spotsPreview =
         <div className='spot-preview'>
-            <SpotPreviewItem key={spot1.id} spot={spot1}/>
-            <SpotPreviewItem key={spot2.id} spot={spot2} />
-            <SpotPreviewItem key={spot3.id} spot={spot3} />
+          <SpotPreviewItem key={spot1.id} spot={spot1}/>
+          <SpotPreviewItem key={spot2.id} spot={spot2} />
+          <SpotPreviewItem key={spot3.id} spot={spot3} />
         </div>;
     }
 
@@ -78,6 +78,19 @@ class Dashboard extends React.Component {
                 </Link>
               </div>
               <div className='booking-preview-item'>
+                { bookingPreview }
+              </div>
+            </section>
+
+            <section className='box' id='reviews'>
+              <div className='dash-title'>
+                <Link
+                  to='/profile'
+                  style={{ textDecoration: 'none', color: 'inherit'}}>
+                  Reviews
+                </Link>
+              </div>
+              <div className='review-preview-item'>
                 { bookingPreview }
               </div>
             </section>

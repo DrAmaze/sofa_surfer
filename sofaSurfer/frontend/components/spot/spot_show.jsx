@@ -10,11 +10,10 @@ class SpotShow extends React.Component {
     super(props);
     let { spotId } = this.props;
     let spot = this.props.fetchSpot(spotId);
-
   }
 
   render () {
-    let { spotId } = this.props;
+    let { spotId, spot } = this.props;
     return(
       <div className="single-spot-show">
         <br/><br/><br/>

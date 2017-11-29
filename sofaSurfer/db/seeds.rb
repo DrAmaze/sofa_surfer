@@ -8,12 +8,21 @@
 
 # bookings
 
+
+Booking.create!(
+  traveler_id: 1,
+  host_id: 6,
+  location_id: 3,
+  arrival: DateTime.parse("02/01/2018"),
+  departure: DateTime.parse("02/04/2018"),
+)
+
 require 'csv'
 
 csv_text = File.read(Rails.root.join('lib', 'seeds', 'USER_DATA.csv'))
 csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
 csv.each do |row|
-  t = User.create
+  t = User.new
   t.username = row['username']
   t.email = row['email']
   t.phone = row['phone']
@@ -23,8 +32,9 @@ csv.each do |row|
   t.about_me = row['about_me']
   t.street = row['street']
   t.img_url = row['img_url']
-  password = row['password']
+  t.password = 'password'
   t.save
+  puts t.errors.full_messages
   puts "#{t.username} saved"
 end
 
@@ -115,13 +125,4 @@ User.create!(
   about_me: 'I like to rugby',
   password: 'password',
   street: 'mission st',
-)
-
-
-Booking.create!(
-  traveler_id: 1,
-  host_id: 6,
-  location_id: 3,
-  arrival: DateTime.parse("02/01/2018"),
-  departure: DateTime.parse("02/04/2018"),
 )
