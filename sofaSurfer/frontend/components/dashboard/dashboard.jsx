@@ -3,6 +3,7 @@ import { Link, withRouter } from 'react-router-dom';
 
 import SpotPreviewItem from './dashboard_spot_preview';
 import BookingPreviewItem from './dashboard_booking_preview';
+import Search from '../search/search_container';
 
 class Dashboard extends React.Component {
   componentDidMount() {
@@ -21,7 +22,7 @@ class Dashboard extends React.Component {
 
     let { spots } = this.props;
     let spotsPreview;
-    if (this.props.spots.length > 0) {
+    if (this.props.spots.length > 1) {
       let previews = parseInt(Math.random() * 8);
       let spot1 = spots[previews];
       let spot2 = spots[previews+1];

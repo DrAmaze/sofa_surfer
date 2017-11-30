@@ -31,16 +31,3 @@ export const createSpot = spot => dispatch => (
     dispatch(receiveSpot(spot))
   ))
 );
-
-// search
-
-const receiveSearchResults = searchResults => ({
-  type: RECEIVE_SEARCH_RESULTS,
-  searchResults
-});
-
-export const searchLocationDB = query => dispatch => (
-  searchLocationDB(query).then(
-    results => dispatch(receiveSearchResults(results))
-  )
-);

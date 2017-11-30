@@ -5,7 +5,7 @@ import { ProtectedRoute } from '../../util/route_util';
 import BookingSearchForm from '../booking/booking_search_form_container';
 import UserList from '../user/user_list_container';
 
-class SpotShow extends React.Component {
+class SpotShow extends React.Component {  
   componentDidMount () {
     this.props.fetchSpot(this.props.spotId);
   }

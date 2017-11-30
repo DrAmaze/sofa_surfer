@@ -24,9 +24,9 @@ class Location < ApplicationRecord
     foreign_key: :location_id,
     class_name: :User
 
-  def self.top_five_results(query_param)
-    param = '%' + query_param.downcase ='%'
-    Spot.where('lower(neighborhood) LIKE ?', param).limit(5)
+  def self.top_five_results(term)
+    Location
+      .where("neighborhood ILIKE :term", term: "%#{term}%").limit(5)
   end
 
 end

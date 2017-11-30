@@ -5,6 +5,7 @@ import merge from 'lodash/merge';
 import Modal from 'react-modal';
 import LoginForm from '../session_form/login_container';
 import SignupForm from '../session_form/signup_container';
+import Search from '../search/search_container';
 
 
 class Header extends React.Component {
@@ -79,6 +80,9 @@ class Header extends React.Component {
           <span onClick={() => this.props.history.push('/dashboard')}>
             SofaSurfer
           </span>
+        </li>
+        <li>
+          <Search />
         </li>
         <li className='navbar-logged-in'>
           <ul className='navbar-right'>

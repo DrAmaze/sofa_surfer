@@ -19,11 +19,3 @@ export const createSpot = data => (
     data
   })
 );
-
-export const searchLocationDB = query => (
-  $.ajax({
-    method: 'GET',
-    url: `api/location_searches`,
-    data: { search: { query }}
-  })
-);
