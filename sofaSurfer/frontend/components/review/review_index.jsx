@@ -4,7 +4,7 @@ import { Link, withRouter } from 'react-router-dom';
 class ReviewIndex extends React.Component {
   componentDidMount() {
     this.props.fetchReviews(this.props.userId);
-    debugger
+
   }
 
   render () {
