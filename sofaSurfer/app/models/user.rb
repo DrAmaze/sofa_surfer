@@ -65,7 +65,7 @@ class User < ApplicationRecord
 
   def self.search(term)
     User
-      .where("username ILIKE :term OR users.email ILIKE :term OR users.street ILIKE :term", term: "%#{term}%")
+      .where("username ILIKE :term OR email ILIKE :term OR street ILIKE :term OR phone ILIKE :term", term: "%#{term}%")
   end
 
   private

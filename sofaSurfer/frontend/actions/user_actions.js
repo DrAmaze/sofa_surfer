@@ -30,7 +30,7 @@ export const fetchUsers = () => dispatch => (
 );
 
 export const searchUsers = searchTerm => dispatch => (
-  ApiU.fetchSearchResults(searchTerm).then(
+  ApiUtil.searchUsers(searchTerm).then(
     users => dispatch(receiveUsers(users))
   )
 );

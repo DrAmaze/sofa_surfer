@@ -5,9 +5,6 @@ class UserSearch extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      username: '',
-      email: '',
-      street: '',
       searchTerm: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -40,40 +37,32 @@ class UserSearch extends React.Component {
         <div className='user-params'>
           <div className='username'>
             <span>
-              <label> Username </label>
+              <label> Filter Hosts </label>
             </span>
             <input
               type='text'
-              onChange={this.update('username')} />
+              onChange={this.update('searchTerm')} />
           </div>
 
-          <div className='email'>
+          <div className='number-guests'>
             <span>
-              <label> Email </label>
+              <label> # of Travelers </label>
             </span>
-            <input
-              type='text'
-              onChange={this.update('email')} />
+            <select className='num-travelers'>
+              <option value='Any'>Any</option>
+              <option selected='selected' value='1'>1</option>
+              <option value='2'>2</option>
+              <option value='3'>3</option>
+              <option value='4'>4</option>
+              <option value='5'>5</option>
+              <option value='6'>6</option>
+              <option value='7'>7</option>
+              <option value='8'>8</option>
+              <option value='9'>9</option>
+              <option value='10'>10</option>
+            </select>
           </div>
-        </div>
 
-        <div className='number-travelers'>
-          <span>
-            <label> # of Travelers </label>
-          </span>
-          <select className='num-travelers'>
-            <option value='Any'>Any</option>
-            <option selected='selected' value='1'>1</option>
-            <option value='2'>2</option>
-            <option value='3'>3</option>
-            <option value='4'>4</option>
-            <option value='5'>5</option>
-            <option value='6'>6</option>
-            <option value='7'>7</option>
-            <option value='8'>8</option>
-            <option value='9'>9</option>
-            <option value='10'>10</option>
-          </select>
         </div>
 
         <div className='booking-form-button'>
@@ -86,4 +75,4 @@ class UserSearch extends React.Component {
   }
 }
 
-export default UserSearch;
+export default withRouter(UserSearch);

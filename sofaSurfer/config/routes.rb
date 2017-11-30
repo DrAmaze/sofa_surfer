@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     resource :session, only: [:create, :destroy, :show]
     resources :locations, only: [:create, :show, :index]
     resources :bookings, only: [:create, :show, :index, :destroy, :update]
-    post "search", to: 'search#index'
+    post "/users/search", to: 'users#search'
   end
 
   root "static_pages#root"

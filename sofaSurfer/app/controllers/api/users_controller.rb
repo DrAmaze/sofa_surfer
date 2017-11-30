@@ -14,12 +14,13 @@ class Api::UsersController < ApplicationController
   end
 
   def index
+    @users = User.all
     render json: User.all
   end
 
   def search
-    @users = User.search(params[:term]).order(:name)
-    render :index
+    @users = User.search(params[:term]).order(:username)
+    render json: @users
   end
 
   private

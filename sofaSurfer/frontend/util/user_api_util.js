@@ -12,6 +12,14 @@ export const fetchUsers = () => (
   })
 );
 
+export const searchUsers = searchTerm => (
+  $.ajax({
+    method: 'POST',
+    url: 'api/users/search',
+    data: { term: searchTerm }
+  })
+);
+
 export const fetchReviews = (userId) => (
   $.ajax({
     method: 'GET',

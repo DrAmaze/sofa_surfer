@@ -32,7 +32,7 @@ class SpotShow extends React.Component {
           <div className="spot-index-link">
             <Link
               to="/locations"
-              style={{ textDecoration: 'none', color: 'darkgray' }}>
+              style={{ textDecoration: 'none', color: 'darkgray', fontWeight: 'bolder' }}>
               Back to San Francisco ...
             </Link>
           </div>
