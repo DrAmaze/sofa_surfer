@@ -3,6 +3,9 @@ import * as ApiU from '../util/search_api_util';
 
 export const RECEIVE_USER = 'RECEIVE_USER';
 export const RECEIVE_USERS = 'RECEIVE_USERS';
+export const RECEIVE_REVIEWS ='RECEIVE_REVIEWS';
+export const RECEIVE_REVIEW ='RECEIVE_REVIEW';
+export const REMOVE_REVIEW = 'REMOVE_REVIEW';
 
 const receiveUser = user => ({
   type: RECEIVE_USER,
@@ -30,4 +33,39 @@ export const searchUsers = searchTerm => dispatch => (
   ApiU.fetchSearchResults(searchTerm).then(
     users => dispatch(receiveUsers(users))
   )
+);
+
+// reviews
+
+const receiveReview = review => ({
+  type: RECEIVE_REVIEW,
+  review
+});
+
+const receiveReviews = reviews => ({
+  type: RECEIVE_REVIEWS,
+  reviews
+});
+
+const removeReview = review => ({
+  type: REMOVE_REVIEW,
+  review
+});
+
+export const fetchReviews = () => dispatch => (
+  ApiUtil.fetchReviews().then(reviews => (
+    dispatch(receiveReviews(reviews))
+  ))
+);
+
+export const fetchReview = (review) => dispatch => (
+  ApiUtil.fetchReview(review).then(review => (
+    dispatch(receiveReview(review))
+  ))
+);
+
+export const deleteReview = (review) => dispatch => (
+  ApiUtil.removeReview(review).then(review => (
+    dispatch(deleteReview(review))
+  ))
 );

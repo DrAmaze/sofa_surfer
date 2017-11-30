@@ -15,6 +15,7 @@ import Dashboard from './dashboard/dashboard_container';
 import SpotIndex from './spot/spot_index_container';
 import SpotShow from './spot/spot_show_container';
 import Bookings from './booking/booking_container';
+import Profile from './review/review_container';
 
 const ScrollToTop = () => {
   window.scrollTo(0, 0);
@@ -33,6 +34,7 @@ const App = () => (
       <ProtectedRoute path="/locations/:spotId" component={SpotShow} />
       <ProtectedRoute path='/locations' component={SpotIndex} />
       <ProtectedRoute path='/bookings' component={Bookings} />
+      <ProtectedRoute path='/profile' component={Profile} />
 
 
     </Switch>

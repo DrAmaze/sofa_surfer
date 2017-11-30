@@ -1,1 +1,1 @@
-json.extract! location, :id, :street, :neighborhood, :img_url
+json.extract! location, :id, :neighborhood, :img_url
