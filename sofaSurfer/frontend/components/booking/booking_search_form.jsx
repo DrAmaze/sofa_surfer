@@ -115,4 +115,4 @@ class BookingSearchForm extends React.Component {
   }
 }
 
-export default withRouter(BookingSearchForm);
+export default BookingSearchForm;

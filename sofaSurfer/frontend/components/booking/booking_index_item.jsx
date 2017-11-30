@@ -1,17 +1,29 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 
-const BookingIndexItem = ({ booking }) => (
-  <li className="booking-index-item">
-    <Link
-      to={`/bookings/${booking.id}`}
-      style={{ textDecoration: 'inherit', color: 'inherit' }}>
-      <span className='booking-index-item-location'>
-        ARR: {booking.arrival}
-        DEP: {booking.departure}
-      </span>
-    </Link>
-  </li>
-);
+class BookingIndexItem extends React.Component {
 
-export default withRouter(BookingIndexItem);
+  render () {
+  let { spot, user, booking } = this.props;
+    return(
+      <li className="booking-index-item">
+        <div>
+          <h2>Trip to { booking.location_id }</h2>
+          <section>
+            <div> ARR: {booking.arrival.toString().slice(0,10)}</div>
+            <div> DEP: {booking.departure.toString().slice(0,10)}</div>
+          </section>
+        </div>
+
+        <div>
+          <p>
+            { booking.description }
+          </p>
+        </div>
+      </li>
+    );
+  }
+}
+
+
+export default BookingIndexItem;

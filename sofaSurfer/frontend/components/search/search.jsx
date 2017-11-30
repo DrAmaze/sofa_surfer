@@ -7,48 +7,36 @@ class Search extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      searchQuery: '',
-      users: this.props.users,
-      spots: this.props.spots
+      users: '',
+      spots: '',
+      searchTerm: ''
     };
-    this.handleSearch = this.handleSearch.bind(this);
-    this.startSearch = this.startSearch.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  componentDidMount() {
-    this.props.clearSearch();
+  handleInput(type) {
+    return (e) => {
+      this.setState({ [type]: e.target.value });
+    };
   }
 
-  componentWillReceiveProps(nextProps) {
-    this.setState({ users: nextProps.users, spots: nextProps.spots });
-  }
-
-  handleSearch(e) {
+  handleSubmit(e) {
     e.preventDefault();
-    this.setState({
-      searchQuery: e.currentTarget.value,
-    });
-  }
-
-  startSearch() {
-    const data = { search: { term: this.state.searchQuery } };
-    if (this.state.searchQuery === "") {
-      this.props.clearSearch();
-    } else {
-      this.props.fetchSearchResults(data);
-    }
+    this.props.fetchSearchResults(this.state.searchTerm).then(() =>
+      this.props.history.push('/search')
+    );
   }
 
   render() {
     return (
       <nav className="search">
         <h3 className="view-header">SEARCH</h3>
-        <form>
+        <form className='search-form' onSubmit={this.handleSubmit}>
           <input
-            type="text"
-            ref={(input) => { this.searchInput = input; }}
-            onChange={this.handleSearch}
-            value={this.state.searchQuery}
+            type="search"
+            onChange={this.handleInput('searchTerm')}
+            onSubmit={this.handleSubmit}
+            value={this.state.searchTerm}
             className="search-bar"
             placeholder="Start typing..."
           />

@@ -27,6 +27,7 @@ class SignupForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    this.props.clearSessionErrors();
     const user = this.state;
     this.props.processForm({ user }).then(() => this.props.closeModal());
   }

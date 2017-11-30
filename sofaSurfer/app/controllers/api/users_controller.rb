@@ -17,6 +17,11 @@ class Api::UsersController < ApplicationController
     render json: User.all
   end
 
+  def search
+    @users = User.search(params[:term]).order(:name)
+    render :index
+  end
+
   private
 
   def user_params

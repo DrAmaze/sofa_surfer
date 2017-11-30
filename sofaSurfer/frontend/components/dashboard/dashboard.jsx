@@ -8,6 +8,7 @@ import Search from '../search/search_container';
 class Dashboard extends React.Component {
   componentDidMount() {
     this.props.fetchSpots();
+    this.props.fetchBookings();
   }
 
   render () {
@@ -40,9 +41,11 @@ class Dashboard extends React.Component {
     let bookingPreview;
     if (this.props.bookings.length > 0) {
       bookingPreview =
-        <div className='spot-preview'>
+        <ul className='booking-preview'>
           <BookingPreviewItem key={bookings[0].id} booking={bookings[0]}/>
-        </div>;
+          <BookingPreviewItem key={bookings[1].id} booking={bookings[1]}/>
+          <BookingPreviewItem key={bookings[2].id} booking={bookings[2]}/>
+        </ul>;
     }
 
     return (

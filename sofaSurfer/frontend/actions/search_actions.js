@@ -23,11 +23,7 @@ export const startSearching = () => ({
   type: START_SEARCHING,
 });
 
-export const fetchSearchResults = search => dispatch => {
-  dispatch(startSearching());
-  return ApiUtil.fetchSearchResults(search).then(results => (
-    dispatch(receiveSpotSearch(results)).then(results => (
-      dispatch(receiveUserSearch(results)))
-    ))
-  );
-};
+export const fetchSearchResults = searchTerm => dispatch => (
+  ApiUtil.fetchSearchResults(searchTerm).then(results => (
+    dispatch(receiveSpotSearch(results)))
+));

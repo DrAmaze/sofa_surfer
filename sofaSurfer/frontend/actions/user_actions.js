@@ -1,4 +1,5 @@
 import * as ApiUtil from '../util/user_api_util';
+import * as ApiU from '../util/search_api_util';
 
 export const RECEIVE_USER = 'RECEIVE_USER';
 export const RECEIVE_USERS = 'RECEIVE_USERS';
@@ -23,4 +24,10 @@ export const fetchUsers = () => dispatch => (
   ApiUtil.fetchUsers().then(users => (
     dispatch(receiveUsers(users))
   ))
+);
+
+export const searchUsers = searchTerm => dispatch => (
+  ApiU.fetchSearchResults(searchTerm).then(
+    users => dispatch(receiveUsers(users))
+  )
 );

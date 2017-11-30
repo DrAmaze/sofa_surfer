@@ -9,7 +9,8 @@ class Booking extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      modalOpen: false
+      modalOpen: false,
+      formType: ''
     };
     this.closeModal = this.closeModal.bind(this);
     this.openModal = this.openModal.bind(this);
@@ -32,13 +33,23 @@ class Booking extends React.Component {
     this.setState({ modalOpen: true, formType: 'createBooking' });
   }
 
-  render () {
+  handleUpdateBooking(e) {
+    e.preventDefault();
+      this.setState({ modalOpen: true, formType: 'updateBooking' });
+  }
 
+  handleDeleteBooking(e) {
+    e.preventDefault();
+      this.setState({ modalOpen: true, formType: 'deleteBooking' });
+  }
+
+  render () {
     let { bookings } = this.props;
 
     if (this.props.bookings) {
       bookings = bookings.map(booking =>
         <BookingIndexItem
+          fetchSpot={this.props.fetchSpot}
           key={booking.id}
           booking={booking} />
     );
@@ -75,26 +86,35 @@ class Booking extends React.Component {
       handleNewBooking={this.handleNewBooking} />;
 
     return (
-      <div className='bookings'>
+      <div>
         <br/><br/><br/>
-        <h1>These are your current bookings</h1>
-        <div onClick={this.openModal}>
-          yooooo
+        <div className='bookings'>
+          <section className='bookings-index'>
+            <h1>Public Trips</h1>
+            <ul>
+              {bookings}
+            </ul>
+          </section>
+
+          <section className='create-trip'>
+            <h3>Create a Trip</h3>
+            <button
+              className='search-color-button'
+              onClick={this.openModal}>
+              New Trip
+            </button>
+          </section>
+
+          <Modal
+            className='booking-modal'
+            isOpen={this.state.modalOpen}
+            onRequestClose={this.closeModal}
+            shouldCloseOnOverlayClick={true}
+            shouldCloseOnEsc={true}
+            style={style}>
+            {book}
+          </Modal>
         </div>
-        <section className='bookings-index'>
-          <ul>
-            {bookings}
-          </ul>
-        </section>
-        <Modal
-          className='booking-modal'
-          isOpen={this.state.modalOpen}
-          onRequestClose={this.closeModal}
-          shouldCloseOnOverlayClick={true}
-          shouldCloseOnEsc={true}
-          style={style}>
-          {book}
-        </Modal>
       </div>
     );
   }

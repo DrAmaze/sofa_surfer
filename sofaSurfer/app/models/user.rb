@@ -61,9 +61,9 @@ class User < ApplicationRecord
     self.session_token
   end
 
-  def self.top_five_results(term)
+  def self.search(term)
     User
-      .where("users.username ILIKE :term OR users.email ILIKE :term OR users.street ILIKE :term", term: "%#{term}%").limit(5)
+      .where("username ILIKE :term OR users.email ILIKE :term OR users.street ILIKE :term", term: "%#{term}%")
   end
 
   private

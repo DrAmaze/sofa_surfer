@@ -3,8 +3,8 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 import BookingIndex from './booking_index';
 
-import { fetchSpot } from '../../actions/spot_actions';
 import { selectMyBookings } from '../../reducers/selectors';
+import { fetchSpot } from '../../actions/spot_actions';
 import {
   fetchBookings,
   fetchBooking
@@ -13,14 +13,14 @@ import {
 
 const mapStateToProps = state => {
   return {
-    spots: selectMyBookings(state),
+    bookings: selectMyBookings(state),
   };
 };
 
 const mapDispatchToProps = dispatch => ({
   fetchBookings: () => dispatch(fetchBookings()),
   fetchBooking: spot => dispatch(fetchBooking(spot)),
-  fetchSpot: spot => dispatch(fetchSpot)
+  fetchSpot: spotId => dispatch(fetchSpot(spotId))
 });
 
 export default withRouter(connect(

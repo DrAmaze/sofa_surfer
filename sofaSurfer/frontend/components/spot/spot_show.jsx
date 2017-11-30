@@ -2,10 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import { ProtectedRoute } from '../../util/route_util';
-import BookingSearchForm from '../booking/booking_search_form_container';
+import UserSearchForm from '../user/user_search_form_container';
 import UserList from '../user/user_list_container';
 
-class SpotShow extends React.Component {  
+class SpotShow extends React.Component {
   componentDidMount () {
     this.props.fetchSpot(this.props.spotId);
   }
@@ -36,7 +36,7 @@ class SpotShow extends React.Component {
               Back to San Francisco ...
             </Link>
           </div>
-          <BookingSearchForm />
+          <UserSearchForm />
 
           <UserList />
         </div>

@@ -24,7 +24,7 @@ class Location < ApplicationRecord
     foreign_key: :location_id,
     class_name: :User
 
-  def self.top_five_results(term)
+  def self.search(term)
     Location
       .where("neighborhood ILIKE :term", term: "%#{term}%").limit(5)
   end

@@ -11,7 +11,6 @@ import {
 const mapStateToProps = state => ({
   users: selectAllUsers(state),
   spots: selectAllSpots(state),
-  fetching: state.fetching,
 });
 
 const mapDispatchToProps = dispatch => ({

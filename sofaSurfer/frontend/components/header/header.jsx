@@ -87,8 +87,8 @@ class Header extends React.Component {
         <li className='navbar-logged-in'>
           <ul className='navbar-right'>
             <li>
-              <span onClick={() => this.toggleHosting}>
-                Hosting
+              <span onClick={() => this.props.history.push('/profile')}>
+                Reviews
               </span>
             </li>
             <li>
