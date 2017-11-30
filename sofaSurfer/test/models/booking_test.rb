@@ -8,6 +8,7 @@
 #  location_id :integer          not null
 #  arrival     :datetime         not null
 #  departure   :datetime         not null
+#  description :text
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #

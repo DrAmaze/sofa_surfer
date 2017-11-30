@@ -10,6 +10,8 @@
 #  hosting         :boolean
 #  location_id     :string
 #  about_me        :text
+#  street          :string
+#  img_url         :string
 #  password_digest :string           not null
 #  session_token   :string           not null
 #  created_at      :datetime         not null

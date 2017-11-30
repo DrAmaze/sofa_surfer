@@ -12,7 +12,7 @@ class Dashboard extends React.Component {
   }
 
   render () {
-    let { username, location, hosting } = this.props.currentUser;
+    let { username, location, hosting, img_url } = this.props.currentUser;
 
     let guests;
     if (hosting) {
@@ -48,17 +48,25 @@ class Dashboard extends React.Component {
         </ul>;
     }
 
+    let image;
+    if (img_url) {
+      image = <img src={img_url} alt='user image' />;
+    } else {
+      image = <img src='https://staticcdn.selio.com/adoos-static/img/user_default.png' alt='blank image' />;
+    }
+
     return (
       <div>
         <br/><br/><br/>
         <div className='dashboard'>
           <section className='user'>
+            <Link
+              to='/profile'
+              style={{ textDecoration: 'none', color: 'inherit'}}>
+              {image}
+            </Link>
             <h3 className='user-dashboard'>
-              <Link
-                to='/profile'
-                style={{ textDecoration: 'none', color: 'inherit'}}>
-                {username}
-              </Link>
+              {username}
             </h3>
             <br/>
             <h3 className='home'> San Francisco, CA, USA </h3>
@@ -101,7 +109,7 @@ class Dashboard extends React.Component {
                 </Link>
               </div>
               <div className='review-preview-item'>
-                { bookingPreview }
+
               </div>
             </section>
           </div>
