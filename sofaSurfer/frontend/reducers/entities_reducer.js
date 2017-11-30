@@ -8,7 +8,6 @@ import reviews from './reviews_reducer';
 
 export default combineReducers({
   spots,
-  searches,
   bookings,
   users
 });

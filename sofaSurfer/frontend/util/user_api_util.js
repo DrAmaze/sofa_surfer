@@ -12,32 +12,32 @@ export const fetchUsers = () => (
   })
 );
 
-export const fetchReviews = (user) => (
+export const fetchReviews = (userId) => (
   $.ajax({
     method: 'GET',
-    url: `api/users/${user.id}/reviews`,
+    url: `api/users/${userId}/reviews`,
   })
 );
 
-export const createReview = (user, review) => (
+export const createReview = (userId, review) => (
   $.ajax({
     method: 'POST',
-    url: `api/users/${user.id}/reviews`,
+    url: `api/users/${userId}/reviews`,
     review
   })
 );
 
-export const updateReview = (user, review) => (
+export const updateReview = (userId, review) => (
   $.ajax({
     method: 'PATCH',
-    url: `api/users/${user.id}/reviews/${review.id}`,
+    url: `api/users/${userId}/reviews/${review.id}`,
     review
   })
 );
 
-export const deleteReview = (user, review) => (
+export const deleteReview = (userId, reviewId) => (
   $.ajax({
     method: 'DELETE',
-    url: `api/users/${user.id}/reviews/${review.id}`,
+    url: `api/users/${userId}/reviews/${reviewId}`,
   })
 );

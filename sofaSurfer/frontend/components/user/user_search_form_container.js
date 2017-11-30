@@ -1,6 +1,6 @@
-import React from 'React';
+import React from 'react';
 import { connect } from 'react-redux';
-import UserSearch from './user_search_form';
+import UserSearchForm from './user_search_form';
 import { searchUsers }from '../../actions/user_actions';
 
 const mapStateToProps = (state) => ({
@@ -14,4 +14,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(UserSearch);
+)(UserSearchForm);

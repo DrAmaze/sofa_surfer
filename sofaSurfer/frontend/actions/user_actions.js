@@ -58,11 +58,18 @@ export const fetchReviews = () => dispatch => (
   ))
 );
 
-export const fetchReview = (review) => dispatch => (
-  ApiUtil.fetchReview(review).then(review => (
+export const createReview = (review) => dispatch => (
+  ApiUtil.createReview(review).then(review => (
     dispatch(receiveReview(review))
   ))
 );
+
+export const updateReview = (review) => dispatch => (
+  ApiUtil.updateReview(review).then(review => (
+    dispatch(receiveReview(review))
+  ))
+);
+
 
 export const deleteReview = (review) => dispatch => (
   ApiUtil.removeReview(review).then(review => (

@@ -9,4 +9,6 @@ export const selectSpot = ({ spots }, id) => {
 
 export const selectMyBookings = state => values(state.entities.bookings);
 
+export const selectMyReviews = state => values(state.entities.reviews);
+
 export const selectAllUsers = state => values(state.entities.users);
