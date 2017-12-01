@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 import Header from './header';
 import { logout } from '../../actions/session_actions';
-import { updateUser } from '../../actions/user_actions';
+import { clearSearch } from '../../actions/search_actions';
 
 const mapStateToProps = state => ({
   currentUser: state.session.currentUser
@@ -11,7 +11,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   logout: () => dispatch(logout()),
-  updateUser: user => dispatch(updateUser(user))
+  clearSearch: () => dispatch(clearSearch())
 });
 
 export default withRouter(connect(

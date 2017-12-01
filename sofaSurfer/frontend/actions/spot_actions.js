@@ -31,3 +31,9 @@ export const createSpot = spot => dispatch => (
     dispatch(receiveSpot(spot))
   ))
 );
+
+export const searchSpots = searchTerm => dispatch => (
+  ApiUtil.searchSpots(searchTerm).then(
+    spots => dispatch(receiveSpots(spots))
+  )
+);

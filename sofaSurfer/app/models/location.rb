@@ -25,7 +25,7 @@ class Location < ApplicationRecord
 
   def self.search(term)
     Location
-      .where("neighborhood ILIKE :term", term: "%#{term}%").limit(5)
+      .where("neighborhood ILIKE :term", term: "%#{term}%")
   end
 
 end

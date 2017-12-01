@@ -19,7 +19,13 @@ class Api::LocationsController < ApplicationController
   end
 
   def index
-    render json: Location.all
+    @locations = Location.all
+    render :index
+  end
+
+  def search
+    @locations = Location.search(params[:term]).order(:neighborhood)
+    render 'api/locations/index'
   end
 
   private

@@ -23,30 +23,48 @@ class Dashboard extends React.Component {
 
     let { spots } = this.props;
     let spotsPreview;
-    if (this.props.spots.length > 1) {
-      let previews = parseInt(Math.random() * 8);
+
+    if (this.props.spots.length > 0) {
+      let previews = parseInt(Math.random() * 7);
       let spot1 = spots[previews];
       let spot2 = spots[previews+1];
       let spot3 = spots[previews+2];
 
-      spotsPreview =
+      spotsPreview = spots.length > 3 ?
         <div className='spot-preview'>
           <SpotPreviewItem key={spot1.id} spot={spot1}/>
           <SpotPreviewItem key={spot2.id} spot={spot2} />
           <SpotPreviewItem key={spot3.id} spot={spot3} />
-        </div>;
+        </div> : '';
     }
 
     let { bookings } = this.props;
     let bookingPreview;
-    if (this.props.bookings.length > 0) {
-
+    if (bookings.length > 0) {
+      if (bookings.length === 1) {
+        bookingPreview =
+          <ul className='booking-preview'>
+            <BookingPreviewItem key={bookings[0].id} booking={bookings[0]}/>
+          </ul>;
+      } else if (bookings.length === 2) {
+        bookingPreview =
+          <ul className='booking-preview'>
+            <BookingPreviewItem key={bookings[0].id} booking={bookings[0]}/>
+            <BookingPreviewItem key={bookings[1].id} booking={bookings[1]}/>
+          </ul>;
+      } else {
       bookingPreview =
         <ul className='booking-preview'>
           <BookingPreviewItem key={bookings[0].id} booking={bookings[0]}/>
           <BookingPreviewItem key={bookings[1].id} booking={bookings[1]}/>
-
+          <BookingPreviewItem key={bookings[2].id} booking={bookings[2]}/>
         </ul>;
+      }
+    } else {
+      bookingPreview =
+        <div>
+          You do not have any scheduled trips!
+        </div>;
     }
 
     let image;

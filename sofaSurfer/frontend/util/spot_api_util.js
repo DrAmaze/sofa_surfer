@@ -19,3 +19,11 @@ export const createSpot = data => (
     data
   })
 );
+
+export const searchSpots = searchTerm => (
+  $.ajax({
+    method: 'POST',
+    url: 'api/locations/search',
+    data: { term: searchTerm }
+  })
+);

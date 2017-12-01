@@ -7,14 +7,12 @@ class Search extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      users: '',
-      spots: '',
       searchTerm: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleInput(type) {
+  update(type) {
     return (e) => {
       this.setState({ [type]: e.target.value });
     };
@@ -22,9 +20,11 @@ class Search extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.fetchSearchResults(this.state.searchTerm).then(() =>
-      this.props.history.push('/search')
-    );
+    this.props.searchSpots(this.state.searchTerm).then(
+      () => this.props.searchUsers(this.state.searchTerm)
+    ).then(
+      () => this.props.history.push('/search')
+    ).then(() => this.setState({ searchTerm: '' }));
   }
 
   render() {
@@ -34,12 +34,15 @@ class Search extends React.Component {
         <form className='search-form' onSubmit={this.handleSubmit}>
           <input
             type="search"
-            onChange={this.handleInput('searchTerm')}
+            onChange={this.update('searchTerm')}
             onSubmit={this.handleSubmit}
             value={this.state.searchTerm}
             className="search-bar"
             placeholder="Start typing..."
           />
+        <button className='search-button' type='submit'>
+          <i className="fa fa-search" aria-hidden="true"></i>
+        </button>
         </form>
       </nav>
     );

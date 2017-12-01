@@ -22,6 +22,10 @@ class Header extends React.Component {
     this.handleLogIn = this.handleLogIn.bind(this);
   }
 
+  componentWillMount () {
+    this.props.clearSearch();
+  }
+
   closeModal() {
     this.setState({ modalOpen: false });
   }
@@ -82,7 +86,10 @@ class Header extends React.Component {
           </span>
         </li>
         <li>
-          <Search />
+          <Search onClick={() => {
+              this.props.history.push('/search');
+              this.props.clearSearch();
+            }} />
         </li>
         <li className='navbar-logged-in'>
           <ul className='navbar-right'>

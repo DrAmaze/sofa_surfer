@@ -9,7 +9,6 @@ class SpotIndex extends React.Component {
   }
 
   render () {
-
     let { spots } = this.props;
 
     if (this.props.spots) {
