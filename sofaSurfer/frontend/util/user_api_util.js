@@ -20,6 +20,14 @@ export const searchUsers = searchTerm => (
   })
 );
 
+export const updateUser = user => (
+  $.ajax({
+    method: 'PATCH',
+    url: `api/user/${user.id}`,
+    data: { user }
+  })
+);
+
 export const fetchReviews = (userId) => (
   $.ajax({
     method: 'GET',

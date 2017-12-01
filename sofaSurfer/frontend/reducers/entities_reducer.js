@@ -10,5 +10,6 @@ export default combineReducers({
   spots,
   bookings,
   users,
+  reviews,
   search
 });

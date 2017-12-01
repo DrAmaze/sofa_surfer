@@ -15,7 +15,7 @@ import Dashboard from './dashboard/dashboard_container';
 import SpotIndex from './spot/spot_index_container';
 import SpotShow from './spot/spot_show_container';
 import Bookings from './booking/booking_container';
-import Profile from './review/review_container';
+import Profile from './profile/profile_container';
 import Search from './search/search_results_container';
 import Footer from './header/footer';
 
@@ -36,6 +36,7 @@ const App = () => (
       <ProtectedRoute path="/locations/:spotId" component={SpotShow} />
       <ProtectedRoute path='/locations' component={SpotIndex} />
       <ProtectedRoute path='/bookings' component={Bookings} />
+      <ProtectedRoute path='/users/:userId' component={Profile} />
       <ProtectedRoute path='/profile' component={Profile} />
       <ProtectedRoute path='/search' component={Search} />
 

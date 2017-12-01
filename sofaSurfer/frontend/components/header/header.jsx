@@ -95,7 +95,7 @@ class Header extends React.Component {
           <ul className='navbar-right'>
             <li>
               <span onClick={() => this.props.history.push('/profile')}>
-                Reviews
+                Profile
               </span>
             </li>
             <li>

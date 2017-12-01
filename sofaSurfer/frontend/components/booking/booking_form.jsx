@@ -21,6 +21,10 @@ class BookingForm extends React.Component {
     this.props.fetchSpots();
   }
 
+  componentWillMount () {
+    this.props.clearBookingErrors();
+  }
+
   update(field) {
     return e => this.setState({
       [field]: e.target.value
@@ -29,6 +33,7 @@ class BookingForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    this.props.clearBookingErrors();
     const booking = this.state;
     this.props.createBooking({ booking })
     .then(() => this.props.closeModal());

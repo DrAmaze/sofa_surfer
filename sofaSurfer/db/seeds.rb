@@ -71,7 +71,7 @@ User.create!(
   about_me: 'I am a generic user with generic interests and generic friends',
   password: 'password',
   street: 'beautiful rd',
-  img_url: 'http://www.marletinc.com/wp-content/uploads/2017/09/demo-user.png'
+  img_url: 'http://www.iconninja.com/files/411/435/758/casual-girl-user-female-avatar-person-icon.svg'
 )
 
 User.create!(

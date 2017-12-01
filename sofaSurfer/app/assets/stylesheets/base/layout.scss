@@ -963,6 +963,21 @@ table.benefits tr:nth-of-type(2n) {
   padding: 0 10px;
 }
 
+.hosted {
+  display: block;
+  position: relative;
+
+}
+
+.hosted h3 {
+  position: relative;
+  float: right;
+  margin-right: 20%;
+  margin-bottom: 30px;
+}
+
+// create modal
+
 .create-trip {
   background-color: white;
   box-shadow: 2px 2px 2px lightgray;
