@@ -6,12 +6,15 @@ import BookingIndex from './booking_index';
 import { selectMyBookings } from '../../reducers/selectors';
 import { fetchSpot } from '../../actions/spot_actions';
 import {
+  updateBooking,
   fetchBookings,
   fetchBooking
 } from '../../actions/booking_actions';
+import { fetchUsers } from '../../actions/user_actions';
 
 
 const mapStateToProps = state => {
+
   return {
     bookings: selectMyBookings(state),
   };
@@ -20,7 +23,9 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => ({
   fetchBookings: () => dispatch(fetchBookings()),
   fetchBooking: spot => dispatch(fetchBooking(spot)),
-  fetchSpot: spotId => dispatch(fetchSpot(spotId))
+  updateBooking: booking => dispatch(updateBooking(booking)),
+  fetchSpot: spotId => dispatch(fetchSpot(spotId)),
+  fetchUsers: () => dispatch(fetchUsers())
 });
 
 export default withRouter(connect(

@@ -24,8 +24,8 @@ class UserSearchResultItem extends React.Component {
           {image}
         </div>
         <div className='basic-user-info'>
-          <h3> Username: { username }</h3>
-          <h3> Email: { email } </h3>
+          <h3> Username: </h3><p>{ username }</p>
+          <h3> Email: </h3><p>{ email } </p>
         </div>
       </li>
     );

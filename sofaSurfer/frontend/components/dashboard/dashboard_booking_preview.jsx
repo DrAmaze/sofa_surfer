@@ -11,7 +11,6 @@ const BookingPreviewItem = ({ booking }) => (
         <div> ARR: {booking.arrival.toString().slice(0,10)}</div>
         <div> DEP: {booking.departure.toString().slice(0,10)}</div>
       </section>
-
     </Link>
   </li>
 );

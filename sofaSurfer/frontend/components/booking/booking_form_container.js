@@ -2,18 +2,20 @@ import { connect } from 'react-redux';
 
 import BookingForm from './booking_form';
 import { createBooking, updateBooking, deleteBooking, fetchBookings } from '../../actions/booking_actions';
-import { fetchUser } from '../../actions/user_actions';
+import { fetchUsers } from '../../actions/user_actions';
+import { fetchSpots } from '../../actions/spot_actions';
 import { clearSessionErrors } from '../../actions/error_actions';
 
 const mapStateToProps = state => ({
-  errors: state.errors.session_errors
+  currentUser: state.session.currentUser
 });
 
 const mapDispatchToProps = dispatch => ({
   createBooking: booking => dispatch(createBooking(booking)),
   updateBooking: booking => dispatch(updateBooking(booking)),
   deleteBooking: booking => dispatch(deleteBooking(booking)),
-  fetchUser: id => dispatch(fetchUser(id)),
+  fetchSpots: () => dispatch(fetchSpots()),
+  fetchUsers: id => dispatch(fetchUsers(id)),
 });
 
 export default connect(

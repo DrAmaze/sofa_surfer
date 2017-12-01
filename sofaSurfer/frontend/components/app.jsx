@@ -17,6 +17,7 @@ import SpotShow from './spot/spot_show_container';
 import Bookings from './booking/booking_container';
 import Profile from './review/review_container';
 import Search from './search/search_results_container';
+import Footer from './header/footer';
 
 const ScrollToTop = () => {
   window.scrollTo(0, 0);
@@ -38,8 +39,10 @@ const App = () => (
       <ProtectedRoute path='/profile' component={Profile} />
       <ProtectedRoute path='/search' component={Search} />
 
-
     </Switch>
+    <footer>
+      <Footer />
+    </footer>
   </div>
 );
 

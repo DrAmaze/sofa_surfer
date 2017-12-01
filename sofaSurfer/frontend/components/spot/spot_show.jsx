@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import { ProtectedRoute } from '../../util/route_util';
-import UserSearchForm from '../user/user_search_form_container';
+import UserSearchFormContainer from '../user/user_search_form_container';
 import UserList from '../user/user_list_container';
 
 class SpotShow extends React.Component {
@@ -36,7 +36,7 @@ class SpotShow extends React.Component {
               Back to San Francisco ...
             </Link>
           </div>
-          <UserSearchForm />
+          <UserSearchFormContainer />
 
           <UserList />
         </div>

@@ -1,24 +1,22 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
+import Modal from 'react-modal';
 
-
-class BookingForm extends React.Component {
+class BookingUpdateForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      id: this.props.booking.id,
       traveler_id: this.props.currentUser.id,
-      host_id: 0,
-      location_id: 0,
-      arrival: '',
-      departure: '',
-      description: ''
+      host_id: this.props.booking.host_id,
+      location_id: this.props.booking.location_id,
+      arrival: this.props.booking.arrival.toString().slice(0,10),
+      departure: this.props.booking.departure.toString().slice(0,10),
+      description: this.props.booking.decription
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.renderErrors = this.renderErrors.bind(this);
-  }
-
-  componentDidMount () {
-    this.props.fetchSpots();
+    this.handleDeletion = this.handleDeletion.bind(this);
   }
 
   update(field) {
@@ -29,8 +27,23 @@ class BookingForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    const booking = this.state;
-    this.props.createBooking({ booking })
+    let booking = {
+      id: this.props.booking.id,
+      traveler_id: this.props.currentUser.id,
+      host_id: parseInt(this.state.host_id),
+      location_id: parseInt(this.state.location_id),
+      arrival: new Date(this.state.arrival),
+      departure: new Date(this.state.departure),
+      description: this.state.decription
+    };
+    this.props.updateBooking(booking)
+    .then(() => this.props.closeModal());
+  }
+
+  handleDeletion(e) {
+    e.preventDefault();
+    let bookingId = this.props.booking.id;
+    this.props.deleteBooking(bookingId)
     .then(() => this.props.closeModal());
   }
 
@@ -49,12 +62,13 @@ class BookingForm extends React.Component {
   }
 
   render () {
+    const { deleteBooking } = this.props;
     return (
       <div className="booking-form-container">
         <form onSubmit={this.handleSubmit} className="booking-form-box">
           <nav className='login-head'>
             <div>
-              <h4>Create a Trip</h4>
+              <h4>Update Trip to the {this.props.booking.spot}</h4>
               <span
                 onClick={this.props.closeModal}
                 className="login-form-close">
@@ -76,16 +90,16 @@ class BookingForm extends React.Component {
                 onChange={this.update('location_id')}>
                 <option selected='selected'> e.g. Presidio
                 </option>
-                <option value='1'>presidio</option>
-                <option value='2'>fisherman's wharf</option>
-                <option value='3'>chinatown</option>
-                <option value='4'>mission</option>
-                <option value='5'>castro</option>
-                <option value='6'>financial</option>
-                <option value='7'>sunset</option>
-                <option value='8'>richmond</option>
-                <option value='9'>haight</option>
-                <option value='10'>tenderloin</option>
+                <option value={1}>presidio</option>
+                <option value={2}>fisherman's wharf</option>
+                <option value={3}>chinatown</option>
+                <option value={4}>mission</option>
+                <option value={5}>castro</option>
+                <option value={6}>financial</option>
+                <option value={7}>sunset</option>
+                <option value={8}>richmond</option>
+                <option value={9}>haight</option>
+                <option value={10}>tenderloin</option>
               </select>
             </label>
             <br/><br/>
@@ -116,6 +130,7 @@ class BookingForm extends React.Component {
               <br/>
               <input type="number"
                 min='1'
+                value={this.state.host}
                 onChange={this.update('host_id')}
                 placeholder={'1'}
                 className="booking-input"/>
@@ -125,6 +140,7 @@ class BookingForm extends React.Component {
               Trip Description
               <br/>
               <input type="text"
+                value={this.state.description}
                 className="booking-input"
                 onChange={this.update('description')}
                 placeholder={'Tell locals about your trip and why they should meet or host you'}
@@ -139,10 +155,9 @@ class BookingForm extends React.Component {
               className='create-button'
               onClick={this.closeModal}
               type="submit"
-              value="Create">Create</button>
+              value="Update">Update</button>
             <button className='booking-cancel'
-              type="reset"
-              onClick={this.closeModal}>Cancel</button>
+              onClick={this.handleDeletion}>Delete</button>
           </footer>
         </form>
       </div>
@@ -150,4 +165,4 @@ class BookingForm extends React.Component {
   }
 }
 
-export default withRouter(BookingForm);
+export default withRouter(BookingUpdateForm);

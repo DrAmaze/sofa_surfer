@@ -16,9 +16,10 @@ class Booking extends React.Component {
     this.openModal = this.openModal.bind(this);
     this.handleNewBooking = this.handleNewBooking.bind(this);
   }
+
   componentDidMount() {
-    console.log(this.props)
     this.props.fetchBookings();
+    this.props.fetchUsers();
   }
 
   closeModal() {
@@ -31,17 +32,7 @@ class Booking extends React.Component {
 
   handleNewBooking(e) {
     e.preventDefault();
-    this.setState({ modalOpen: true, formType: 'createBooking' });
-  }
-
-  handleUpdateBooking(e) {
-    e.preventDefault();
-      this.setState({ modalOpen: true, formType: 'updateBooking' });
-  }
-
-  handleDeleteBooking(e) {
-    e.preventDefault();
-      this.setState({ modalOpen: true, formType: 'deleteBooking' });
+    this.setState({ modalOpen: true });
   }
 
   render () {

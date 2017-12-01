@@ -8,6 +8,27 @@ body {
 
 // navbar
 
+.footer {
+  background-color: #ed6504;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: 36px;
+  overflow: hidden;
+  font-size: 24px;
+}
+
+.footer a {
+  color: white;
+  margin-left: 10px;
+}
+
+.footer a:hover {
+  cursor: pointer;
+  color: lightgray;
+}
+
+
 .header-container {
   border-bottom: 2px solid lightgray;
   background-color: white;
@@ -892,6 +913,7 @@ table.benefits tr:nth-of-type(2n) {
   flex: 5 0 0;
   background-color: white;
   box-shadow: 2px 2px 2px lightgray;
+  min-width: 600px;
 }
 
 .bookings-index h1 {
@@ -916,6 +938,29 @@ table.benefits tr:nth-of-type(2n) {
 
 .bookings-index ul li:last-of-type {
   border-bottom: none;
+}
+
+.booking-index-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.booking-index-item div {
+  display: inline-block;
+  width: 30%
+}
+
+.booking-index-item button {
+  float: right;
+  margin-right: 20%;
+}
+
+.booking-description {
+  padding: 0 80px;
+}
+
+.arr-dep-book div {
+  padding: 0 10px;
 }
 
 .create-trip {
@@ -1059,7 +1104,18 @@ table.benefits tr:nth-of-type(2n) {
 
 .user-search-result-item div {
   width: 30%;
+}
 
+.basic-user-info {
+  padding: 20px;
+}
+
+.basic-user-info h3 {
+  font-weight: bolder;
+}
+
+.basic-user-info p {
+  margin: 5px 0 10px 10px;
 }
 
 // empty
