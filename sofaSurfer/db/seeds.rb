@@ -9,7 +9,7 @@
 # locations
 Location.create!(
   neighborhood: 'presidio',
-  img_url: 'http://greatruns.com/wp-content/uploads/2016/11/SanFran4.jpg'
+  img_url: 'https://italystorie.files.wordpress.com/2015/01/ggbridge_old_coast_guard_station.jpg'
 )
 
 Location.create!(
@@ -62,7 +62,7 @@ Location.create!(
 #users
 
 User.create!(
-  username: 'sample',
+  username: 'sample User',
   email: 'sample@user',
   phone: '1234567890',
   age: 18,
@@ -71,6 +71,7 @@ User.create!(
   about_me: 'I am a generic user with generic interests and generic friends',
   password: 'password',
   street: 'beautiful rd',
+  img_url: 'http://www.marletinc.com/wp-content/uploads/2017/09/demo-user.png'
 )
 
 User.create!(
@@ -121,16 +122,32 @@ end
 puts "There are now #{User.count} rows in the Users table"
 
 Booking.create!(
-  traveler_id: 1,
-  host_id: 6,
+  traveler_id: 7,
+  host_id: 1,
   location_id: 3,
   arrival: DateTime.parse("02/01/2018"),
   departure: DateTime.parse("02/04/2018"),
 )
 
 Booking.create!(
+  traveler_id: 16,
+  host_id: 1,
+  location_id: 7,
+  arrival: DateTime.parse("02/06/2018"),
+  departure: DateTime.parse("02/09/2018"),
+)
+
+Booking.create!(
+  traveler_id: 193,
+  host_id: 1,
+  location_id: 7,
+  arrival: DateTime.parse("02/06/2018"),
+  departure: DateTime.parse("02/09/2018"),
+)
+
+Booking.create!(
   traveler_id: 1,
-  host_id: 12,
+  host_id: 54,
   location_id: 7,
   arrival: DateTime.parse("02/06/2018"),
   departure: DateTime.parse("02/09/2018"),

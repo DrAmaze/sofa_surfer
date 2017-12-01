@@ -1,6 +1,6 @@
 import React from 'react';
 import { values } from 'lodash';
-import UserListItem from '../user/user_list_item';
+import UserSearchResultItem from '../user/user_search_result_item';
 import SpotIndexItem from '../spot/spot_index_item';
 
 class SearchResults extends React.Component {
@@ -15,7 +15,7 @@ class SearchResults extends React.Component {
     if (users.length > 0 || spots.length > 0) {
       if (users.length > 0) {
         userItems = users.map(user => (
-          <UserListItem
+          <UserSearchResultItem
             key={user.id}
             user={ user } />
         ));
@@ -26,6 +26,10 @@ class SearchResults extends React.Component {
             key={spot.id}
             spot={ spot } />
         ));
+      } else {
+        spotItems = <div></div>;
+        userItems =<div></div>;
+
       }
 
       return (
@@ -47,8 +51,10 @@ class SearchResults extends React.Component {
       );
     } else {
       return (
-        <div>
-          loading ...
+        <div className='empty'>
+          <br/><br/><br/>
+
+          <h1>No search results ...</h1>
         </div>
       );
     }

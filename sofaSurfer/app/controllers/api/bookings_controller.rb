@@ -28,7 +28,8 @@ class Api::BookingsController < ApplicationController
   end
 
   def index
-    render json: Booking.all.where(traveler_id: current_user.id)
+    @bookings = Booking.all.where(host_id: current_user.id, traveler_id: current_user.id)
+    render :index
   end
 
   private

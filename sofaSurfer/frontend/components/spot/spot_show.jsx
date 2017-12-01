@@ -43,7 +43,7 @@ class SpotShow extends React.Component {
       );
     } else {
       return (
-        <div>
+        <div className='empty'>
           loading...
         </div>
       );

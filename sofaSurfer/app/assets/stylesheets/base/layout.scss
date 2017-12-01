@@ -40,6 +40,10 @@ body {
   cursor: pointer;
 }
 
+.search-bar {
+  color: #929dad;
+}
+
 .navbar-right {
   align-items: center;
   box-sizing: border-box;
@@ -231,7 +235,8 @@ body {
 
 .splash-title {
   background-size: cover;
-  height: 900px;
+  background-position: bottom -1px right 0px;
+  height: 800px;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -240,6 +245,7 @@ body {
   text-align: center;
   font-weight: lighter;
   color: #fb7210;
+  background-clip: border-box;
 }
 
 .splash-title h1 {
@@ -567,7 +573,6 @@ table.benefits tr:nth-of-type(2n) {
 .spot-preview-item img {
   height: 100%;
   bottom: 50px;
-  object-fit: cover;
 }
 
 // booking preview
@@ -655,6 +660,9 @@ table.benefits tr:nth-of-type(2n) {
 .hosts-list li img {
   height: 100%;
   width:  100%;
+  margin: 10px;
+  border: 1px solid lightgray;
+  border-radius: 3px;
 }
 
 .user-image {
@@ -663,11 +671,11 @@ table.benefits tr:nth-of-type(2n) {
 }
 
 .hosts-list li div {
-  width: 45%;
+  width: 43%;
 }
 
 .host-info {
-  padding: 10px;
+  padding: 10px 20px;
 }
 
 .host-info h3 {
@@ -720,12 +728,13 @@ table.benefits tr:nth-of-type(2n) {
 
 .spot-index-item-location {
   color: white;
-  text-decoration: capitalize;
+  text-transform: capitalize;
   position: relative;
-  top: 50px;
+  top: 80px;
   right: 50px;
   text-shadow: 1px 1px black;
   z-index: 3;
+  font-weight: bolder;
 }
 
 // spot show page
@@ -1023,6 +1032,10 @@ table.benefits tr:nth-of-type(2n) {
   flex-wrap: wrap;
 }
 
+.search-results div ul div {
+  box-shadow: none;
+}
+
 .search-results div ul li {
   padding: 0px 2.5%;
   width: 45%;
@@ -1035,4 +1048,24 @@ table.benefits tr:nth-of-type(2n) {
   right: 0;
   left: 30%;
   font-weight: bolder;
+}
+
+.user-search-result-item {
+  box-shadow: none;
+  display: flex;
+  flex-direction: row;
+  width: 30%;
+}
+
+.user-search-result-item div {
+  width: 30%;
+
+}
+
+// empty
+
+.empty {
+  padding: 10% 20%;
+  font-size: 28px;
+
 }

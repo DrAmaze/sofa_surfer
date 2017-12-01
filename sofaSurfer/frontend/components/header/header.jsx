@@ -85,7 +85,7 @@ class Header extends React.Component {
             SofaSurfer
           </span>
         </li>
-        <li>
+        <li className='search-bar'>
           <Search onClick={() => {
               this.props.history.push('/search');
               this.props.clearSearch();

@@ -1,13 +1,11 @@
 import React from 'react';
 
-class UserListItem extends React.Component {
+class UserSearchResultItem extends React.Component {
   render () {
     const { user } = this.props;
     const {
       username,
       email,
-      phone,
-      age,
       about_me,
       img_url
     } = user;
@@ -20,23 +18,18 @@ class UserListItem extends React.Component {
     }
 
     return (
-      <li className='spot-host'>
+      <li className='user-search-result-item'>
 
-        <div className='user-image'>
+        <div className='user-search-result-image'>
           {image}
         </div>
-        <div className='host-info'>
-          <h3>{ username }</h3>
-          <div> Email: { email } </div>
-          <div> Phone: { phone } </div>
-          <div> Age: { age } </div>
-        </div>
-        <div className='host-about-me'>
-          <p> { about_me } </p>
+        <div className='basic-user-info'>
+          <h3> Username: { username }</h3>
+          <h3> Email: { email } </h3>
         </div>
       </li>
     );
   }
 }
 
-export default UserListItem;
+export default UserSearchResultItem;

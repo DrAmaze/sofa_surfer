@@ -7,7 +7,7 @@ const BookingPreviewItem = ({ booking }) => (
       to={`/bookings/${booking.id}`}
       style={{ textDecoration: 'none', color: 'gray'}}>
       <section>
-        <h3>Trip to { booking.location_id }</h3>
+        <h3>Trip to { booking.spot }</h3>
         <div> ARR: {booking.arrival.toString().slice(0,10)}</div>
         <div> DEP: {booking.departure.toString().slice(0,10)}</div>
       </section>
