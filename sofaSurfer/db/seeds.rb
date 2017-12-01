@@ -136,3 +136,44 @@ Booking.create!(
   arrival: DateTime.parse("02/06/2018"),
   departure: DateTime.parse("02/09/2018"),
 )
+
+Booking.create!(
+  traveler_id: 1,
+  host_id: 132,
+  location_id: 8,
+  arrival: DateTime.parse("03/21/2018"),
+  departure: DateTime.parse("03/23/2018"),
+)
+
+Booking.create!(
+  traveler_id: 1,
+  host_id: 12,
+  location_id: 7,
+  arrival: DateTime.parse("04/06/2018"),
+  departure: DateTime.parse("04/07/2018"),
+)
+
+Booking.create!(
+  traveler_id: 1,
+  host_id: 151,
+  location_id: 2,
+  arrival: DateTime.parse("05/18/2018"),
+  departure: DateTime.parse("05/20/2018"),
+)
+
+csv_text = File.read(Rails.root.join('lib', 'seeds', 'BOOKING_DATA.csv'))
+csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
+csv.each do |row|
+  t = Booking.new
+  t.traveler_id = row['traveler_id']
+  t.host_id = row['host_id']
+  t.location_id = row['location_id']
+  t.arrival = row[DateTime.parse('arrival')]
+  t.departure = row[DateTime.parse('departure')]
+  t.description = row['description']
+  t.save
+  puts t.errors.full_messages
+  puts "#{t} saved"
+end
+
+puts "There are now #{Booking.count} rows in the Users table"

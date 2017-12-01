@@ -58,7 +58,6 @@ class BookingIndexItem extends React.Component {
       handleUpdateBooking={this.handleUpdateBooking}
       updateBooking={this.updateBooking}
       booking={booking} />;
-    debugger
     return(
       <li className="booking-index-item">
         <div className='arr-dep-book'>

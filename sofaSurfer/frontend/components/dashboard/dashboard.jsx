@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
-
+import Modal from 'react-modal';
 import SpotPreviewItem from './dashboard_spot_preview';
 import BookingPreviewItem from './dashboard_booking_preview';
+import UserUpdateFormContainer from '../user/user_update_form_container';
 import Search from '../search/search_container';
 
 class Dashboard extends React.Component {
@@ -18,9 +19,13 @@ class Dashboard extends React.Component {
       location_id: 0,
       about_me: '',
       street: '',
-      img_url: 'http://www.marletinc.com/wp-content/uploads/2017/09/demo-user.png'
+      img_url: 'http://www.marletinc.com/wp-content/uploads/2017/09/demo-user.png',
+      modalOpen: false
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.closeModal = this.closeModal.bind(this);
+    this.openModal = this.openModal.bind(this);
+    this.handleUpdateUser = this.handleUpdateUser.bind(this);
     // this.renderErrors = this.renderErrors.bind(this);
   }
 
@@ -35,10 +40,22 @@ class Dashboard extends React.Component {
     });
   }
 
-handleSubmit(e) {
-  e.preventDefault();
-  this.props.updateUser(this.props.user);
-}
+  handleUpdateUser(e) {
+    this.setState({ modalOpen: true });
+  }
+
+  closeModal() {
+    this.setState({ modalOpen: false });
+  }
+
+  openModal() {
+    this.setState({ modalOpen: true });
+  }
+
+  handleSubmit(e) {
+    e.preventDefault();
+    this.props.updateUser(this.props.user);
+  }
 
   render () {
     let {
@@ -53,6 +70,36 @@ handleSubmit(e) {
       home,
       about_me
     } = this.props.currentUser;
+
+    const style = {
+      overlay : {
+        position        : 'fixed',
+        top             : 0,
+        left            : 0,
+        right           : 0,
+        bottom          : 0,
+        backgroundColor : 'rgba(25, 25, 25, 0.90)',
+        zIndex          : 10
+      },
+      content : {
+        position        : 'relative',
+        top             : '10px',
+        border          : '1px solid #ccc',
+        zIndex          : 11,
+        background      : 'white',
+        borderRadius    : '5px',
+        width           : '70%',
+        height          : '555px',
+        marginLeft      : 'auto',
+        marginRight     : 'auto',
+      }
+    };
+    debugger
+    const userUpdate = <UserUpdateFormContainer
+      closeModal={this.closeModal}
+      handleUpdateUser={this.handleUpdateUser}
+      updateUser={this.updateUser}
+      user={this.props.currentUser} />;
 
     let guests;
     if (hosting) {
@@ -161,39 +208,62 @@ handleSubmit(e) {
               </div>
             </section>
 
-            <section className='box' id='reviews'>
+            <section className='box-about-me' id='reviews'>
               <div className='dash-title'>
                 <Link
-                  to='/profile'
+                  to='/dashboard'
                   style={{ textDecoration: 'none', color: 'inherit'}}>
                   About me
                 </Link>
               </div>
-              <div className='personal-user-information'>
-                <h4>
-                  Email :
-                </h4>
-                { email }
-              </div>
-              <div className='personal-user-information'>
-                <h4>
-                  Phone :
-                </h4>
-                { phone }
-              </div>
-              <div className='personal-user-information'>
-                <h4>
-                  Age:
-                </h4>
-                { age }
-              </div>
-              <div className='personal-about-me-information'>
-                { about_me }
+              <div className='user-attributes'>
+                <div className='personal-user-information'>
+                  <div>
+                    <h4>
+                      Email :
+                    </h4>
+                    { email }
+                  </div>
+                  <div>
+                    <h4>
+                      Phone :
+                    </h4>
+                    { phone }
+                  </div>
+                  <div>
+                    <h4>
+                      Age:
+                    </h4>
+                    { age }
+                  </div>
+                </div>
+                <div className='personal-about-me-information'>
+                  <div className='personal-about-me'>
+                    { about_me }
+                  </div>
+                  <br/><br/>
+                  <div className='hosted'>
+                    <button
+                      className='search-color-button'
+                      onClick={this.openModal}>
+                      Edit
+                    </button>
+                  </div>
+                </div>
               </div>
             </section>
           </div>
         </div>
         <br/><br/>
+          <Modal
+            className='booking-modal'
+            isOpen={this.state.modalOpen}
+            onRequestClose={this.closeModal}
+            shouldCloseOnOverlayClick={true}
+            shouldCloseOnEsc={true}
+            style={style}>
+            {userUpdate}
+          </Modal>
       </div>
     );
   }

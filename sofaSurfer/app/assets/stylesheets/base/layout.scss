@@ -17,6 +17,7 @@ body {
   overflow: hidden;
   font-size: 24px;
   z-index: 10;
+  border-top: 1px solid lightgray;
 }
 
 .footer a {
@@ -79,7 +80,7 @@ body {
 
 .search-form {
   width: 100%;
-
+  display:flex;
 }
 
 .search-form input {
@@ -105,6 +106,8 @@ body {
   height: 36px;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
   width: 20%;
   font-size: 18px;
 }
@@ -631,6 +634,47 @@ table.benefits tr:nth-of-type(2n) {
   border-bottom: 1px solid #e6e6e6;
   width: 110%;
   padding: 10px 30px;
+}
+
+.box-about-me {
+  // display: flex;
+  // flex-direction: row;
+  // position: relative;
+}
+
+.user-attributes {
+  display: flex;
+  flex-direction: row;
+}
+
+.personal-user-information {
+  width: 20%;
+
+}
+
+
+.personal-user-information {
+  font-size: 14px;
+  margin: 0 30px;
+}
+
+.personal-user-information h4 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.personal-about-me-information {
+  position: relative;
+  text-align: left;
+  font-size: 14px;
+  width: 60%;
+  bottom: 20px;
+}
+
+.personal-about-me-information button {
+  float: right;
+  position: relative;
+
 }
 
 .dash-title:hover {

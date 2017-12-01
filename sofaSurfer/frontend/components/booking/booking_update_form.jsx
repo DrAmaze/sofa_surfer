@@ -12,7 +12,7 @@ class BookingUpdateForm extends React.Component {
       location_id: this.props.booking.location_id,
       arrival: this.props.booking.arrival.toString().slice(0,10),
       departure: this.props.booking.departure.toString().slice(0,10),
-      description: this.props.booking.decription
+      description: this.props.booking.description
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.renderErrors = this.renderErrors.bind(this);

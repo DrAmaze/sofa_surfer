@@ -1,0 +1,81 @@
+id,traveler_id,host_id,location_id,arrival,departure,description
+1,40,103,4,08/15/2017,03/11/2017,In hac habitasse platea dictumst.
+2,83,37,4,12/22/2017,05/05/2017,"Cras in purus eu magna vulputate luctus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien."
+3,107,84,8,12/30/2017,06/06/2017,Proin at turpis a pede posuere nonummy. Integer non velit.
+4,47,97,7,03/04/2017,07/30/2017,
+5,14,109,10,12/29/2016,03/12/2017,"Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam."
+6,21,121,3,08/09/2017,11/12/2017,Donec quis orci eget orci vehicula condimentum.
+7,138,160,5,07/04/2017,02/10/2017,Sed ante. Vivamus tortor. Duis mattis egestas metus. Aenean fermentum. Donec ut mauris eget massa tempor convallis.
+8,41,101,10,05/22/2017,02/14/2018,Fusce posuere felis sed lacus.
+9,122,88,8,10/22/2017,02/10/2017,"Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh. Quisque id justo sit amet sapien dignissim vestibulum."
+10,49,121,4,12/09/2016,01/23/2017,Proin risus. Praesent lectus.
+11,39,61,7,01/19/2017,01/28/2018,
+12,158,9,3,06/30/2017,08/06/2017,"Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem. Fusce consequat."
+13,82,69,4,11/12/2017,01/29/2017,"Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio. Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo."
+14,5,116,2,04/05/2017,01/10/2018,"Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus."
+15,162,69,9,06/24/2017,10/24/2017,"Donec dapibus. Duis at velit eu est congue elementum. In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo."
+16,124,17,3,10/14/2017,05/08/2017,"Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede. Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus."
+17,67,175,8,01/26/2017,12/18/2017,"Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue."
+18,91,5,7,02/03/2017,07/13/2017,"Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo. Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros."
+19,147,75,10,06/10/2017,05/24/2017,Ut tellus. Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi. Cras non velit nec nisi vulputate nonummy.
+20,104,134,3,02/12/2017,01/29/2018,Integer ac leo. Pellentesque ultrices mattis odio.
+21,144,155,7,08/27/2017,08/01/2017,"Aenean sit amet justo. Morbi ut odio. Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
+22,151,32,6,06/17/2017,01/19/2018,"In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue."
+23,83,135,2,01/17/2017,06/29/2017,"In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem. Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy."
+24,144,102,5,09/13/2017,03/11/2017,Nulla ut erat id mauris vulputate elementum. Nullam varius.
+25,126,37,6,06/02/2017,06/17/2017,Nulla tellus.
+26,50,130,4,12/28/2016,10/24/2017,"Donec semper sapien a libero. Nam dui. Proin leo odio, porttitor id, consequat in, consequat ut, nulla."
+27,129,74,9,12/21/2017,06/05/2017,"Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus."
+28,101,132,9,02/20/2017,06/05/2017,Nunc rhoncus dui vel sem.
+29,130,123,2,07/28/2017,04/07/2017,Curabitur gravida nisi at nibh.
+30,53,148,1,07/30/2017,10/20/2017,"In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo."
+31,107,173,9,02/19/2017,08/27/2017,Nulla justo. Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.
+32,34,144,6,02/23/2017,08/16/2017,Cras in purus eu magna vulputate luctus.
+33,65,120,4,12/20/2017,04/11/2017,Nulla facilisi. Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque. Quisque porta volutpat erat.
+34,61,143,5,08/27/2017,04/11/2017,"Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus. Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis."
+35,1,157,4,04/28/2017,01/14/2018,"Donec dapibus. Duis at velit eu est congue elementum. In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante."
+36,9,87,4,12/29/2016,04/03/2017,"Cras in purus eu magna vulputate luctus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam vel augue."
+37,117,143,1,01/02/2018,12/20/2017,Duis ac nibh.
+38,106,23,6,06/01/2017,08/15/2017,"Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus. Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus."
+39,161,20,8,11/22/2017,04/17/2017,Curabitur at ipsum ac tellus semper interdum.
+40,70,115,3,03/06/2017,07/05/2017,Integer ac leo.
+41,125,10,3,08/07/2017,06/29/2017,Nullam varius. Nulla facilisi. Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.
+42,64,43,4,08/21/2017,08/30/2017,Aliquam sit amet diam in magna bibendum imperdiet.
+43,130,127,3,12/17/2017,04/13/2017,Cras non velit nec nisi vulputate nonummy.
+44,164,138,6,09/04/2017,09/19/2017,"Nunc nisl. Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum."
+45,29,105,6,11/28/2017,05/31/2017,
+46,10,167,8,04/13/2017,12/18/2017,"Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh. Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est."
+47,66,161,6,06/01/2017,01/29/2017,"Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem."
+48,10,138,10,07/14/2017,07/22/2017,"Integer non velit. Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi."
+49,39,61,2,08/03/2017,12/03/2017,In eleifend quam a odio. In hac habitasse platea dictumst. Maecenas ut massa quis augue luctus tincidunt.
+50,157,94,10,05/20/2017,11/13/2017,"Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero. Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh."
+51,1,31,1,04/28/2017,09/26/2017,"Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem. Fusce consequat. Nulla nisl. Nunc nisl."
+52,29,106,8,04/20/2017,04/05/2017,Vivamus tortor. Duis mattis egestas metus. Aenean fermentum. Donec ut mauris eget massa tempor convallis.
+53,141,16,6,10/28/2017,01/05/2017,Duis aliquam convallis nunc.
+54,3,117,6,02/26/2017,02/09/2018,"Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam vel augue."
+55,6,14,1,05/01/2017,04/30/2017,"Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh. Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est."
+56,142,172,7,03/01/2017,09/05/2017,"Nulla tellus. In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus. Suspendisse potenti."
+57,62,116,5,07/03/2017,07/08/2017,
+58,92,126,9,07/14/2017,01/07/2018,Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.
+59,95,6,3,05/19/2017,03/12/2017,In congue. Etiam justo.
+60,18,83,1,10/16/2017,07/23/2017,Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.
+61,173,73,2,12/01/2017,03/07/2017,"In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo. Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros."
+62,161,62,4,08/04/2017,05/19/2017,Morbi non lectus.
+63,43,2,5,03/24/2017,07/25/2017,"Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl. Aenean lectus."
+64,74,110,3,10/22/2017,12/06/2017,Proin interdum mauris non ligula pellentesque ultrices.
+65,125,176,2,02/26/2017,01/18/2018,Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem. Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo.
+66,80,20,7,07/25/2017,04/15/2017,"Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum."
+67,152,150,9,08/20/2017,04/17/2017,"Nulla suscipit ligula in lacus. Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam."
+68,113,91,1,11/21/2017,01/15/2017,"Aenean sit amet justo. Morbi ut odio. Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim."
+69,47,11,1,08/12/2017,09/18/2017,"Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+70,3,40,5,10/06/2017,06/16/2017,"Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero. Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum."
+71,8,13,8,09/17/2017,12/17/2017,Vivamus in felis eu sapien cursus vestibulum. Proin eu mi.
+72,141,126,1,07/29/2017,09/16/2017,Nullam varius.
+73,67,173,4,02/02/2017,10/20/2017,Proin eu mi. Nulla ac enim.
+74,118,34,3,07/08/2017,09/05/2017,Morbi non lectus.
+75,125,36,6,12/22/2017,01/01/2018,"Cras in purus eu magna vulputate luctus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam vel augue."
+76,34,28,10,06/26/2017,06/22/2017,"Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque."
+77,98,159,9,10/29/2017,03/10/2017,"Praesent lectus. Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis."
+78,32,106,8,03/08/2017,04/11/2017,Mauris lacinia sapien quis libero. Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh. In quis justo.
+79,41,166,6,02/02/2017,05/04/2017,"Proin risus. Praesent lectus. Vestibulum quam sapien, varius ut, blandit non, interdum in, ante."
+80,51,101,7,09/27/2017,08/01/2017,"Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo."

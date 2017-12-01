@@ -37,7 +37,6 @@ const App = () => (
       <ProtectedRoute path='/locations' component={SpotIndex} />
       <ProtectedRoute path='/bookings' component={Bookings} />
       <ProtectedRoute path='/users/:userId' component={Profile} />
-      <ProtectedRoute path='/profile' component={Profile} />
       <ProtectedRoute path='/search' component={Search} />
 
     </Switch>
