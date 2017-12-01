@@ -30,7 +30,6 @@ class Search extends React.Component {
   render() {
     return (
       <nav className="search">
-        <h3 className="view-header">SEARCH</h3>
         <form className='search-form' onSubmit={this.handleSubmit}>
           <input
             type="search"
@@ -40,9 +39,9 @@ class Search extends React.Component {
             className="search-bar"
             placeholder="Start typing..."
           />
-        <button className='search-button' type='submit'>
-          <i className="fa fa-search" aria-hidden="true"></i>
-        </button>
+          <button className='search-button' type='submit'>
+            <i className="fa fa-search" aria-hidden="true"></i>
+          </button>
         </form>
       </nav>
     );

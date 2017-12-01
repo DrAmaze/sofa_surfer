@@ -6,13 +6,53 @@ import BookingPreviewItem from './dashboard_booking_preview';
 import Search from '../search/search_container';
 
 class Dashboard extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      username: '',
+      email: '',
+      phone: '',
+      age: 0,
+      hosting: false,
+      location_id: 0,
+      about_me: '',
+      street: '',
+      img_url: 'http://www.marletinc.com/wp-content/uploads/2017/09/demo-user.png'
+    };
+    this.handleSubmit = this.handleSubmit.bind(this);
+    // this.renderErrors = this.renderErrors.bind(this);
+  }
+
   componentDidMount() {
     this.props.fetchSpots();
     this.props.fetchBookings();
   }
 
+  update(field) {
+    return e => this.setState({
+      [field]: e.target.value
+    });
+  }
+
+handleSubmit(e) {
+  e.preventDefault();
+  this.props.updateUser(this.props.user);
+}
+
   render () {
-    let { username, location, hosting, img_url } = this.props.currentUser;
+    let {
+      username,
+      email,
+      phone,
+      age,
+      location_id,
+      hosting,
+      img_url,
+      street,
+      home,
+      about_me
+    } = this.props.currentUser;
 
     let guests;
     if (hosting) {
@@ -79,6 +119,7 @@ class Dashboard extends React.Component {
         <br/><br/><br/>
         <div className='dashboard'>
           <section className='user'>
+
             <Link
               to='/profile'
               style={{ textDecoration: 'none', color: 'inherit'}}>
@@ -88,7 +129,8 @@ class Dashboard extends React.Component {
               {username}
             </h3>
             <br/>
-            <h3 className='home'> San Francisco, CA, USA </h3>
+            <h4 className='street-home'> {street}, {home} </h4>
+            <h4 className='home'> San Francisco, CA, USA </h4>
             <br/>
             <div> {guests} </div>
           </section>
@@ -124,15 +166,34 @@ class Dashboard extends React.Component {
                 <Link
                   to='/profile'
                   style={{ textDecoration: 'none', color: 'inherit'}}>
-                  Reviews
+                  About me
                 </Link>
               </div>
-              <div className='review-preview-item'>
-
+              <div className='personal-user-information'>
+                <h4>
+                  Email :
+                </h4>
+                { email }
+              </div>
+              <div className='personal-user-information'>
+                <h4>
+                  Phone :
+                </h4>
+                { phone }
+              </div>
+              <div className='personal-user-information'>
+                <h4>
+                  Age:
+                </h4>
+                { age }
+              </div>
+              <div className='personal-about-me-information'>
+                { about_me }
               </div>
             </section>
           </div>
         </div>
+        <br/><br/>
       </div>
     );
   }

@@ -77,41 +77,42 @@ class Profile extends React.Component {
               {username}
             </h3>
             <br/>
-            <h3 className='home'> {street}, {home} </h3>
-            <h3 className='home'> San Francisco, CA, USA </h3>
+            <h4 className='street-home'> {street}, {home} </h4>
+            <h4 className='home'> San Francisco, CA, USA </h4>
             <br/>
             <div> {guests} </div>
           </section>
 
-        <div className='information'>
-          <section className='box' id='locations'>
-            <div className='dash-title'>
-              About Me
-            </div>
-            <div>
-              <h4>
-                Email :
-              </h4>
-              { email }
-            </div>
-            <div>
-              <h4>
-                Phone :
-              </h4>
-              { phone }
-            </div>
-            <div>
-              <h4>
-                Age:
-              </h4>
-              { age }
-            </div>
-            <div>
-              { about_me }
-            </div>
-          </section>
-        </div>
+          <div className='information'>
+            <section className='about-me' id='locations'>
+              <div className='dash-title'>
+                About Me
+              </div>
+              <div className='personal-user-information'>
+                <h4>
+                  Email :
+                </h4>
+                { email }
+              </div>
+              <div className='personal-user-information'>
+                <h4>
+                  Phone :
+                </h4>
+                { phone }
+              </div>
+              <div className='personal-user-information'>
+                <h4>
+                  Age:
+                </h4>
+                { age }
+              </div>
+              <div className='personal-about-me-information'>
+                { about_me }
+              </div>
+            </section>
+          </div>
       </div>
+      <br/><br/><br/>
     </div>
 
 

@@ -9,17 +9,18 @@ body {
 // navbar
 
 .footer {
-  background-color: #ed6504;
-  position: relative;
+  background-color: #e6e6e6;
+  position: fixed;
   bottom: 0;
   width: 100%;
   height: 36px;
   overflow: hidden;
   font-size: 24px;
+  z-index: 10;
 }
 
 .footer a {
-  color: white;
+  color: #ed6504;
   margin-left: 10px;
 }
 
@@ -59,6 +60,75 @@ body {
 
 .logo:hover {
   cursor: pointer;
+}
+
+.search {
+  display: flex;
+  position: relative;
+  top: 14px;
+  width: 300px;
+  border-spacing: 0;
+  font-family: 'Lato', sans-serif;
+  border-collapse:collapse;
+}
+
+.search:active {
+  outline: none;
+  border: none;
+}
+
+.search-form {
+  width: 100%;
+
+}
+
+.search-form input {
+  border: 3px solid lightgray;
+  border-right: none;
+  height: 36px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  width: 79%;
+  padding: 0 20px;
+  font-size: 18px;
+}
+
+.search-form input:focus {
+  outline: none;
+  border: 3px solid lightgray;
+  border-right: none;
+}
+
+.search-form button {
+  border: 3px solid lightgray;
+  border-left: none;
+  height: 36px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  width: 20%;
+  font-size: 18px;
+}
+
+.search-form button:hover {
+  cursor: pointer;
+  color: gray;
+}
+
+.search-form button:focus {
+  outline: none;
+  border: 3px solid lightgray;
+  border-left: none;
+}
+
+.search-bar {
+}
+
+.search-form {
+  height: 30px;
+}
+
+.search-button {
+  padding-top: 0;
 }
 
 .search-bar {
@@ -490,7 +560,14 @@ table.benefits tr:nth-of-type(2n) {
   box-shadow: 2px 2px 2px lightgray;
   border-radius: 2px;
   min-width: 200px;
-  height: 300px;
+  height: 330px;
+}
+
+.home {
+  border-bottom: 1px solid lightgray;
+  text-align: center;
+  width: 100%;
+  padding-bottom: 20px;
 }
 
 .dashboard h2 {
@@ -515,6 +592,7 @@ table.benefits tr:nth-of-type(2n) {
   width: 320px;
   align-items: center;
   text-transform: capitalize;
+  text-align: center;
 }
 
 .user img {
@@ -527,7 +605,7 @@ table.benefits tr:nth-of-type(2n) {
 
 .user h3:nth-of-type(2) {
   text-align: center;
-  border-bottom: 1px solid #e6e6e6;
+
   width: 100%;
   padding: 0 0 25px 0;
 }
@@ -619,6 +697,7 @@ table.benefits tr:nth-of-type(2n) {
 .booking-preview-item h3 {
   font-weight: bolder;
   color: black;
+  text-transform: capitalize;
 }
 
 // spot show hosts
@@ -707,6 +786,21 @@ table.benefits tr:nth-of-type(2n) {
   position: relative;
   width: 200%;
   padding: 10px 10%;
+}
+
+// profile
+
+
+.about-me div {
+  display: flex;
+}
+
+.personal-user-information {
+  padding: 10px 20px;
+}
+
+.personal-about-me-information {
+  padding-top: 50px;
 }
 
 //Locations

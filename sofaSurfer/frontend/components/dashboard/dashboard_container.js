@@ -5,6 +5,7 @@ import Dashboard from './dashboard';
 
 import { fetchSpots } from '../../actions/spot_actions';
 import { fetchBookings } from '../../actions/booking_actions';
+import { updateUser } from '../../actions/user_actions';
 
 import {
   selectAllSpots,
@@ -19,7 +20,8 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   fetchSpots: () => dispatch(fetchSpots()),
-  fetchBookings: () => dispatch(fetchBookings())
+  fetchBookings: () => dispatch(fetchBookings()),
+  updateUser: user => dispatch(updateUser(user))
 });
 
 export default withRouter(connect(

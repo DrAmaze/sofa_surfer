@@ -26,6 +26,7 @@ class SpotIndex extends React.Component {
             {spots}
           </ul>
         </section>
+        <br/><br/>
       </div>
     );
   }
