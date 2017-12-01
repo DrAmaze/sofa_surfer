@@ -94,7 +94,6 @@ class Dashboard extends React.Component {
         marginRight     : 'auto',
       }
     };
-    debugger
     const userUpdate = <UserUpdateFormContainer
       closeModal={this.closeModal}
       handleUpdateUser={this.handleUpdateUser}
@@ -158,9 +157,8 @@ class Dashboard extends React.Component {
     if (img_url) {
       image = <img src={img_url} alt='user image' />;
     } else {
-      image = <img src='https://staticcdn.selio.com/adoos-static/img/user_default.png' alt='blank image' />;
+      image = <img src='http://www.iconninja.com/files/411/435/758/casual-girl-user-female-avatar-person-icon.svg' alt='blank image' />;
     }
-
     return (
       <div>
         <br/><br/><br/>
@@ -168,7 +166,7 @@ class Dashboard extends React.Component {
           <section className='user'>
 
             <Link
-              to='/profile'
+              to='/dashboard'
               style={{ textDecoration: 'none', color: 'inherit'}}>
               {image}
             </Link>
@@ -176,10 +174,11 @@ class Dashboard extends React.Component {
               {username}
             </h3>
             <br/>
-            <h4 className='street-home'> {street}, {home} </h4>
+            <h4 className='street-home'> {street} {home} </h4>
             <h4 className='home'> San Francisco, CA, USA </h4>
             <br/>
             <div> {guests} </div>
+            <br/>
           </section>
 
           <div className='information'>

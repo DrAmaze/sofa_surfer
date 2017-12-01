@@ -29,8 +29,8 @@ export const fetchUsers = () => dispatch => (
 );
 
 export const updateUser = user => dispatch => (
-  ApiUtil.updateUser(user).then(user => (
-    dispatch(receiveUser(user))
+  ApiUtil.updateUser(user).then(person => (
+    dispatch(receiveUser(person))
   ))
 );
 

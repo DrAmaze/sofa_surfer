@@ -27,15 +27,8 @@ class UserUpdateForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    let user = {
-      id: this.props.currentUser.id,
-      email: this.props.currentUser.email,
-      phone: this.props.currentUser.phone,
-      age: this.props.currentUser.age,
-      hosting: this.props.currentUser.hosting,
-      img_url: this.props.currentUser.img_url,
-      about_me: this.props.currentUser.about_me
-    };
+    let user = this.state;
+
     this.props.updateUser(user)
     .then(() => this.props.closeModal());
   }

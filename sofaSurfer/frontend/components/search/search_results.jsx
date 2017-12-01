@@ -51,10 +51,20 @@ class SearchResults extends React.Component {
       );
     } else {
       return (
-        <div className='empty'>
+        <div className='search-results'>
           <br/><br/><br/>
+          <div>
+            <h2> Spot results ... </h2>
+            <ul className='spot-results-items'>
 
-          <h1>No search results ...</h1>
+            </ul>
+          </div>
+          <div>
+            <h2> User results ... </h2>
+            <ul className='user-results-items'>
+              
+            </ul>
+          </div>
         </div>
       );
     }
