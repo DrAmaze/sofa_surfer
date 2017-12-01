@@ -62,8 +62,8 @@ class Dashboard extends React.Component {
       }
     } else {
       bookingPreview =
-        <div>
-          You do not have any scheduled trips!
+        <div className='no-trips'>
+          ... You do not have any scheduled trips ...
         </div>;
     }
 

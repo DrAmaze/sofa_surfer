@@ -62,7 +62,7 @@ Location.create!(
 #users
 
 User.create!(
-  username: 'sample User',
+  username: 'Sample User',
   email: 'sample@user',
   phone: '1234567890',
   age: 18,
@@ -122,32 +122,16 @@ end
 puts "There are now #{User.count} rows in the Users table"
 
 Booking.create!(
-  traveler_id: 7,
-  host_id: 1,
+  traveler_id: 1,
+  host_id: 6,
   location_id: 3,
   arrival: DateTime.parse("02/01/2018"),
   departure: DateTime.parse("02/04/2018"),
 )
 
 Booking.create!(
-  traveler_id: 16,
-  host_id: 1,
-  location_id: 7,
-  arrival: DateTime.parse("02/06/2018"),
-  departure: DateTime.parse("02/09/2018"),
-)
-
-Booking.create!(
-  traveler_id: 193,
-  host_id: 1,
-  location_id: 7,
-  arrival: DateTime.parse("02/06/2018"),
-  departure: DateTime.parse("02/09/2018"),
-)
-
-Booking.create!(
   traveler_id: 1,
-  host_id: 54,
+  host_id: 12,
   location_id: 7,
   arrival: DateTime.parse("02/06/2018"),
   departure: DateTime.parse("02/09/2018"),

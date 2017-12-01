@@ -17,6 +17,9 @@ class BookingForm extends React.Component {
     this.renderErrors = this.renderErrors.bind(this);
   }
 
+  componentDidMount() {
+    this.props.fetchBookings();
+  }
 
   update(field) {
     return e => this.setState({

@@ -17,6 +17,7 @@ class Booking extends React.Component {
     this.handleNewBooking = this.handleNewBooking.bind(this);
   }
   componentDidMount() {
+    console.log(this.props)
     this.props.fetchBookings();
   }
 

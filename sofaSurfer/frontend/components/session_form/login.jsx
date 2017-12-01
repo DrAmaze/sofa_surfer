@@ -48,7 +48,7 @@ class LoginForm extends React.Component {
   demoSignin(e) {
     e.preventDefault();
     this.state = {
-      username: 'sample',
+      username: 'Sample User',
       email: 'sample@user.com',
       password: 'password'
     };
