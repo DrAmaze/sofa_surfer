@@ -20,7 +20,7 @@ This bulk project was designed and constructed in less than two weeks; however, 
 
 The search bar in the header enables the user to traverse the application with ease as the tool uses input characters to find any relevant user or location information.  The results of a search are sorted alphabetically, and separated by neighborhood and username.  The placement of the feature makes it available throughout the user experience; thus, making it a valuable asset to any SofaSurfer.  
 
-#SEARCHBARPHOTO
+![](https://github.com/DrAmaze/sofa_surfer/blob/master/sofaSurfer/app/assets/images/location_show_page.png)
 
 This feature builds on its functionality in the show page for a particular neighborhood.  As there may be hundreds of hosts in a particular area, it it can be difficult to find someone who meets your distinct needs.  The filter search option enables the user to filter the hosts by username, email, and other personal information.
 
@@ -47,7 +47,7 @@ This was troubling due to the fact that I had to parse both the locations and th
 
 The dashboard feature is dynamic in that it offers the user a glimpse at the variety of functionality available to them thorughout the application.  It enables the user to update their information, view their current trips, and glance at an ever-changing preview of neighborhoods around San Francisco.
 
-###DASHBOARD PHOTO
+![](https://github.com/DrAmaze/sofa_surfer/blob/master/sofaSurfer/app/assets/images/dashboard.png)
 
 This presented a variety of issues including making various requests to the backend.  This necessitated code optimization and minimlist styling so as to not overwhlem the user.  The create, read, update functionality of the user sits in a React modal component, adding to the functionality and minimalism of the page.  
 
