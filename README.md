@@ -2,7 +2,7 @@
 
 [SofaSurfer Live](https://sofasurfer.herokuapp.com/)
 
-Sofaurfer is a free lodging website for those who want to explore the various corners of San Francisco, with locals who know the area, inspired by CouchSurfing.  It utilizes Rails/PostgresSQL backend with React.js and Redux on the frontend.
+Sofa Surfer is a free lodging website for those who want to explore the various corners of San Francisco, with locals who know the area, inspired by CouchSurfing.  It utilizes Rails/PostgresSQL backend with React.js and Redux on the frontend.
 
 This bulk project was designed and constructed in less than two weeks; however, I plan to continue making improvements in the future.
 
@@ -10,7 +10,7 @@ This bulk project was designed and constructed in less than two weeks; however, 
 
 * Secure user authentication in both the frontend and the backend using BCrypt.
 * Users can view locations around San Francisco, CA, USA, and identify hosts to facilitate the adventure.
-* Application dynically adapts to display all information in a beautiful way.
+* Application dynamically adapts to display all information in a beautiful way.
 * Search the application for users and locations.
 * Filter hosts by username, email, and other user information to meet the needs of your trip.
 * Users can create, read, update, and destroy bookings with other users.
@@ -20,7 +20,7 @@ This bulk project was designed and constructed in less than two weeks; however, 
 
 The search bar in the header enables the user to traverse the application with ease as the tool uses input characters to find any relevant user or location information.  The results of a search are sorted alphabetically, and separated by neighborhood and username.  The placement of the feature makes it available throughout the user experience; thus, making it a valuable asset to any SofaSurfer.  
 
-![](https://github.com/DrAmaze/sofa_surfer/blob/master/sofaSurfer/app/assets/images/location_show_page.png)
+![](app/assets/images/location_show_page.png)
 
 This feature builds on its functionality in the show page for a particular neighborhood.  As there may be hundreds of hosts in a particular area, it it can be difficult to find someone who meets your distinct needs.  The filter search option enables the user to filter the hosts by username, email, and other personal information.
 
@@ -47,9 +47,9 @@ This was troubling due to the fact that I had to parse both the locations and th
 
 The dashboard feature is dynamic in that it offers the user a glimpse at the variety of functionality available to them thorughout the application.  It enables the user to update their information, view their current trips, and glance at an ever-changing preview of neighborhoods around San Francisco.
 
-![](https://github.com/DrAmaze/sofa_surfer/blob/master/sofaSurfer/app/assets/images/dashboard.png)
+![](app/assets/images/dashboard.png)
 
-This presented a variety of issues including making various requests to the backend.  This necessitated code optimization and minimlist styling so as to not overwhlem the user.  The create, read, update functionality of the user sits in a React modal component, adding to the functionality and minimalism of the page.  
+This presented a variety of issues including making various requests to the backend.  This necessitated code optimization and minimalist styling so as to not overwhelm the user.  The create, read, update functionality of the user sits in a React modal component, adding to the functionality and minimalism of the page.  
 
 Another challenge presented was the generating of the random neighborhoods. This was accomplished with a simple randomness function based on the number of locations.
 
