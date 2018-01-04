@@ -225,7 +225,7 @@ class Splash extends React.Component {
                 </td>
               <td>
                 <span>
-
+                  check
                 </span>
               </td>
               </tr>
@@ -237,11 +237,12 @@ class Splash extends React.Component {
                   <span
                     aria-hidden="true"
                     data-icon="" >
+
                   </span>
                 </td>
                 <td>
                   <span>
-
+                    check
                   </span>
                 </td>
               </tr>
@@ -253,11 +254,11 @@ class Splash extends React.Component {
                   <span
                     aria-hidden="true"
                     data-icon="" >
+                    check
                   </span>
                 </td>
                 <td>
                   <span>
-
                   </span>
                 </td>
               </tr>
@@ -269,11 +270,11 @@ class Splash extends React.Component {
                   <span
                     aria-hidden="true"
                     data-icon="" >
+                    check
                   </span>
                 </td>
                 <td>
                   <span>
-
                   </span>
                 </td>
               </tr>

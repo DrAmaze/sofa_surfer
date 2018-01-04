@@ -1,0 +1,212 @@
+
+.dashboard {
+  font-size: 18px;
+  display: flex;
+  justify-content: space-around;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 100%;
+
+}
+
+.dashboard h1 {
+  display: inline-block;
+  font-size: 36px;
+}
+
+.dashboard h4 {
+  font-weight: lighter;
+}
+
+.home {
+  border-bottom: 1px solid gray;
+}
+
+.dashboard section {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+  box-shadow: 2px 2px 2px lightgray;
+  border-radius: 2px;
+  min-width: 200px;
+  height: 55%;
+}
+
+.home {
+  border-bottom: 1px solid lightgray;
+  text-align: center;
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+.dashboard h2 {
+  text-transform: uppercase;
+  border-bottom: 1px solid #e6e6e6;
+  width: 100%;
+  padding: 15px  0 15px 25px;
+}
+
+.dashboard:nth-child(n+1) {
+  margin: 5px 0;
+}
+
+.user-dashboard{
+  margin-top: 10px;
+}
+
+.user {
+  padding: 10px 10px;
+  display: flex;
+  flex: 1 0 0;
+  width: 320px;
+  align-items: center;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.user img {
+  position: relative;
+  text-align: center;
+  height: 50%;
+  width: 50%;
+  margin: 0 25%;
+}
+
+.user h3:nth-of-type(2) {
+  text-align: center;
+
+  width: 100%;
+  padding: 0 0 25px 0;
+}
+
+.user-dashboard {
+  margin-top: 0px;
+}
+
+.information {
+  display: block;
+  width: 100%;
+  flex: 3 0 0;
+  min-width: 250px;
+}
+
+.information section {
+  height: 220px;
+  list-style: none;
+  font-size: 20px;
+}
+
+.dash-title {
+  border-bottom: 1px solid #e6e6e6;
+  width: 110%;
+  padding: 10px 30px;
+}
+
+.box-about-me {
+  // display: flex;
+  // flex-direction: row;
+  // position: relative;
+}
+
+.user-attributes {
+  display: flex;
+  flex-direction: row;
+}
+
+.personal-user-information {
+  width: 20%;
+
+}
+
+
+.personal-user-information {
+  font-size: 14px;
+  margin: 0 30px;
+}
+
+.personal-user-information h4 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.personal-about-me-information {
+  position: relative;
+  text-align: left;
+  font-size: 14px;
+  width: 60%;
+  bottom: 20px;
+}
+
+.personal-about-me-information button {
+  float: right;
+  position: relative;
+
+}
+
+.dash-title:hover {
+  color: #ed6504;
+}
+
+.spot-preview {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  font-size: 1em;
+  font-weight: bolder;
+  color: white;
+}
+
+.spot-preview li span {
+  position: absolute;
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  width: 50%;
+}
+
+.spot-preview li {
+  height: 120px;
+  padding: 20px;
+  top: 0px;
+}
+
+.grid-items {
+
+}
+
+.spot-preview-item {
+  width: 30%;
+  text-align: center;
+}
+
+.spot-preview-item img {
+  height: 100%;
+  bottom: 50px;
+}
+
+// booking preview
+.booking-preview {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.booking-preview section {
+  background: none;
+  box-shadow: none;
+  height: 50%;
+}
+.booking-preview-item {
+  position: relative;
+  display: block;
+  border-bottom: none;
+  margin: 10px;
+  width: 100%;
+}
+
+.booking-preview-item h3 {
+  font-weight: bolder;
+  color: black;
+  text-transform: capitalize;
+}

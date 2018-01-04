@@ -1,0 +1,356 @@
+//Locations
+.locations h1 {
+  font-size: 36px;
+  color: #27374c;
+  font-weight:lighter;
+  padding: 2% 10%;
+  text-shadow: 1px 1px lightgray;
+}
+
+.spots-index {
+  font-size: 20px;
+  background-color: white;
+  text-align: center;
+  width: 98%;
+  margin-left: 1%;
+  box-shadow: 3px 3px 3px lightgray;
+  min-width: 750px;
+}
+
+.spots-index > ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 2%;
+}
+
+.spot-index-item {
+  width: 45%;
+  padding: 0px 2%;
+  text-decoration: none;
+  color: white;
+  padding-top: none;
+}
+
+.spot-index-item img {
+  height: 80%;
+  box-shadow: 1px 1px 1px lightgray;
+}
+
+.spot-index-item-location {
+  color: white;
+  text-transform: capitalize;
+  position: relative;
+  top: 80px;
+  right: 50px;
+  text-shadow: 1px 1px black;
+  z-index: 3;
+  font-weight: bolder;
+}
+
+// spot show page
+// .spot-name {
+//   background-image: url(https://images.unsplash.com/photo-1495579525815-b742aa69eaf1?auto=format&fit=crop&w=963&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D);
+//   background-size: cover;
+//   height: 300px;
+// }
+.single-spot-show {
+}
+
+.user-search, .user-count {
+  background-color: white;
+  box-shadow: 2px 2px 2px lightgray;
+  display: block;
+  margin-left: 70px;
+  margin-right: 70px;
+  height: 240px;
+  min-width: 400px;
+}
+
+.user-search-header {
+  display: flex;
+  list-style-type: none;
+  flex-direction: row;
+  font-size: 16px;
+  padding: 0px 20px;
+  margin-bottom: 10px;
+}
+
+.user-search-header li {
+  padding: 20px 0px;
+  cursor: pointer;
+}
+
+.user-search-header li:first-of-type {
+  color: #ed6504;
+  border-bottom: 2px solid #ed6504;
+  margin-right: 20px;
+}
+
+.user-params div {
+  float: left;
+  width: 46%;
+  padding: 4px 1.5%;
+  margin-right: 1%;
+}
+
+.user-search form span {
+  color: #929dad;
+  text-transform: uppercase;
+  display: block;
+  padding: 5px 0;
+}
+
+.user-search-form form span input,
+.email input,
+.username input {
+  border-radius: 3px;
+  border: 1px solid #929dad;
+  width: 100%;
+  padding: 10px 0 10px 2%;
+  text-align: center;
+  font-size: 16px;
+}
+
+.username, .email {
+  width: 100%;
+}
+
+.number-travelers {
+  display: inline-block;
+  width: 100%;
+  padding: 4px 1.5%;
+}
+
+.num-travelers {
+  -webkit-appearance: none;
+  display: block;
+  border: 1px solid #bfcad2;
+  border-radius: 4px;
+  box-shadow: none;
+  padding: 8px;
+  font-size: 1.2em;
+  color: inherit;
+  width: 100%;
+  background-color: white;
+  border: 1px solid #929dad
+}
+
+.booking-form-button {
+  margin: 20px 15px;
+  float: right;
+}
+
+.search-color-button {
+  text-transform: capitalize;
+  font-size: 14px;
+  padding: 10px 30px;
+  border: 1px solid #287fb8;
+  background-color: #287fb8;
+  color: white;
+  font-weight: bold;
+  margin: 0 5px;
+}
+
+.search-color-button:hover {
+  cursor: pointer;
+  background-color: #6288a5;
+}
+
+// .grey-color-button {
+//   text-transform: capitalize;
+//   font-size: 14px;
+//   padding: 10px;
+//   max-width: 100px;
+//   border: 1px solid #afb7c3;
+//   background-color: #afb7c3;
+//   color: white;
+//   margin-right: 5px;
+// }
+//
+// .grey-color-button:hover {
+//   cursor: pointer;
+//   background-color: gray;
+// }
+
+// number of people
+
+.user-count {
+  background-color: #f9f9f9;
+  height: 30px;
+  font-size: 16px;
+  color: gray;
+  padding: 10px 20px;
+}
+
+// user list
+
+// booking index page
+
+.bookings {
+  display: flex;
+  flex-direction: row;
+
+}
+
+.bookings section {
+  width: 100%;
+  padding: 0px 20px;
+  margin: 10px;
+}
+
+.bookings-index {
+  flex: 5 0 0;
+  background-color: white;
+  box-shadow: 2px 2px 2px lightgray;
+  min-width: 600px;
+}
+
+.bookings-index h1 {
+  font-size: 20px;
+  font-weight: bolder;
+  border-bottom: 1px solid lightgray;
+  padding: 10px 10px 15px 5px;
+}
+
+.bookings-index ul li h2 {
+
+  font-size: 18px;
+  font-weight: bolder;
+  color: black;
+
+}
+
+.bookings-index ul li {
+  margin: 20px 0 20px 10px;
+  border-bottom: 1px solid lightgray;
+}
+
+.bookings-index ul li:last-of-type {
+  border-bottom: none;
+}
+
+.booking-index-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.booking-index-item div {
+  display: inline-block;
+  width: 30%
+}
+
+.booking-index-item button {
+  float: right;
+  margin-right: 20%;
+}
+
+.booking-description {
+  padding: 0 80px;
+}
+
+.arr-dep-book div {
+  padding: 0 10px;
+}
+
+.hosted {
+  display: block;
+  position: relative;
+
+}
+
+.hosted h3 {
+  position: relative;
+  float: right;
+  margin-right: 20%;
+  margin-bottom: 30px;
+}
+
+// create modal
+
+.create-trip {
+  background-color: white;
+  box-shadow: 2px 2px 2px lightgray;
+  flex: 1 0 0;
+  height: 100px;
+
+  text-align: center;
+}
+
+.create-trip h3 {
+  color: #ed6504;
+  text-transform: uppercase;
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+// create booking modal
+.booking-form-box nav {
+  background-color: lightgray;
+  font-size: 18px;
+}
+
+.booking-form-box nav h4 {
+  margin: 10px 0 0 5px;
+}
+
+.booking-form {
+  padding: 0 20px;
+}
+.booking-location {
+  width: 97%;
+  padding: 10px 5px;
+  border: 1px solid lightgray;
+  border-radius: 3px;
+}
+
+.booking-form label {
+  font-size: 16px;
+}
+
+.booking-location {
+  width: 98%;
+  color: gray;
+  border: 1px solid lightgray;
+
+}
+
+.booking-input {
+  width: 96%;
+  color: gray;
+  border: 1px solid lightgray;
+  border-radius: 3px;
+  padding: 10px 5px;
+}
+
+.booking-submit {
+  background-color: #ecf0f1;
+  width: 100%;
+  position: relative;
+  display: block;
+}
+
+.booking-submit button {
+  padding: 10px;
+  font-size: 16px;
+  margin: 15px 20px;
+  color: white;
+}
+
+.create-button {
+  color: #444;
+  background-color: #41b866;
+}
+
+.create-button:hover {
+  background-color: #64c883;
+  cursor: pointer;
+}
+
+.booking-cancel {
+  background-color: #bfcad2;
+}
+
+.booking-cancel:hover {
+  background-color: #e6e6e6;
+  cursor: pointer;
+}

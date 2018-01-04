@@ -1,0 +1,64 @@
+// spot search results
+.search-results {
+  min-width: 750px;
+}
+
+.search-results div {
+  background-color: white;
+  box-shadow: 2px 2px 2px gray;
+  margin: 10px;
+}
+
+.search-results div h2 {
+  font-size: 20px;
+  font-weight: bolder;
+  border-bottom: 1px solid lightgray;
+  padding: 20px 10px 20px 40px;
+}
+
+.search-results div ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.search-results div ul div {
+  box-shadow: none;
+}
+
+.search-results div ul li {
+  padding: 0px 2.5%;
+  width: 45%;
+}
+
+.search-results div ul li span {
+  font-size: 20px;
+  position: relative;
+  top: 70px;
+  right: 0;
+  left: 30%;
+  font-weight: bolder;
+}
+
+.user-search-result-item {
+  box-shadow: none;
+  display: flex;
+  flex-direction: row;
+  width: 30%;
+}
+
+.user-search-result-item div {
+  width: 30%;
+}
+
+.basic-user-info {
+  padding: 20px;
+}
+
+.basic-user-info h3 {
+  font-weight: bolder;
+}
+
+.basic-user-info p {
+  margin: 5px 0 10px 10px;
+}

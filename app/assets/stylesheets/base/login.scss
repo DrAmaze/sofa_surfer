@@ -1,0 +1,99 @@
+.login-form-container,
+.signup-form-container {
+  border-radius: 8px;
+  font-size: 22px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  top: 100px;
+}
+
+.signup-form-container {
+  height: 500px;
+}
+
+.login-form {
+  margin-right: 0;
+}
+
+.login-head {
+  border-bottom: 1px solid lightgray;
+  padding: 10px;
+}
+
+.login-head div{
+  display: flex;
+  flex-direction:row;
+  justify-content: space-between;
+}
+
+.session-errors{
+  animation-name: shake;
+  animation-duration: .5s;
+  color: red;
+  flex-direction: column;
+  font-size: 12px;
+  text-align:center;
+}
+
+.session-errors ul {
+  width:100%;
+
+}
+
+.login-form-close {
+  position: relative;
+  color: gray;
+  cursor: pointer;
+  line-height: 1;
+  font-size: 26px;
+  font-style: none;
+  left: 0px;
+  margin-right: 10px;
+  padding: 10px;
+  top: 0px;
+}
+
+.login-form-close:hover {
+  color: #f00;
+}
+
+.login-form-box h4 {
+  display: flex;
+  padding: 10px;
+}
+
+
+.login-form input {
+  position: relative;
+  width: 80%;
+  padding: 10px;
+  margin: 5px 5%;
+  border: 1px solid lightgray;
+}
+
+.login-form input:hover {
+  border-radius: 1px solid lightgray;
+}
+
+.user-location {
+  -webkit-appearance: none;
+  width: 85%;
+  padding: 10px;
+  margin: 5px 5%;
+  box-shadow: 0;
+  border: 1px solid lightgray;
+  border-radius: none;
+  color: gray;
+  background-color: white;
+}
+
+.login-alternative {
+  font-size: 14px;
+  color: gray;
+  text-align: center;
+}
+
+.login-alternative span {
+  text-align: center;
+}
