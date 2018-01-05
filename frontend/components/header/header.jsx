@@ -99,6 +99,11 @@ class Header extends React.Component {
               </span>
             </li>
             <li>
+              <span onClick={() => this.props.history.push('/locations')}>
+                Locations
+              </span>
+            </li>
+            <li>
               <span onClick={() => this.props.history.push('/bookings')}>
                 Bookings
               </span>
