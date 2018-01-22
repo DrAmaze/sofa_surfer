@@ -76,8 +76,7 @@ class Booking extends React.Component {
 
     const book = <BookingFormContainer
       closeModal={this.closeModal}
-      handleNewBooking={this.handleNewBooking}
-      fetchUsers={this.fetchUsers} />;
+      handleNewBooking={this.handleNewBooking} />;
 
     return (
       <div>

@@ -19,7 +19,7 @@ class BookingForm extends React.Component {
 
   componentDidMount () {
     this.props.fetchSpots();
-    this.props.fetchUsers();
+    // this.props.fetchUsers();
   }
 
   componentWillMount () {
