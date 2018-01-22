@@ -1,0 +1,101 @@
+// spot show hosts
+
+.single-spot-show {
+  display: flex;
+  flex-direction: column;
+}
+
+.spot-show-image {
+  width: 100%;
+  position: relative;
+  height: 200px;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  opacity: .9;
+}
+
+.single-spot-show h1 {
+  position:absolute;
+  top: 130px;
+  color: white;
+  font-size: 4em;
+  text-shadow: 1px 1px  5px black;
+  text-transform: uppercase;
+  margin-left: 70px;
+}
+
+.spot-index-link {
+  background: rgba(0,0,0,.3);
+  position: relative;
+  bottom: 30px;
+  text-align: right;
+  padding: 5px 10px;
+}
+
+.hosts-list {
+  margin: 10px 70px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  min-width: 400px;
+}
+
+.hosts-list li {
+  background-color: white;
+  width: 49%;
+  margin-bottom: 2%;
+  box-shadow: 2px 2px 2px lightgray;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.hosts-list li:nth-of-type(2n) {
+  margin-left: 2%;
+}
+
+.hosts-list li img {
+  height: 100%;
+  width:  100%;
+  margin: 10px;
+  border-radius: 3px;
+  object-fit:contain;
+}
+
+.user-image {
+  height: 150px;
+  width: 150px;
+}
+
+.hosts-list li div {
+  width: 43%;
+}
+
+.host-info {
+  padding: 10px 20px;
+}
+
+.host-info h3 {
+  font-weight: bold;
+}
+
+.host-about-me p {
+  position: relative;
+  width: 200%;
+  padding: 10px 10%;
+}
+
+// profile
+
+.about-me div {
+  display: flex;
+}
+
+.personal-user-information {
+  padding: 10px 20px;
+}
+
+.personal-about-me-information {
+  padding-top: 50px;
+}

@@ -1,0 +1,216 @@
+// title
+
+.clone-screen {
+  display: block;
+  font-size: 20px;
+  padding: 10px;
+}
+
+.splash {
+  min-width: 1000px;
+}
+
+.splash-title {
+  background-size: cover;
+  background-position: bottom -1px right 0px;
+  height: 800px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-image: url(https://images.unsplash.com/photo-1446160657592-4782fb76fb99?auto=format&fit=crop&w=1349&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D);
+  justify-content: center;
+  text-align: center;
+  font-weight: lighter;
+  color: #fb7210;
+  background-clip: border-box;
+}
+
+.splash-title h1 {
+  font-size: 56px;
+}
+
+.splash-title h4 {
+  font-size: 24px;
+}
+
+//why join?
+.why {
+  background-color: #287fb8;
+  height: 800px;
+}
+
+.why h1 {
+  justify-content: center;
+  color: white;
+  font-size: 56px;
+  text-align: center;
+  font-weight: lighter;
+}
+
+.underline {
+  width: 50px;
+  color: white;
+  margin-bottom: 1em;
+  height: 2px;
+  background-color: white;
+}
+
+.why ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: .9em;
+  min-width: 950px;
+}
+
+.why ul li {
+  margin: 5px;
+  padding: 30px;
+  background: #3e99d5;
+  width: 27%;
+  box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+  min-height: 440px;
+}
+
+.why ul li h6,
+.why ul li p {
+  justify-content: center;
+  color: white;
+  font-size: 1.2em;
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.why ul li p {
+  font-weight: lighter;
+  font-size: 15px;
+}
+
+.why ul li img {
+  margin: 10px;
+  display: block;
+  margin-bottom: 1em;
+  right: 5px;
+  height: 35%;
+  width: 90%;
+  margin-right: 0;
+}
+
+// how it works
+
+.how-it-works {
+  background-color: #ed6504;
+  height: 1000px;
+}
+
+.how-it-works h1 {
+  justify-content: center;
+  color: white;
+  font-size: 56px;
+  text-align: center;
+  font-weight: lighter;
+}
+
+.underline {
+  width: 50px;
+  color: white;
+  margin-bottom: 1em;
+  height: 2px;
+  background-color: white;
+}
+
+.how-it-works ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 1.2em;
+  min-width: 950px;
+}
+
+.how-it-works ul li {
+  margin: 5px;
+  padding: 30px;
+  background: #ff855c;
+  width: 25%;
+  position: relative;
+  top: 10px;
+  height: 280px;
+  box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+}
+
+.how-it-works ul li h6,
+.how-it-works ul li p {
+  justify-content: center;
+  color: white;
+  font-size: 1em;
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.how-it-works ul li p {
+  font-size: 1em;
+}
+
+.how-it-works ul li img {
+  align-items: center;
+  display: block;
+  height: 42%;
+  margin-bottom: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  object-fit:contain;
+  right: 5px;
+  width: 42%;
+
+}
+
+table.benefits {
+  padding-top: 30px;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  font-weight: lighter;
+  box-sizing: border-box;
+  text-align: center;
+  border-spacing: 0;
+  width: 100%;
+}
+
+.benefits th {
+  padding: 8px 30px;
+}
+
+.benefits td {
+  padding: 8px 30px;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+.table-left {
+  text-align: left;
+  padding: 8px 30px;
+}
+
+.table-mid-col,
+.table-mid-col-top,
+.table-mid-col-bottom {
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+}
+
+table.benefits tr:nth-of-type(2n) {
+  background-color: #FF7F00;
+}
+
+.table-mid-col-top {
+  border-radius: 4px 4px 0 0;
+  border-top: 1px solid white;
+}
+
+.table-mid-col-bottom {
+  border-bottom: 1px solid white;
+  border-radius: 0 0 4px 4px;
+  padding-bottom: 5px;
+}
