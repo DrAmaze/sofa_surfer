@@ -51,6 +51,7 @@ class Profile extends React.Component {
       home
     } = this.props.currentUser;
 
+    console.log(this.props.currentUser);
     let guests;
     if (hosting) {
       guests = "Accepting Guests";
@@ -77,13 +78,13 @@ class Profile extends React.Component {
               {username}
             </h3>
             <br/>
-            <h4 className='street-home'> {street}, {home} </h4>
+            <h4 className='street-home'> {street} {home} </h4>
             <h4 className='home'> San Francisco, CA, USA </h4>
             <br/>
             <div> {guests} </div>
           </section>
 
-          <div className='information'>
+          <div className='information' id='profile-info'>
             <section className='about-me' id='locations'>
               <div className='dash-title'>
                 About Me
@@ -92,21 +93,24 @@ class Profile extends React.Component {
                 <h4>
                   Email :
                 </h4>
+                <br/>
                 { email }
               </div>
               <div className='personal-user-information'>
                 <h4>
                   Phone :
                 </h4>
+                <br/>
                 { phone }
               </div>
               <div className='personal-user-information'>
                 <h4>
                   Age:
                 </h4>
+                <br/>
                 { age }
               </div>
-              <div className='personal-about-me-information'>
+              <div className='personal-about-me-information profile-about-me'>
                 { about_me }
               </div>
             </section>
