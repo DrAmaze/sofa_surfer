@@ -1,8 +1,19 @@
-.profile-info {
-  height: 1000px;
+div.profile {
+  display: flex;
+}
+
+section.profile-header h3, h4, div {
+  text-align: center;
+}
+
+.profile-header {
+  height: 500px;
+  background-color: white;
+  margin: 40px;
+  width: 20%;
+  height: 550px;
 }
 
 .profile-about-me {
   font-size: 20px;
-  // margin: 20px 10px;
 }

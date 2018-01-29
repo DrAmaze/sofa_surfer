@@ -51,7 +51,6 @@ class Profile extends React.Component {
       home
     } = this.props.currentUser;
 
-    console.log(this.props.currentUser);
     let guests;
     if (hosting) {
       guests = "Accepting Guests";
@@ -69,12 +68,12 @@ class Profile extends React.Component {
     return (
       <div>
         <br/><br/><br/>
-        <div className='dashboard'>
-          <section className='user'>
+        <div className='profile'>
+          <section className='profile-header'>
             <div>
               {image}
             </div>
-            <h3 className='user-dashboard'>
+            <h3 className='user-profile'>
               {username}
             </h3>
             <br/>
@@ -84,33 +83,33 @@ class Profile extends React.Component {
             <div> {guests} </div>
           </section>
 
-          <div className='information' id='profile-info'>
-            <section className='about-me' id='locations'>
-              <div className='dash-title'>
+          <div className='profile-information' id='profile-info'>
+            <section className='about-me'>
+              <div className='profile-title'>
                 About Me
               </div>
-              <div className='personal-user-information'>
+              <div className='profile-information'>
                 <h4>
                   Email :
                 </h4>
                 <br/>
                 { email }
               </div>
-              <div className='personal-user-information'>
+              <div className='profile-information'>
                 <h4>
                   Phone :
                 </h4>
                 <br/>
                 { phone }
               </div>
-              <div className='personal-user-information'>
+              <div className='profile-information'>
                 <h4>
                   Age:
                 </h4>
                 <br/>
                 { age }
               </div>
-              <div className='personal-about-me-information profile-about-me'>
+              <div className='profile-about-me-information profile-about-me'>
                 { about_me }
               </div>
             </section>
