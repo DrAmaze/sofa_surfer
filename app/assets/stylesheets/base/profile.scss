@@ -1,5 +1,7 @@
 div.profile {
   display: flex;
+  font-size: 20px;
+  box-shadow: 2px solid gray;
 }
 
 section.profile-header h3, h4, div {
@@ -11,9 +13,15 @@ section.profile-header h3, h4, div {
   background-color: white;
   margin: 40px;
   width: 20%;
-  height: 550px;
+  height: 590px;
+}
+
+div.profile-information {
+  background-color: white;
+  margin: 40px;
+  width: 70%;
 }
 
 .profile-about-me {
-  font-size: 20px;
+  font-size: 24px;
 }
