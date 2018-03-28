@@ -34,7 +34,19 @@ class Profile extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.updateUser(this.props.user);
+
+    let user = {
+      username: this.props.currentUser.username,
+      email: this.props.currentUser.email,
+      phone: this.props.currentUser.phone,
+      age: this.props.currentUser.age,
+      hosting: this.props.currentUser.hosting,
+      location_id: this.props.currentUser.location_id,
+      about_me: this.props.currentUser.about_me,
+      street: '',
+      img_url: 'http://www.marletinc.com/wp-content/uploads/2017/09/demo-user.png'
+    };
+    this.props.updateUser(this.props.currentUser);
   }
 
   render () {
@@ -113,12 +125,13 @@ class Profile extends React.Component {
                 { about_me }
               </div>
             </section>
+            <button>
+              Edit
+            </button>
           </div>
-      </div>
+        </div>
       <br/><br/><br/>
-    </div>
-
-
+      </div>
     );
   }
 }
