@@ -125,8 +125,11 @@ class Profile extends React.Component {
                 { about_me }
               </div>
             </section>
-            <button>
-              Edit
+            <button
+              className='search-color-button'
+              type='submit'
+              value='Update'>
+              Update
             </button>
           </div>
         </div>
