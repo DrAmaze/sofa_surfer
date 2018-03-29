@@ -141,19 +141,24 @@
 }
 
 .search-color-button {
-  text-transform: capitalize;
-  font-size: 14px;
-  padding: 10px 30px;
-  border: 1px solid #287fb8;
   background-color: #287fb8;
+  border: 1px solid #287fb8;
+  box-shadow: 3px 3px 2px lightgray;
   color: white;
+  font-size: 14px;
   font-weight: bold;
   margin: 0 5px;
+  padding: 10px 30px;
+  text-transform: capitalize;
 }
 
 .search-color-button:hover {
   cursor: pointer;
   background-color: #6288a5;
+}
+
+.search-color-button:active {
+  box-shadow: 1px 1px 1px lightgray;
 }
 
 // .grey-color-button {
