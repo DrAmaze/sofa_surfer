@@ -39,11 +39,13 @@ group :development, :test do
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
   gem 'pry-rails'
-  gem 'web-console', '>= 3.3.0'
   gem 'spring'
+  gem 'rspec-rails', '~> 3.6'
+  gem 'factory_bot_rails'
 end
 
 group :development do
+  gem 'web-console', '>= 3.3.0'
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'listen', '>= 3.0.5', '< 3.2'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
@@ -51,6 +53,10 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'annotate'
+end
+
+group :test do
+  gem 'shoulda-matchers'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
