@@ -3,22 +3,19 @@ require 'rails_helper'
 RSpec.describe User, type: :model do
   describe 'password encryption' do
 
-    spot1 = Location.create!({
-        neighborhood: 'Presidio',
-        img_url: 'stockphoto.com'
-      })
-
-    it 'does not save passwords to the database' do
-
-      User.create!({
-          username: 'anastassia',
-          password: 'nunyabusiness',
-          location: spot1,
-          email: 'ana@taser.com'
-      })
-      user = User.find_by_username('anastassia')
-      expect(user.password).not_to be('nunyabusiness')
-    end
+    # it 'does not save passwords to the database' do
+    #
+    #   spot1 = Location.find_by_neighborhood('presidio')
+    #
+    #   User.create!({
+    #       username: 'anastassia',
+    #       password: 'nunyabusiness',
+    #       location: Location.find_by_neighborhood('presidio'),
+    #       email: 'ana@taser.com'
+    #   })
+    #   user = User.find_by_username('anastassia')
+    #   expect(user.password).not_to be('nunyabusiness')
+    # end
 
     # Add more tests here!
 
