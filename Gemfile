@@ -40,8 +40,8 @@ group :development, :test do
   gem 'selenium-webdriver'
   gem 'pry-rails'
   gem 'spring'
-  gem 'rspec-rails', '~> 3.6'
-  gem 'factory_bot_rails'
+  gem 'rspec-rails', '~> 3.7'
+  gem 'rspec_junit_formatter'
 end
 
 group :development do
