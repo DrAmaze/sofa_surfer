@@ -1,4 +1,5 @@
 [![tested with jest](https://img.shields.io/badge/tested_with-jest-99424f.svg)](https://github.com/facebook/jest)
+[![tested with RSpec](https://img.shields.io/badge/tested_with-RSpec-99424f.svg)](https://github.com/rspec/rspec)
 
 # sofa_surfer
 
