@@ -1,5 +1,4 @@
 require 'rails_helper'
-require 'factories'
 
 RSpec.describe User, type: :model do
   describe 'password encryption' do
@@ -11,7 +10,7 @@ RSpec.describe User, type: :model do
           password: 'nunyabusiness',
           location: Location.find(1),
           email: 'ana@taser.com'
-      })
+        })
       user = User.find_by_username('anastassia')
       expect(user.password).not_to be('nunyabusiness')
     end
