@@ -88,4 +88,21 @@ RSpec.describe User, type: :model do
     end
   end
 
+  describe "associations" do
+    it 'belongs to locations' do
+      t = Location.reflect_on_association(:hosts)
+      expect(t.macro).to eq(:has_many)
+    end
+
+    it 'has many bookings' do
+      t = User.reflect_on_association(:bookings)
+      expect(t.macro).to eq(:has_many)
+    end
+
+    it 'has many hostings' do
+      t = User.reflect_on_association(:hostings)
+      expect(t.macro).to eq(:has_many)
+    end
+  end
+
 end
