@@ -25,5 +25,4 @@ class Booking < ApplicationRecord
     primary_key: :id,
     foreign_key: :location_id,
     class_name: :Location
-
 end

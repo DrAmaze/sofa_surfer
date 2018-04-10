@@ -4,7 +4,6 @@ RSpec.describe User, type: :model do
   describe 'password encryption' do
 
     it 'does not save passwords to the database' do
-
       User.create!({
           username: 'anastassia',
           password: 'nunyabusiness',
