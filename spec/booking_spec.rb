@@ -3,14 +3,19 @@ require 'rails_helper'
 RSpec.describe Booking, type: :model do
   describe 'model' do
     it 'is valid with minimal attributes' do
+      arr = DateTime.new(2018,5,3,4,5,6)
+      dep = DateTime.new(2018,5,12,4,5,6)
+
       Booking.create!({
           traveler_id: 5,
           host_id: 1,
           location_id: 1,
-          arrival: DateTime.new(2018,5,3,4,5,6),
-          departure: DateTime.new(2018,5,12,4,5,6)
+          arrival: arr,
+          departure: dep,
+          host: User.find(3)
         })
-        booking = Booking.find_by_host_id(1)
+
+        booking = Booking.find_by_departure(dep)
         expect(booking).to be_valid
     end
 
@@ -21,7 +26,8 @@ RSpec.describe Booking, type: :model do
           location_id: 1,
           arrival: DateTime.new(2018,5,3,4,5,6),
           departure: DateTime.new(2018,5,12,4,5,6),
-          description: 'This will be quite an adventure'
+          description: 'This will be quite an adventure',
+          host: User.find(3)
         })
         booking = Booking.find_by_description('This will be quite an adventure')
         expect(booking).to be_valid
