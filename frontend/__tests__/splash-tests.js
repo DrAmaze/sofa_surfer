@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow, mount, render } from 'enzyme';
-import Splash from './components/splash/splash.jsx';
+import Splash from '../components/splash/splash';
 
 const Enzyme = require('enzyme');
 const EnzymeAdapter = require('enzyme-adapter-react-16');
