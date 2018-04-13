@@ -1,3 +1,4 @@
+import React from 'react';
 import ReactDOM from 'react-dom';
 import configureStore from '../store/store';
 
@@ -23,7 +24,5 @@ describe('entry', () => {
   it('invokes the configureStore function', () => {
     expect(configureStore).toBeCalled();
   });
-
-  // Add more tests here!
 
 });

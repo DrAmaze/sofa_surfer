@@ -4,7 +4,7 @@ import {
   CLEAR_SEARCH
 } from '../actions/search_actions';
 
-export const SearchReducer = (state = {}, action) => {
+const SearchReducer = (state = {}, action) => {
   Object.freeze(state);
   switch(action.type) {
     case CLEAR_SEARCH:
@@ -13,3 +13,5 @@ export const SearchReducer = (state = {}, action) => {
       return state;
   }
 };
+
+export default SearchReducer;
