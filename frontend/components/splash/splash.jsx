@@ -88,7 +88,7 @@ class Splash extends React.Component {
 
         <section className='why'>
           <br/><br/>
-          <h1 >Why Join?</h1>
+          <h1>Why Join?</h1>
           <hr className='underline' />
           <ul>
             <li>

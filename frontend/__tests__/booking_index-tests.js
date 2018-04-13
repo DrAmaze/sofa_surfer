@@ -1,6 +1,5 @@
 import React from 'react';
 import Modal from 'react-modal';
-import BookingContainer from '../components/booking/booking_container';
 import Booking from '../components/booking/booking_index';
 import { shallow } from 'enzyme';
 

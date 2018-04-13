@@ -8,19 +8,13 @@ const EnzymeAdapter = require('enzyme-adapter-react-16');
 
 Enzyme.configure({ adapter: new EnzymeAdapter() });
 
-describe('Splash Component', () => {
+describe('<SplashContainer>', () => {
 
-  it('Should render', () => {
+  it('Should render page', () => {
     expect(shallow(<Splash />).exists(<div className='splash'></div>)).toBe(true);
   });
 
   it('Enables user to access session forms', () => {
-    expect(shallow(<Splash />).exists(<input className='color-button'></input>)).toBe(true);
-  });
-
-  it('Mounts the React Modal', () => {
-    const wrapper = shallow(<Splash />);
-    wrapper.find('input').simulate('click');
-    expect(wrapper.find(Modal).prop('isOpen')).toEqual(true);
+    expect(shallow(<Splash />).exists(<button className='color-button'></button>)).toBe(true);
   });
 });

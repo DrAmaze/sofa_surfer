@@ -128,7 +128,6 @@ class Header extends React.Component {
             <li className='join'>
               <button
                 className='color-button'
-                type="submit"
                 onClick={this.handleSignup} >
                 Join
               </button>
@@ -136,9 +135,8 @@ class Header extends React.Component {
             <li className='login'>
               <button
                 className='clear-button'
-                type='submit'
                 onClick={this.handleLogIn}>
-                Login
+                Log In
               </button>
             </li>
           </ul>
@@ -151,7 +149,6 @@ class Header extends React.Component {
       <SignupForm
         closeModal={this.closeModal}
         handleLogIn={this.handleLogIn}/>
-
       ) : (
         <LoginForm
           closeModal={this.closeModal}
