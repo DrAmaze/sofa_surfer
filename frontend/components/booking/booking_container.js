@@ -13,12 +13,9 @@ import {
 import { fetchUsers, fetchUser } from '../../actions/user_actions';
 
 
-const mapStateToProps = state => {
-
-  return {
-    bookings: selectMyBookings(state),
-  };
-};
+const mapStateToProps = state => ({
+  bookings: selectMyBookings(state),
+});
 
 const mapDispatchToProps = dispatch => ({
   fetchBookings: () => dispatch(fetchBookings()),
