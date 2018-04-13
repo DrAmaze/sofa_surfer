@@ -79,11 +79,12 @@ class Splash extends React.Component {
           <h1>Stay with Locals and Meet Travelers</h1>
           <h4>Share Authentic Travel Experiences</h4>
           <br/>
-          <input className='color-button' type="submit" value="Join" onClick={this.handleSignup} />
+          <button className='color-button'
+            type="submit"
+            onClick={this.handleSignup}>
+            Join
+          </button>
         </section>
-
-
-
 
         <section className='why'>
           <br/><br/>

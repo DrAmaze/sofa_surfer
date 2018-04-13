@@ -11,6 +11,6 @@ Enzyme.configure({ adapter: new EnzymeAdapter() });
 describe('Login Component', () => {
 
   it('Should render without errors', () => {
-
+    
   });
 });

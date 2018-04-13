@@ -126,18 +126,20 @@ class Header extends React.Component {
               How it works
             </li>
             <li className='join'>
-              <input
+              <button
                 className='color-button'
                 type="submit"
-                value=" Join "
-                onClick={this.handleSignup} />
+                onClick={this.handleSignup} >
+                Join
+              </button>
             </li>
             <li className='login'>
-              <input
+              <button
                 className='clear-button'
                 type='submit'
-                value='Log In'
-                onClick={this.handleLogIn}/>
+                onClick={this.handleLogIn}>
+                Login
+              </button>
             </li>
           </ul>
         </li>

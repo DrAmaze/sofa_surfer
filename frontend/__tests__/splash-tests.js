@@ -1,4 +1,5 @@
 import React from 'react';
+import Modal from 'react-modal';
 import { shallow, mount, render } from 'enzyme';
 import Splash from '../components/splash/splash';
 
@@ -15,5 +16,11 @@ describe('Splash Component', () => {
 
   it('Enables user to access session forms', () => {
     expect(shallow(<Splash />).exists(<input className='color-button'></input>)).toBe(true);
+  });
+
+  it('Mounts the React Modal', () => {
+    const wrapper = shallow(<Splash />);
+    wrapper.find('input').simulate('click');
+    expect(wrapper.find(Modal).prop('isOpen')).toEqual(true);
   });
 });
