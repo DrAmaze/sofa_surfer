@@ -22,7 +22,7 @@ img {
   object-fit: cover;
 }
 
-button:active {
+button:active, button:focus, input:active, input:focus {
   outline: none;
   border: none;
 }

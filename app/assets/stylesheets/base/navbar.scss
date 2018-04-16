@@ -165,6 +165,7 @@
 
 .color-button {
   background-color: #287fb8;
+  box-shadow: 1px 1px 1px lightgrey;
   color: white;
 }
 
@@ -176,6 +177,7 @@
 
 .clear-button {
   background-color: white;
+  box-shadow: 2px 2px 2px lightgrey;
   color: #287fb8;
 }
 
@@ -194,6 +196,7 @@
 .clear-button-login {
   background-color: white;
   border: 1px solid #287fb8;
+  box-shadow: 2px 2px 2px lightgrey;
   color: #287fb8;
   font-weight: bold;
 }
