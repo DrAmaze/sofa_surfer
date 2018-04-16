@@ -97,8 +97,9 @@ class SignupForm extends React.Component {
               <select
                 className='user-location'
                 value={this.state.location_id}
-                onChange={this.update('location_id')}>
-                <option selected='selected' value='0'>
+                onChange={this.update('location_id')}
+                selected='0'>
+                <option value='0'>
                   Please select your location
                 </option>
                 <option value='1'>presidio</option>
