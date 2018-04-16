@@ -82,19 +82,20 @@ class BookingForm extends React.Component {
               <select
                 className='booking-location'
                 value={this.state.location_id}
-                onChange={this.update('location_id')}>
-                <option selected='selected'> e.g. Presidio
+                onChange={this.update('location_id')}
+                selected='0'>
+                <option value='0' disabled> e.g. Presidio
                 </option>
-                <option value='1'>presidio</option>
-                <option value='2'>fisherman's wharf</option>
-                <option value='3'>chinatown</option>
-                <option value='4'>mission</option>
-                <option value='5'>castro</option>
-                <option value='6'>financial</option>
-                <option value='7'>sunset</option>
-                <option value='8'>richmond</option>
-                <option value='9'>haight</option>
-                <option value='10'>tenderloin</option>
+                <option value='1'>Presidio</option>
+                <option value='2'>Fisherman's Wharf</option>
+                <option value='3'>Chinatown</option>
+                <option value='4'>Mission</option>
+                <option value='5'>Castro</option>
+                <option value='6'>Financial</option>
+                <option value='7'>Sunset</option>
+                <option value='8'>Richmond</option>
+                <option value='9'>Haight</option>
+                <option value='10'>Tenderloin</option>
               </select>
             </label>
             <br/><br/>

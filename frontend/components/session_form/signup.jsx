@@ -99,7 +99,7 @@ class SignupForm extends React.Component {
                 value={this.state.location_id}
                 onChange={this.update('location_id')}
                 selected='0'>
-                <option value='0'>
+                <option value='0' disabled>
                   Please select your location
                 </option>
                 <option value='1'>presidio</option>
