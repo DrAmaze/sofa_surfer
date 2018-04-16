@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import merge from 'lodash/merge';
 
 import Modal from 'react-modal';
@@ -94,19 +94,19 @@ class Header extends React.Component {
         <li className='navbar-logged-in'>
           <ul className='navbar-right'>
             <li>
-              <span onClick={() => this.props.history.push('/')}>
+              <Link to={ `/` }>
                 Profile
-              </span>
+              </Link>
             </li>
             <li>
-              <span onClick={() => this.props.history.push('/locations')}>
+              <Link to={ `/locations` }>
                 Locations
-              </span>
+              </Link>
             </li>
             <li>
-              <span onClick={() => this.props.history.push('/bookings')}>
+              <Link to={ `/bookings` }>
                 Bookings
-              </span>
+              </Link>
             </li>
             <li>
               <span onClick={this.props.logout}>Log Out</span>
@@ -174,4 +174,4 @@ class Header extends React.Component {
   }
 }
 
-export default Header;
+export default withRouter(Header);
