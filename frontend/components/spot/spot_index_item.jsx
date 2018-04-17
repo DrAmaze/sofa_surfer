@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const SpotIndexItem = ({ spot }) => (
   <li className="spot-index-item">
@@ -15,4 +15,4 @@ const SpotIndexItem = ({ spot }) => (
   </li>
 );
 
-export default withRouter(SpotIndexItem);
+export default SpotIndexItem;

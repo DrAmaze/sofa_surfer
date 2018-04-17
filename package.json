@@ -46,6 +46,6 @@
     "postinstall": "webpack"
   },
   "keywords": [],
-  "author": "",
+  "author": "Jacob T. Butler",
   "license": "ISC"
 }
