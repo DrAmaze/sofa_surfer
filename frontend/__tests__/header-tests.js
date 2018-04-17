@@ -10,8 +10,8 @@ Enzyme.configure({ adapter: new EnzymeAdapter() });
 
 describe('<HeaderContainer>', () => {
   it('renders Join and Log In buttons', () => {
-    // const wrapper = shallow(<Header clearSearch={ () => {} }/>);
-    // expect(wrapper.find('button').length).toEqual(2);
+    const wrapper = shallow(<Header clearSearch={ () => {} }/>);
+    expect(wrapper.find('button').length).toEqual(2);
   });
 
   it('opens modal when button is clicked', () => {

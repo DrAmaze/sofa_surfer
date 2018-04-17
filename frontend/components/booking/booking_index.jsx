@@ -114,4 +114,4 @@ class Booking extends React.Component {
   }
 }
 
-export default withRouter(Booking);
+export default Booking;
