@@ -48,9 +48,9 @@ class UserSearch extends React.Component {
             <span>
               <label> # of Travelers </label>
             </span>
-            <select className='num-travelers'>
-              <option value='Any'>Any</option>
-              <option selected='selected' value='1'>1</option>
+            <select className='num-travelers' selected='1'>
+              <option disabled value='Any'>Any</option>
+              <option value='1'>1</option>
               <option value='2'>2</option>
               <option value='3'>3</option>
               <option value='4'>4</option>
