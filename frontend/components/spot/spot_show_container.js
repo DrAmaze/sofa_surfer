@@ -2,6 +2,7 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 
 import { fetchSpot } from '../../actions/spot_actions';
+import { fetchUsers } from '../../actions/user_actions';
 import { selectSpot } from '../../reducers/selectors';
 import SpotShow from './spot_show';
 
@@ -16,7 +17,8 @@ const mapStateToProps = (state, { match }) => {
 };
 
 const mapDispatchToProps = dispatch => ({
-  fetchSpot: id => dispatch(fetchSpot(id))
+  fetchSpot: id => dispatch(fetchSpot(id)),
+  fetchUsers: () => dispatch(fetchUsers())
 });
 
 export default withRouter(connect(

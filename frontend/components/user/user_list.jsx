@@ -4,7 +4,7 @@ import UserListItem from './user_list_item.jsx';
 
 class UserList extends React.Component {
 
-  componentDidMount () {
+  componentWillMount () {
     this.props.fetchUsers();
     this.props.fetchSpot(this.props.spotId);
   }
@@ -13,7 +13,7 @@ class UserList extends React.Component {
     let { users } = this.props;
     let userItems;
     let hosts = [];
-    if (users.length > 0) {
+    if (this.props.users) {
       hosts = users.filter(user =>
         user.hosting && parseInt(user.location_id) === this.props.spotId
       );

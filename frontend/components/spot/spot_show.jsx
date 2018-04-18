@@ -38,7 +38,7 @@ class SpotShow extends React.Component {
           </div>
           <UserSearchFormContainer />
 
-          <UserList />
+          <UserList fetchUsers={ this.props.fetchUsers }/>
         </div>
       );
     } else {
