@@ -63,6 +63,10 @@ class BookingUpdateForm extends React.Component {
 
   render () {
     const { deleteBooking } = this.props;
+
+    // Description isn't required
+    const description = this.state.description ? this.state.description : '';
+
     return (
       <div className="booking-form-container">
         <form onSubmit={this.handleSubmit} className="booking-form-box">
@@ -89,7 +93,7 @@ class BookingUpdateForm extends React.Component {
                 value={this.state.location_id}
                 onChange={this.update('location_id')}
                 selected='0'>
-                <option value='0' disabled > e.g. Presidio
+                <option value='0' disabled> e.g. Presidio
                 </option>
                 <option value='1'>presidio</option>
                 <option value='2'>fisherman's wharf</option>
@@ -141,7 +145,7 @@ class BookingUpdateForm extends React.Component {
               Trip Description
               <br/>
               <input type="text"
-                value={this.state.description}
+                value={ description }
                 className="booking-input"
                 onChange={this.update('description')}
                 placeholder={'Tell locals about your trip and why they should meet or host you'}

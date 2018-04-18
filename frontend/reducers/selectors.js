@@ -16,4 +16,6 @@ export const selectMyBookings = state => values(state.entities.bookings);
 
 export const selectMyReviews = state => values(state.entities.reviews);
 
-export const selectAllUsers = state => values(state.entities.users);
+export const selectAllUsers = state => {
+  return values(state.entities.users);
+};

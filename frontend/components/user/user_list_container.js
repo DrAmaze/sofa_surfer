@@ -8,7 +8,6 @@ import { fetchUser, fetchUsers } from '../../actions/user_actions';
 import { selectAllUsers } from '../../reducers/selectors';
 
 const mapStateToProps = (state, { match }) => {
-  debugger
   return {
     users: selectAllUsers(state),
     spotId: parseInt(match.params.spotId)

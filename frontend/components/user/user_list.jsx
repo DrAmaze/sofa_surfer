@@ -13,7 +13,7 @@ class UserList extends React.Component {
     let { users } = this.props;
     let userItems;
     let hosts = [];
-    if (this.props.users) {
+    if (this.props.users.length > 0) {
       hosts = users.filter(user =>
         user.hosting && parseInt(user.location_id) === this.props.spotId
       );
