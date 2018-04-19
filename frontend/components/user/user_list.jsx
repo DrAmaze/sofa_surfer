@@ -1,9 +1,7 @@
 import React from 'react';
-
 import UserListItem from './user_list_item.jsx';
 
 class UserList extends React.Component {
-
   componentWillMount () {
     this.props.fetchUsers();
     this.props.fetchSpot(this.props.spotId);
