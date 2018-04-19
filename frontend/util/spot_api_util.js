@@ -1,7 +1,7 @@
 export const fetchSpots = () => (
   $.ajax({
     method: 'GET',
-    url: 'api/locations',
+    url: `api/locations`,
   })
 );
 
@@ -23,7 +23,7 @@ export const createSpot = data => (
 export const searchSpots = searchTerm => (
   $.ajax({
     method: 'POST',
-    url: 'api/locations/search',
+    url: `${window.location.origin}/api/locations/search`,
     data: { term: searchTerm }
   })
 );

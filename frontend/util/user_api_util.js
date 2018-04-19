@@ -15,7 +15,7 @@ export const fetchUsers = () => (
 export const searchUsers = searchTerm => (
   $.ajax({
     method: 'POST',
-    url: 'api/users/search',
+    url: `${window.location.origin}/api/users/search`,
     data: { term: searchTerm }
   })
 );
