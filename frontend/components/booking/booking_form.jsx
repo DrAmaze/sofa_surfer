@@ -63,7 +63,7 @@ class BookingForm extends React.Component {
         user.hosting && parseInt(user.location_id) === parseInt(this.state.location_id)
       );
       hostItems = hosts.map((host, i) => (
-        <option value={i} key={i}>{ host.username }</option>
+        <option value={ host.id } key={i}>{ host.username }</option>
       ));
     } else {
       hostItems = [];
@@ -79,7 +79,7 @@ class BookingForm extends React.Component {
           onChange={this.update('host_id')}
           selected='0'
           >
-          <option value='0' disabled>Select your Host</option>
+          <option value='0'>Select your Host</option>
           { hostItems }
         </select>
       </label>;

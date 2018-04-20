@@ -79,7 +79,7 @@ class BookingUpdateForm extends React.Component {
         if (host.id === this.state.host_id) {
           hostId = i;
         }
-        return <option value={i} key={i}>{ host.username }</option>;
+        return <option value={ host.id } key={i}>{ host.username }</option>;
       });
     } else {
       hostItems = [];
