@@ -12,7 +12,7 @@ class SpotIndex extends React.Component {
     let { spots } = this.props;
 
     if (this.props.spots) {
-      spots = spots.map(spot => <SpotIndexItem key={spot.id} spot={spot} />);
+      spots = spots.map((spot, i) => <SpotIndexItem key={i} spot={spot} />);
     } else {
       spots = [];
     }
@@ -23,7 +23,7 @@ class SpotIndex extends React.Component {
         <h1> Choose your adventure ... </h1>
         <section className='spots-index'>
           <ul>
-            {spots}
+            { spots }
           </ul>
         </section>
         <br/><br/>
