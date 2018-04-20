@@ -9,7 +9,6 @@ import Search from '../search/search_container';
 class Dashboard extends React.Component {
   constructor(props) {
     super(props);
-
     this.state = {
       username: '',
       email: '',
@@ -111,17 +110,29 @@ class Dashboard extends React.Component {
     let spotsPreview;
 
     if (this.props.spots.length > 0) {
-      let previews = parseInt(Math.random() * 7);
-      let spot1 = spots[previews];
-      let spot2 = spots[previews+1];
-      let spot3 = spots[previews+2];
+      let previews1, previews2, previews3;
 
-      spotsPreview = spots.length > 3 ?
-        <div className='spot-preview'>
-          <SpotPreviewItem key={spot1.id} spot={spot1}/>
-          <SpotPreviewItem key={spot2.id} spot={spot2} />
-          <SpotPreviewItem key={spot3.id} spot={spot3} />
-        </div> : '';
+      debugger
+      if(spots.length >= 3) {
+        previews1 = parseInt(Math.random() * spots.length);
+        while (previews2 === previews1 || !previews2) {
+          previews2 = parseInt(Math.random() * spots.length);
+        }
+        while (previews3 === previews2 || previews3 === previews1 || !previews3) {
+          previews3 = parseInt(Math.random() * spots.length);
+        }
+
+        let spot1 = spots[previews1];
+        let spot2 = spots[previews2];
+        let spot3 = spots[previews3];
+        spotsPreview = <div className='spot-preview'>
+            <SpotPreviewItem key={1} spot={spot1}/>
+            <SpotPreviewItem key={2} spot={spot2} />
+            <SpotPreviewItem key={3} spot={spot3} />
+          </div>;
+        } else {
+          spotsPreview = '';
+        }
     }
 
     let { bookings } = this.props;
