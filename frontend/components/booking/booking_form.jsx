@@ -66,7 +66,7 @@ class BookingForm extends React.Component {
         <option value={i} key={i}>{ host.username }</option>
       ));
     } else {
-      hosts = [];
+      hostItems = [];
     }
 
     let hostForm;

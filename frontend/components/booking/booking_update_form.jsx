@@ -67,6 +67,41 @@ class BookingUpdateForm extends React.Component {
     // Description isn't required
     const description = this.state.description ? this.state.description : '';
 
+    let { users } = this.props;
+    let hosts;
+    let hostItems;
+    let hostId;
+    if (this.props.users.length > 0) {
+      hosts = users.filter(user =>
+        user.hosting && parseInt(user.location_id) === parseInt(this.state.location_id)
+      );
+      hostItems = hosts.map((host, i) => {
+        if (host.id === this.state.host_id) {
+          hostId = i;
+        }
+        return <option value={i} key={i}>{ host.username }</option>;
+      });
+    } else {
+      hostItems = [];
+    }
+
+    let hostForm;
+    if (this.state.location_id !== 0) {
+      hostForm = <label>
+        Host
+        <br/>
+        <select
+          className='booking-location'
+          onChange={this.update('host_id')}
+          selected={ hostId }
+          >
+          { hostItems }
+        </select>
+      </label>;
+    } else {
+      hostForm = <div></div>;
+    }
+
     return (
       <div className="booking-form-container">
         <form onSubmit={this.handleSubmit} className="booking-form-box">
@@ -130,16 +165,7 @@ class BookingUpdateForm extends React.Component {
               />
             </label>
             <br/><br/>
-            <label>
-              Host
-              <br/>
-              <input type="number"
-                min='1'
-                value={this.state.host}
-                onChange={this.update('host_id')}
-                placeholder={'1'}
-                className="booking-input"/>
-            </label>
+            { hostForm }
             <br/><br/>
             <label>
               Trip Description
