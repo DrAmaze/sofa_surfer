@@ -5,15 +5,14 @@ import { createBooking, updateBooking, deleteBooking, fetchBookings } from '../.
 import { fetchUsers } from '../../actions/user_actions';
 import { fetchSpots } from '../../actions/spot_actions';
 import { clearBookingErrors } from '../../actions/error_actions';
-import { selectHosts } from '../../reducers/selectors';
+import { selectAllUsers } from '../../reducers/selectors';
 
 const mapStateToProps = state => {
   // const hostId = parseInt(match.params)
-  // const hosts = selectHosts(state.entities, spotId);
   return {
     currentUser: state.session.currentUser,
     errors: state.errors.booking_errors,
-    // hosts
+    users: selectAllUsers(state)
   };
 };
 

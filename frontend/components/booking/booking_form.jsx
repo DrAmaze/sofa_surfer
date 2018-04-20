@@ -1,6 +1,5 @@
 import React from 'react';
-import { Link, withRouter } from 'react-router-dom';
-
+import { Link } from 'react-router-dom';
 
 class BookingForm extends React.Component {
   constructor(props) {
@@ -24,6 +23,7 @@ class BookingForm extends React.Component {
 
   componentWillMount () {
     this.props.clearBookingErrors();
+    this.props.fetchUsers();
   }
 
   update(field) {
@@ -55,8 +55,37 @@ class BookingForm extends React.Component {
   }
 
   render () {
-    let users = this.props.fetchUsers();
+    let { users } = this.props;
+    let hosts;
+    let hostItems;
+    if (this.props.users.length > 0) {
+      hosts = users.filter(user =>
+        user.hosting && parseInt(user.location_id) === parseInt(this.state.location_id)
+      );
+      hostItems = hosts.map((host, i) => (
+        <option value={i} key={i}>{ host.username }</option>
+      ));
+    } else {
+      hosts = [];
+    }
 
+    let hostForm;
+    if (this.state.location_id !== 0) {
+      hostForm = <label>
+        Host
+        <br/>
+        <select
+          className='booking-location'
+          onChange={this.update('host_id')}
+          selected='0'
+          >
+          <option value='0' disabled>Select your Host</option>
+          { hostItems }
+        </select>
+      </label>;
+    } else {
+      hostForm = <div></div>;
+    }
 
     return (
       <div className="booking-form-container">
@@ -121,15 +150,7 @@ class BookingForm extends React.Component {
               />
             </label>
             <br/><br/>
-            <label>
-              Host
-              <br/>
-              <input type="number"
-                min='1'
-                onChange={this.update('host_id')}
-                placeholder={'1'}
-                className="booking-input"/>
-            </label>
+            { hostForm }
             <br/><br/>
             <label>
               Trip Description
@@ -139,11 +160,11 @@ class BookingForm extends React.Component {
                 onChange={this.update('description')}
                 placeholder={'Tell locals about your trip and why they should meet or host you'}
               />
-            </label>
-            <br/>
+              </label>
+              <br/>
 
-            <br/>
-          </div>
+              <br/>
+            </div>
           <footer className='booking-submit'>
             <button
               className='create-button'
@@ -160,4 +181,4 @@ class BookingForm extends React.Component {
   }
 }
 
-export default withRouter(BookingForm);
+export default BookingForm;
