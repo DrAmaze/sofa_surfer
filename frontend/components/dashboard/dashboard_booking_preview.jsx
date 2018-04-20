@@ -4,7 +4,7 @@ import { Link, withRouter } from 'react-router-dom';
 const BookingPreviewItem = ({ booking }) => (
   <li className="booking-preview-item">
     <Link
-      to={`/bookings/${booking.id}`}
+      to={ `/bookings` }
       style={{ textDecoration: 'none', color: 'gray'}}>
       <section>
         <h3>Trip to { booking.spot }</h3>
