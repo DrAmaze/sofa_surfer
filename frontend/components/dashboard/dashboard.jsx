@@ -112,7 +112,6 @@ class Dashboard extends React.Component {
     if (this.props.spots.length > 0) {
       let previews1, previews2, previews3;
 
-      debugger
       if(spots.length >= 3) {
         previews1 = parseInt(Math.random() * spots.length);
         while (previews2 === previews1 || !previews2) {

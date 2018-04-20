@@ -12,16 +12,16 @@ class SearchResults extends React.Component {
     spots = values(spots);
     users = values(users);
     if (users.length > 0) {
-      userItems = users.map(user => (
+      userItems = users.map((user, i) => (
         <UserSearchResultItem
-          key={user.id}
+          key={i}
           user={ user } />
       ));
     }
     if (spots.length > 0) {
-      spotItems = spots.map(spot => (
+      spotItems = spots.map((spot, i) => (
         <SpotIndexItem
-          key={spot.id}
+          key={i}
           spot={ spot } />
       ));
     } else {
