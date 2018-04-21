@@ -18,7 +18,6 @@ class BookingForm extends React.Component {
 
   componentDidMount () {
     this.props.fetchSpots();
-    // this.props.fetchUsers();
   }
 
   componentWillMount () {
@@ -56,8 +55,8 @@ class BookingForm extends React.Component {
 
   render () {
     let { users } = this.props;
-    let hosts;
-    let hostItems;
+    let hosts, hostItems, hostForm;
+
     if (this.props.users.length > 0) {
       hosts = users.filter(user =>
         user.hosting && parseInt(user.location_id) === parseInt(this.state.location_id)
@@ -69,7 +68,6 @@ class BookingForm extends React.Component {
       hostItems = [];
     }
 
-    let hostForm;
     if (this.state.location_id !== 0) {
       hostForm = <label>
         Host

@@ -101,7 +101,7 @@ class BookingUpdateForm extends React.Component {
     } else {
       hostForm = <div></div>;
     }
-debugger
+
     return (
       <div className="booking-form-container">
         <form onSubmit={ this.handleSubmit } className="booking-form-box">

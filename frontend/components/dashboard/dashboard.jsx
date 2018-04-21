@@ -129,9 +129,9 @@ class Dashboard extends React.Component {
             <SpotPreviewItem key={2} spot={spot2} />
             <SpotPreviewItem key={3} spot={spot3} />
           </div>;
-        } else {
-          spotsPreview = '';
-        }
+      } else {
+        spotsPreview = '';
+      }
     }
 
     let { bookings } = this.props;
