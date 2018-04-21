@@ -4,7 +4,6 @@ import configureStore from './store/store';
 import Root from './components/root';
 import Modal from 'react-modal';
 
-
 document.addEventListener('DOMContentLoaded', () => {
   let store;
   if (window.currentUser) {

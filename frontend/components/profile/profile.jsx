@@ -19,7 +19,7 @@ class Profile extends React.Component {
       img_url: 'http://www.marletinc.com/wp-content/uploads/2017/09/demo-user.png'
     };
     this.handleSubmit = this.handleSubmit.bind(this);
-    // this.renderErrors = this.renderErrors.bind(this);
+    this.renderErrors = this.renderErrors.bind(this);
   }
 
   componentDidMount () {
