@@ -4,7 +4,6 @@ import Modal from 'react-modal';
 import BookingIndexItem from './booking_index_item';
 import BookingFormContainer from './booking_form_container';
 
-
 class Booking extends React.Component {
   constructor(props) {
     super(props);
@@ -19,7 +18,7 @@ class Booking extends React.Component {
 
   componentDidMount() {
     this.props.fetchBookings();
-    // this.props.fetchUsers();
+    this.props.fetchUsers();
   }
 
   closeModal() {
@@ -41,10 +40,10 @@ class Booking extends React.Component {
     if (this.props.bookings) {
       bookings = bookings.map(booking =>
         <BookingIndexItem
-          fetchSpot={this.props.fetchSpot}
-          key={booking.id}
-          booking={booking}
-           />
+          fetchSpot={ this.props.fetchSpot }
+          key={ booking.id }
+          booking={ booking }
+          />
     );
     } else {
       bookings = [];
@@ -75,8 +74,8 @@ class Booking extends React.Component {
     };
 
     const book = <BookingFormContainer
-      closeModal={this.closeModal}
-      handleNewBooking={this.handleNewBooking} />;
+      closeModal={ this.closeModal }
+      handleNewBooking={ this.handleNewBooking } />;
 
     return (
       <div>
@@ -85,7 +84,7 @@ class Booking extends React.Component {
           <section className='bookings-index'>
             <h1>Public Trips</h1>
             <ul>
-              {bookings}
+              { bookings }
             </ul>
           </section>
 
@@ -93,19 +92,19 @@ class Booking extends React.Component {
             <h3>Create a Trip</h3>
             <button
               className='search-color-button'
-              onClick={this.openModal}>
+              onClick={ this.openModal }>
               New Trip
             </button>
           </section>
 
           <Modal
             className='booking-modal'
-            isOpen={this.state.modalOpen}
-            onRequestClose={this.closeModal}
-            shouldCloseOnOverlayClick={true}
-            shouldCloseOnEsc={true}
-            style={style}>
-            {book}
+            isOpen={ this.state.modalOpen }
+            onRequestClose={ this.closeModal }
+            shouldCloseOnOverlayClick={ true }
+            shouldCloseOnEsc={ true }
+            style={ style }>
+            { book }
           </Modal>
         </div>
         <br/><br/>

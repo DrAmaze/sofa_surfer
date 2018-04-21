@@ -19,7 +19,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   fetchBookings: () => dispatch(fetchBookings()),
-  fetchBooking: spot => dispatch(fetchBooking(spot)),
+  fetchBooking: booking => dispatch(fetchBooking(booking)),
   updateBooking: booking => dispatch(updateBooking(booking)),
   fetchSpot: spotId => dispatch(fetchSpot(spotId)),
   fetchUser: userId => dispatch(fetchUser(userId)),

@@ -1,6 +1,6 @@
 import React from 'react';
 import Modal from 'react-modal';
-import { Link, withRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import BookingUpdateFormContainer from './booking_update_form_container';
 
 class BookingIndexItem extends React.Component {
@@ -54,10 +54,10 @@ class BookingIndexItem extends React.Component {
     let { fetchUser, booking } = this.props;
     // const host = fetchUser(this.props.booking.host_id);
     const book = <BookingUpdateFormContainer
-      closeModal={this.closeModal}
-      handleUpdateBooking={this.handleUpdateBooking}
-      updateBooking={this.updateBooking}
-      booking={booking} />;
+      closeModal={ this.closeModal }
+      handleUpdateBooking={ this.handleUpdateBooking }
+      updateBooking={ this.updateBooking }
+      booking={ booking } />;
     return (
       <li className="booking-index-item">
         <div className='arr-dep-book'>
@@ -83,17 +83,16 @@ class BookingIndexItem extends React.Component {
 
         <Modal
           className='booking-modal'
-          isOpen={this.state.modalOpen}
-          onRequestClose={this.closeModal}
-          shouldCloseOnOverlayClick={true}
-          shouldCloseOnEsc={true}
-          style={style}>
-          {book}
+          isOpen={ this.state.modalOpen }
+          onRequestClose={ this.closeModal }
+          shouldCloseOnOverlayClick={ true }
+          shouldCloseOnEsc={ true }
+          style={ style }>
+          { book }
         </Modal>
       </li>
     );
   }
 }
-
 
 export default BookingIndexItem;

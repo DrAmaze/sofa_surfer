@@ -7,18 +7,15 @@ import { fetchSpots } from '../../actions/spot_actions';
 import { clearBookingErrors } from '../../actions/error_actions';
 import { selectAllUsers } from '../../reducers/selectors';
 
-const mapStateToProps = state => {
-  // const hostId = parseInt(match.params)
-  return {
-    currentUser: state.session.currentUser,
-    errors: state.errors.booking_errors,
-    users: selectAllUsers(state)
-  };
-};
+const mapStateToProps = state => ({
+  currentUser: state.session.currentUser,
+  errors: state.errors.booking_errors,
+  users: selectAllUsers(state)
+});
+
 
 const mapDispatchToProps = dispatch => ({
   createBooking: booking => dispatch(createBooking(booking)),
-  updateBooking: booking => dispatch(updateBooking(booking)),
   deleteBooking: booking => dispatch(deleteBooking(booking)),
   fetchSpots: () => dispatch(fetchSpots()),
   fetchUsers: () => dispatch(fetchUsers()),

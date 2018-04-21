@@ -92,7 +92,7 @@ class BookingUpdateForm extends React.Component {
         <br/>
         <select
           className='booking-location'
-          onChange={this.update('host_id')}
+          onChange={ this.update('host_id') }
           selected={ hostId }
           >
           { hostItems }
@@ -101,21 +101,21 @@ class BookingUpdateForm extends React.Component {
     } else {
       hostForm = <div></div>;
     }
-
+debugger
     return (
       <div className="booking-form-container">
-        <form onSubmit={this.handleSubmit} className="booking-form-box">
+        <form onSubmit={ this.handleSubmit } className="booking-form-box">
           <nav className='login-head'>
             <div>
-              <h4>Update Trip to the {this.props.booking.spot}</h4>
+              <h4>Update Trip to the { this.props.booking.spot }</h4>
               <span
-                onClick={this.props.closeModal}
+                onClick={ this.props.closeModal }
                 className="login-form-close">
                 x
               </span>
             </div>
             <div className='session-errors'>
-              {this.renderErrors()}
+              { this.renderErrors() }
             </div>
           </nav>
           <div className="booking-form">
@@ -125,8 +125,8 @@ class BookingUpdateForm extends React.Component {
               <br/>
               <select
                 className='booking-location'
-                value={this.state.location_id}
-                onChange={this.update('location_id')}
+                value={ this.state.location_id }
+                onChange={ this.update('location_id') }
                 selected='0'>
                 <option value='0' disabled> e.g. Presidio
                 </option>
@@ -147,10 +147,10 @@ class BookingUpdateForm extends React.Component {
               Arriving on
               <br/>
               <input type="date"
-                value={this.state.arrival}
-                onChange={this.update('arrival')}
+                value={ this.state.arrival }
+                onChange={ this.update('arrival') }
                 className="booking-input"
-                placeholder={'e.g. MM-DD-YYYY'}
+                placeholder={ 'e.g. MM-DD-YYYY' }
               />
             </label>
             <br/><br/>
@@ -158,10 +158,10 @@ class BookingUpdateForm extends React.Component {
               Leaving on
               <br/>
               <input type="date"
-                value={this.state.departure}
-                onChange={this.update('departure')}
+                value={ this.state.departure }
+                onChange={ this.update('departure') }
                 className="booking-input"
-                placeholder={'e.g. MM-DD-YYYY'}
+                placeholder={ 'e.g. MM-DD-YYYY' }
               />
             </label>
             <br/><br/>
@@ -173,8 +173,8 @@ class BookingUpdateForm extends React.Component {
               <input type="text"
                 value={ description }
                 className="booking-input"
-                onChange={this.update('description')}
-                placeholder={'Tell locals about your trip and why they should meet or host you'}
+                onChange={ this.update('description') }
+                placeholder={ 'Tell locals about your trip and why they should meet or host you' }
               />
             </label>
             <br/>
@@ -184,11 +184,11 @@ class BookingUpdateForm extends React.Component {
           <footer className='booking-submit'>
             <button
               className='create-button'
-              onClick={this.closeModal}
+              onClick={ this.closeModal }
               type="submit"
               value="Update">Update</button>
             <button className='booking-cancel'
-              onClick={this.handleDeletion}>Delete</button>
+              onClick={ this.handleDeletion }>Delete</button>
           </footer>
         </form>
       </div>
