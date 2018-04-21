@@ -11,8 +11,8 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  searchUsers: searchTerm => dispatch(searchUsers(searchTerm)),
-  searchSpots: searchTerm => dispatch(searchSpots(searchTerm)),
+  // searchUsers: searchTerm => dispatch(searchUsers(searchTerm)),
+  // searchSpots: searchTerm => dispatch(searchSpots(searchTerm)),
 });
 
 export default withRouter(connect(

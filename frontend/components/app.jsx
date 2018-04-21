@@ -2,7 +2,6 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import {
   Route,
-  Redirect,
   Switch,
   Link,
   HashRouter
@@ -31,14 +30,13 @@ const App = () => (
       <HeaderContainer />
     </header>
     <Switch>
-      <AuthRoute exact path='/' component={Splash} />
-      <ProtectedRoute path='/dashboard' component={Dashboard} />
-      <ProtectedRoute path="/locations/:spotId" component={SpotShow} />
-      <ProtectedRoute path='/locations' component={SpotIndex} />
-      <ProtectedRoute path='/bookings' component={Bookings} />
-      <ProtectedRoute path='/users/:userId' component={Profile} />
-      <ProtectedRoute path='/search' component={Search} />
-
+      <AuthRoute exact path='/' component={ Splash } />
+      <ProtectedRoute path='/dashboard' component={ Dashboard } />
+      <ProtectedRoute path="/locations/:spotId" component={ SpotShow } />
+      <ProtectedRoute path='/locations' component={ SpotIndex } />
+      <ProtectedRoute path='/bookings' component={ Bookings } />
+      <ProtectedRoute path='/users/:userId' component={ Profile } />
+      <ProtectedRoute path='/search' component={ Search } />
     </Switch>
     <footer>
       <Footer />

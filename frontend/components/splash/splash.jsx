@@ -37,12 +37,12 @@ class Splash extends React.Component {
   render () {
     const session = this.state.formType === 'signup' ? (
       <SignupForm
-        closeModal={this.closeModal}
-        handleLogIn={this.handleLogIn}/>
+        closeModal={ this.closeModal }
+        handleLogIn={ this.handleLogIn }/>
       ) : (
         <LoginForm
-          closeModal={this.closeModal}
-          handleSignup={this.handleSignup}/>
+          closeModal={ this.closeModal }
+          handleSignup={ this.handleSignup }/>
       );
 
     const style = {
@@ -81,7 +81,7 @@ class Splash extends React.Component {
           <br/>
           <button className='color-button'
             type="submit"
-            onClick={this.handleSignup}>
+            onClick={ this.handleSignup }>
             Join
           </button>
         </section>
@@ -285,12 +285,12 @@ class Splash extends React.Component {
 
         <Modal
           className='modal'
-          isOpen={this.state.modalOpen}
-          onRequestClose={this.closeModal}
-          shouldCloseOnOverlayClick={true}
-          shouldCloseOnEsc={true}
-          style={style}>
-          {session}
+          isOpen={ this.state.modalOpen }
+          onRequestClose={ this.closeModal }
+          shouldCloseOnOverlayClick={ true }
+          shouldCloseOnEsc={ true }
+          style={ style }>
+          { session }
         </Modal>
       </div>
     );

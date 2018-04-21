@@ -1,6 +1,5 @@
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-
 import { fetchSpot } from '../../actions/spot_actions';
 import { fetchUsers } from '../../actions/user_actions';
 import { selectSpot } from '../../reducers/selectors';

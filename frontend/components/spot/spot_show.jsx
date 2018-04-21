@@ -1,7 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
-import { ProtectedRoute } from '../../util/route_util';
 import UserSearchFormContainer from '../user/user_search_form_container';
 import UserList from '../user/user_list_container';
 
@@ -28,7 +26,7 @@ class SpotShow extends React.Component {
             <img src={spot.img_url} />
           </div>
 
-          <h1 className='spot-title'> { spot.neighborhood } </h1>
+          <h1 className='spot-title'>{ spot.neighborhood }</h1>
           <div className="spot-index-link">
             <Link
               to="/locations"

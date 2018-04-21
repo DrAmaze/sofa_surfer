@@ -7,8 +7,8 @@ class SearchResults extends React.Component {
 
   render () {
     let { users, spots } = this.props;
-    let userItems;
-    let spotItems;
+    let userItems, spotItems;
+
     spots = values(spots);
     users = values(users);
     if (users.length > 0) {
@@ -33,13 +33,13 @@ class SearchResults extends React.Component {
       <div className='search-results'>
         <br/><br/><br/>
         <div>
-          <h2> Spot results ... </h2>
+          <h2>Spot results ...</h2>
           <ul className='spot-results-items'>
             { spotItems }
           </ul>
         </div>
         <div>
-          <h2> User results ... </h2>
+          <h2>User results ...</h2>
           <ul className='user-results-items'>
             { userItems }
           </ul>

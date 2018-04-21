@@ -30,12 +30,12 @@ class Search extends React.Component {
   render() {
     return (
       <nav className="search">
-        <form className='search-form' onSubmit={this.handleSubmit}>
+        <form className='search-form' onSubmit={ this.handleSubmit }>
           <input
             type="search"
-            onChange={this.update('searchTerm')}
-            onSubmit={this.handleSubmit}
-            value={this.state.searchTerm}
+            onChange={ this.update('searchTerm') }
+            onSubmit={ this.handleSubmit }
+            value={ this.state.searchTerm }
             className="search-bar"
             placeholder="Start typing..."
           />

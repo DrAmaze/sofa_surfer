@@ -8,8 +8,8 @@ class SpotSearchItem extends React.Component {
 
     return (
       <li className="spot-search-item">
-        <Link to={`/locations/${spot.id}`}
-          style={{ textDecoration: 'none', color: 'gray'}}>
+        <Link to={ `/locations/${spot.id}` }
+          style={{ textDecoration: 'none', color: 'gray' }}>
           { neighborhood }
         </Link>
       </li>

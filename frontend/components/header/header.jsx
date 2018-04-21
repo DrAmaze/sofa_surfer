@@ -81,12 +81,12 @@ class Header extends React.Component {
     const userInfo = this.props.currentUser ? (
       <ul className='navbar-headers'>
         <li className='logo'>
-          <span onClick={() => this.props.history.push('/dashboard')}>
+          <span onClick={ () => this.props.history.push('/dashboard') }>
             SofaSurfer
           </span>
         </li>
         <li className='search-bar'>
-          <Search onClick={() => {
+          <Search onClick={ () => {
               this.props.history.push('/search');
               this.props.clearSearch();
             }} />
@@ -117,25 +117,27 @@ class Header extends React.Component {
     ) : (
       <ul className='navbar-headers'>
         <li className='logo'
-          onClick={() => this.props.history.push('/')}>
+          onClick={ () => this.props.history.push('/') }>
           SofaSurfer
         </li>
         <li>
           <ul className='navbar-right'>
-            <li onClick={() => window.scrollTo(0, 1600)}>
+            <li onClick={ () => window.scrollTo(0, 1600) }>
               How it works
             </li>
             <li className='join'>
               <button
                 className='color-button'
-                onClick={this.handleSignup} >
+                onClick={ this.handleSignup }
+                >
                 Join
               </button>
             </li>
             <li className='login'>
               <button
                 className='clear-button'
-                onClick={this.handleLogIn}>
+                onClick={ this.handleLogIn  }
+                >
                 Log In
               </button>
             </li>
@@ -147,12 +149,14 @@ class Header extends React.Component {
 
     const session = this.state.formType === 'signup' ? (
       <SignupForm
-        closeModal={this.closeModal}
-        handleLogIn={this.handleLogIn}/>
+        closeModal={ this.closeModal }
+        handleLogIn={ this.handleLogIn }
+        />
       ) : (
         <LoginForm
-          closeModal={this.closeModal}
-          handleSignup={this.handleSignup}/>
+          closeModal={ this.closeModal }
+          handleSignup={ this.handleSignup }
+          />
       );
 
     return (
@@ -162,12 +166,12 @@ class Header extends React.Component {
         </header>
         <Modal
           className='modal'
-          isOpen={this.state.modalOpen}
-          onRequestClose={this.closeModal}
-          shouldCloseOnOverlayClick={true}
-          shouldCloseOnEsc={true}
-          style={style}>
-          {session}
+          isOpen={ this.state.modalOpen }
+          onRequestClose={ this.closeModal }
+          shouldCloseOnOverlayClick={ true }
+          shouldCloseOnEsc={ true }
+          style={ style }>
+          { session }
         </Modal>
       </div>
     );

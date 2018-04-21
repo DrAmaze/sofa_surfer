@@ -37,8 +37,8 @@ class SignupForm extends React.Component {
       return (
         <ul>
           {this.props.errors.map((err, i) => (
-            <li key={`error-${i}`}>
-              {err}
+            <li key={ `error-${i}` }>
+              { err }
             </li>
           ))}
         </ul>
@@ -50,54 +50,54 @@ class SignupForm extends React.Component {
 
     return (
       <div className="signup-form-container">
-        <form onSubmit={this.handleSubmit} className="login-form-box">
+        <form onSubmit={ this.handleSubmit } className="login-form-box">
           <nav className='login-head'>
             <div>
               <h4>Join SofaSurfer for free</h4>
               <span
-                onClick={this.props.closeModal}
+                onClick={ this.props.closeModal }
                 className="login-form-close">
                 x
               </span>
             </div>
             <div className='session-errors'>
-              {this.renderErrors()}
+              { this.renderErrors() }
             </div>
           </nav>
           <div className="login-form">
             <br/>
             <label>
               <input type="text"
-                value={this.state.username}
-                onChange={this.update('username')}
+                value={ this.state.username }
+                onChange={ this.update('username') }
                 className="login-input"
-                placeholder={'Username'}
+                placeholder={ 'Username' }
               />
             </label>
             <br/>
             <label>
               <input type="text"
-                value={this.state.email}
-                onChange={this.update('email')}
+                value={ this.state.email }
+                onChange={ this.update('email') }
                 className="login-input"
-                placeholder={'Email'}
+                placeholder={ 'Email' }
               />
             </label>
             <br/>
             <label>
               <input type="password"
-                value={this.state.password}
-                onChange={this.update('password')}
+                value={ this.state.password }
+                onChange={ this.update('password') }
                 className="login-input"
-                placeholder={'Password'}
+                placeholder={ 'Password' }
               />
             </label>
             <br/>
             <label>
               <select
                 className='user-location'
-                value={this.state.location_id}
-                onChange={this.update('location_id')}
+                value={ this.state.location_id }
+                onChange={ this.update('location_id') }
                 selected='0'>
                 <option value='0' disabled>
                   Please select your location
@@ -116,10 +116,10 @@ class SignupForm extends React.Component {
             </label>
             <input
               className='color-button-login'
-              onClick={this.closeModal}
+              onClick={ this.closeModal }
               type="submit"
               value="Join with Email"
-              />
+            />
             <br/>
             <span className='login-alternative'>
               Already a member?
@@ -129,7 +129,8 @@ class SignupForm extends React.Component {
               className='clear-button-login'
               type="button"
               value="Log in"
-              onClick={this.props.handleLogIn} />
+              onClick={ this.props.handleLogIn }
+            />
           </div>
         </form>
       </div>

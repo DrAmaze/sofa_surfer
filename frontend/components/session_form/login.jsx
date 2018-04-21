@@ -8,6 +8,7 @@ class LoginForm extends React.Component {
       username: '',
       password: ''
     };
+
     this.handleSubmit = this.handleSubmit.bind(this);
     this.demoSignin = this.demoSignin.bind(this);
     this.renderErrors = this.renderErrors.bind(this);
@@ -35,9 +36,9 @@ class LoginForm extends React.Component {
     if (this.props.errors) {
       return (
         <ul className='errors'>
-          {this.props.errors.map((err, i) => (
-            <li key={`error-${i}`}>
-              {err}
+          { this.props.errors.map((err, i) => (
+            <li key={ `error-${i}` }>
+              { err }
             </li>
           ))}
         </ul>
@@ -59,45 +60,46 @@ class LoginForm extends React.Component {
   render () {
     return (
       <div className='login-form-container'>
-        <form onSubmit={this.handleSubmit} className="login-form-box">
+        <form onSubmit={ this.handleSubmit } className="login-form-box">
           <nav className='login-head'>
             <div>
               <h4>Log in to SofaSurfer</h4>
               <span
-                onClick={this.props.closeModal}
+                onClick={ this.props.closeModal }
                 className="login-form-close">
                 x
               </span>
             </div>
             <div className='session-errors'>
-              {this.renderErrors()}
+              { this.renderErrors() }
             </div>
           </nav>
           <div className="login-form">
             <br/>
             <label>
               <input type="text"
-                value={this.state.username}
-                onChange={this.update('username')}
+                value={ this.state.username }
+                onChange={ this.update('username') }
                 className="login-input"
-                placeholder={'Username'}
+                placeholder={ 'Username' }
               />
             </label>
             <br/>
             <label>
               <input type="password"
-                value={this.state.password}
-                onChange={this.update('password')}
+                value={ this.state.password }
+                onChange={ this.update('password') }
                 className="login-input"
-                placeholder={'Password'}
+                placeholder={ 'Password' }
               />
             </label>
             <br/>
             <input
               className='color-button-login'
-              onClick={this.closeModal}
+              onClick={ this.closeModal }
               type="submit"
-              value="Log In" />
+              value="Log In"
+            />
             <br/>
             <span className='login-alternative'>
               Don't have an account?
@@ -105,7 +107,7 @@ class LoginForm extends React.Component {
             <br/>
             <input
               className='color-button-login'
-              onClick={this.demoSignin}
+              onClick={ this.demoSignin }
               type='submit'
               value='Demo Log In' />
             <br/>
@@ -113,7 +115,8 @@ class LoginForm extends React.Component {
               className='clear-button-login'
               type="button"
               value="Join"
-              onClick={this.props.handleSignup} />
+              onClick={ this.props.handleSignup }
+            />
           </div>
         </form>
       </div>
