@@ -19,6 +19,7 @@ class BookingIndexItem extends React.Component {
   }
 
   closeModal() {
+    this.setState({ modalOpen: false });
   }
 
   openModal() {
