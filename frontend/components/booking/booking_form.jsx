@@ -12,6 +12,7 @@ class BookingForm extends React.Component {
       departure: '',
       description: ''
     };
+
     this.handleSubmit = this.handleSubmit.bind(this);
     this.renderErrors = this.renderErrors.bind(this);
   }
@@ -45,7 +46,7 @@ class BookingForm extends React.Component {
         <ul>
           { this.props.errors.map((err, i) => (
             <li key={ `error-${i}` }>
-              {err}
+              { err }
             </li>
           ))}
         </ul>

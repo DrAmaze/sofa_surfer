@@ -14,9 +14,13 @@ class UserUpdateForm extends React.Component {
       img_url: this.props.currentUser.img_url,
       about_me: this.props.currentUser.about_me
     };
+
     this.handleSubmit = this.handleSubmit.bind(this);
     this.renderErrors = this.renderErrors.bind(this);
+  }
 
+  componentWillMount() {
+    this.props.clearUserErrors();
   }
 
   update(field) {
@@ -27,8 +31,8 @@ class UserUpdateForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    this.props.clearUserErrors();
     let user = this.state;
-
     this.props.updateUser(user)
     .then(() => this.props.closeModal());
   }
@@ -37,9 +41,9 @@ class UserUpdateForm extends React.Component {
     if (this.props.errors) {
       return (
         <ul>
-          {this.props.errors.map((err, i) => (
-            <li key={`error-${i}`}>
-              {err}
+          { this.props.errors.map((err, i) => (
+            <li key={ `error-${i}` }>
+              { err }
             </li>
           ))}
         </ul>
@@ -50,18 +54,18 @@ class UserUpdateForm extends React.Component {
   render () {
     return (
       <div className="booking-form-container">
-        <form onSubmit={this.handleSubmit} className="booking-form-box">
+        <form onSubmit={ this.handleSubmit } className="booking-form-box">
           <nav className='login-head'>
             <div>
               <h4>Update User Information</h4>
               <span
-                onClick={this.props.closeModal}
+                onClick={ this.props.closeModal }
                 className="login-form-close">
                 x
               </span>
             </div>
             <div className='session-errors'>
-              {this.renderErrors()}
+              { this.renderErrors() }
             </div>
           </nav>
           <div className="booking-form">
@@ -70,10 +74,10 @@ class UserUpdateForm extends React.Component {
               Email
               <br/>
               <input type="text"
-                value={this.state.email}
-                onChange={this.update('email')}
+                value={ this.state.email }
+                onChange={ this.update('email') }
                 className="booking-input"
-                placeholder={this.state.email}
+                placeholder={ this.state.email }
               />
             </label>
             <br/><br/>
@@ -81,10 +85,10 @@ class UserUpdateForm extends React.Component {
               Phone
               <br/>
               <input type="text"
-                value={this.state.phone}
-                onChange={this.update('phone')}
+                value={ this.state.phone }
+                onChange={ this.update('phone') }
                 className="booking-input"
-                placeholder={this.state.phone}
+                placeholder={ this.state.phone }
               />
             </label>
             <br/><br/>
@@ -92,10 +96,10 @@ class UserUpdateForm extends React.Component {
               age
               <br/>
               <input type="number"
-                value={this.state.age}
-                onChange={this.update('age')}
+                value={ this.state.age}
+                onChange={ this.update('age')}
                 className="booking-input"
-                placeholder={this.state.age}
+                placeholder={ this.state.age}
               />
             </label>
             <br/><br/>
@@ -103,10 +107,10 @@ class UserUpdateForm extends React.Component {
               image url
               <br/>
               <input type="text"
-                value={this.state.img_url}
-                onChange={this.update('img_url')}
+                value={ this.state.img_url }
+                onChange={ this.update('img_url') }
                 className="booking-input"
-                placeholder={this.state.img_url}
+                placeholder={ this.state.img_url }
               />
             </label>
             <br/><br/>
@@ -114,10 +118,10 @@ class UserUpdateForm extends React.Component {
               About Me
               <br/>
               <input type="text"
-                value={this.state.about_me}
+                value={ this.state.about_me }
                 className="booking-input"
-                onChange={this.update('about_me')}
-                placeholder={this.state.about_me}
+                onChange={ this.update('about_me') }
+                placeholder={ this.state.about_me }
               />
             </label>
             <br/>
@@ -127,7 +131,7 @@ class UserUpdateForm extends React.Component {
           <footer className='booking-submit'>
             <button
               className='create-button'
-              onClick={this.closeModal}
+              onClick={ this.closeModal }
               type="submit"
               value="Update">Update</button>
           </footer>

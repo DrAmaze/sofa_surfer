@@ -25,7 +25,6 @@ class Dashboard extends React.Component {
     this.closeModal = this.closeModal.bind(this);
     this.openModal = this.openModal.bind(this);
     this.handleUpdateUser = this.handleUpdateUser.bind(this);
-    // this.renderErrors = this.renderErrors.bind(this);
   }
 
   componentDidMount() {
@@ -94,10 +93,11 @@ class Dashboard extends React.Component {
       }
     };
     const userUpdate = <UserUpdateFormContainer
-      closeModal={this.closeModal}
-      handleUpdateUser={this.handleUpdateUser}
-      updateUser={this.updateUser}
-      user={this.props.currentUser} />;
+      closeModal={ this.closeModal }
+      handleUpdateUser={ this.handleUpdateUser }
+      updateUser={ this.updateUser }
+      user={ this.props.currentUser }
+    />;
 
     let guests;
     if (hosting) {
@@ -254,7 +254,7 @@ class Dashboard extends React.Component {
                   <div className='hosted'>
                     <button
                       className='search-color-button'
-                      onClick={this.openModal}>
+                      onClick={ this.openModal }>
                       Edit
                     </button>
                   </div>
@@ -266,12 +266,12 @@ class Dashboard extends React.Component {
         <br/><br/>
           <Modal
             className='booking-modal'
-            isOpen={this.state.modalOpen}
-            onRequestClose={this.closeModal}
-            shouldCloseOnOverlayClick={true}
-            shouldCloseOnEsc={true}
-            style={style}>
-            {userUpdate}
+            isOpen={ this.state.modalOpen }
+            onRequestClose={ this.closeModal }
+            shouldCloseOnOverlayClick={ true }
+            shouldCloseOnEsc={ true }
+            style={ style }>
+            { userUpdate }
           </Modal>
       </div>
     );
