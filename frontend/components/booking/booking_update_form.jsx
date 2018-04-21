@@ -20,6 +20,10 @@ class BookingUpdateForm extends React.Component {
     this.handleDeletion = this.handleDeletion.bind(this);
   }
 
+  componentWillMount() {
+    this.props.clearBookingErrors();
+  }
+
   update(field) {
     return e => this.setState({
       [field]: e.target.value

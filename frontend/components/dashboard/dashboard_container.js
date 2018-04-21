@@ -25,7 +25,6 @@ const mapDispatchToProps = dispatch => ({
   fetchBookings: () => dispatch(fetchBookings()),
   updateUser: user => dispatch(updateUser(user)),
   clearUserErrors: () => dispatch(clearUserErrors())
-
 });
 
 export default withRouter(connect(
