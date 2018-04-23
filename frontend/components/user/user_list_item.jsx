@@ -12,6 +12,20 @@ class UserListItem extends React.Component {
       img_url
     } = user;
 
+    let phoneNumber;
+    if (phone) {
+      let digits = phone.split('');
+      phoneNumber = ['('];
+      for(let i = 0; i < digits.length; i++) {
+        phoneNumber.push(digits[i]);
+        if(i == 2) { phoneNumber.push(') '); }
+        if(i == 5) { phoneNumber.push('-'); }
+      }
+      phoneNumber.join('');
+    } else {
+      phoneNumber = '';
+    }
+
     let image;
     if (img_url) {
       image = <img src={img_url} alt='user image' />;
@@ -23,12 +37,12 @@ class UserListItem extends React.Component {
       <li className='spot-host'>
 
         <div className='user-image'>
-          {image}
+          { image }
         </div>
         <div className='host-info'>
           <h3>{ username }</h3>
           <div> Email: { email } </div>
-          <div> Phone: { phone } </div>
+          <div> Phone: { phoneNumber } </div>
           <div> Age: { age } </div>
         </div>
         <div className='host-about-me'>
