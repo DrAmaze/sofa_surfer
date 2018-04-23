@@ -18,8 +18,10 @@
 
 .search-results div ul {
   display: flex;
+  margin: 10px 70px;
   flex-direction: row;
   flex-wrap: wrap;
+  min-width: 400px;
 }
 
 .search-results div ul div {

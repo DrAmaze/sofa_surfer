@@ -165,7 +165,7 @@ class Dashboard extends React.Component {
 
     let image;
     if (img_url) {
-      image = <img src={img_url} alt='user image' />;
+      image = <img src={ img_url } alt='user image' />;
     } else {
       image = <img src='http://www.iconninja.com/files/411/435/758/casual-girl-user-female-avatar-person-icon.svg' alt='blank image' />;
     }
@@ -178,16 +178,16 @@ class Dashboard extends React.Component {
             <Link
               to='/dashboard'
               style={{ textDecoration: 'none', color: 'inherit'}}>
-              {image}
+              { image }
             </Link>
             <h3 className='user-dashboard'>
-              {username}
+              { username }
             </h3>
             <br/>
             <h4 className='street-home'> {street} {home} </h4>
             <h4 className='home'> San Francisco, CA, USA </h4>
             <br/>
-            <div> {guests} </div>
+            <div>{ guests }</div>
             <br/>
           </section>
 
@@ -222,7 +222,7 @@ class Dashboard extends React.Component {
                 <Link
                   to='/dashboard'
                   style={{ textDecoration: 'none', color: 'inherit'}}>
-                  About me
+                  About Me
                 </Link>
               </div>
               <div className='user-attributes'>

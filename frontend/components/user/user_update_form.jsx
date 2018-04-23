@@ -11,8 +11,9 @@ class UserUpdateForm extends React.Component {
       phone: this.props.currentUser.phone,
       age: this.props.currentUser.age,
       hosting: this.props.currentUser.hosting,
+      street: this.props.currentUser.street,
       img_url: this.props.currentUser.img_url,
-      about_me: this.props.currentUser.about_me
+      about_me: this.props.currentUser.about_me,
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);

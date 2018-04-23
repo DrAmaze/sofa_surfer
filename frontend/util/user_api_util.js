@@ -1,7 +1,7 @@
 export const fetchUser = id => (
   $.ajax({
     method: 'GET',
-    url: `api/users/${id}`,
+    url: `${window.location.origin}/api/users/${id}`,
   })
 );
 
@@ -23,7 +23,7 @@ export const searchUsers = searchTerm => (
 export const updateUser = user => (
   $.ajax({
     method: 'PATCH',
-    url: `api/users/${user.id}`,
+    url: `${window.location.origin}/api/users/${user.id}`,
     data: { user }
   })
 );
