@@ -163,6 +163,20 @@ class Dashboard extends React.Component {
         </div>;
     }
 
+    let phoneNumber;
+    if (phone) {
+      let digits = phone.split('');
+      phoneNumber = ['('];
+      for(let i = 0; i < digits.length; i++) {
+        phoneNumber.push(digits[i]);
+        if(i == 2) { phoneNumber.push(') '); }
+        if(i == 5) { phoneNumber.push('-'); }
+      }
+      phoneNumber.join('');
+    } else {
+      phoneNumber = '';
+    }
+
     let image;
     if (img_url) {
       image = <img src={ img_url } alt='user image' />;
@@ -237,7 +251,7 @@ class Dashboard extends React.Component {
                     <h4>
                       Phone :
                     </h4>
-                    { phone }
+                    { phoneNumber }
                   </div>
                   <div>
                     <h4>

@@ -76,6 +76,20 @@ class Profile extends React.Component {
       image = <img src='https://staticcdn.selio.com/adoos-static/img/user_default.png' alt='blank image' />;
     }
 
+    let phoneNumber;
+    if (phone) {
+      let digits = phone.split('');
+      phoneNumber = ['('];
+      for(let i = 0; i < digits.length; i++) {
+        phoneNumber.push(digits[i]);
+        if(i == 2) { phoneNumber.push(') '); }
+        if(i == 5) { phoneNumber.push('-'); }
+      }
+      phoneNumber.join('');
+    } else {
+      phoneNumber = '';
+    }
+
     const style = {
       overlay : {
         position        : 'fixed',
@@ -141,7 +155,7 @@ class Profile extends React.Component {
                   Phone:
                 </h4>
                 <br/>
-                <div>{ phone }</div>
+                <div>{ phoneNumber }</div>
               </div>
               <div className='profile-info'>
                 <h4>
