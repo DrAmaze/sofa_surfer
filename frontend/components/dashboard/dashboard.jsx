@@ -195,7 +195,7 @@ class Dashboard extends React.Component {
             <section className='box' id='locations'>
               <div className='dash-title'>
                 <Link to='/locations'
-                  style={{ textDecoration: 'none', color: 'inherit'}}>
+                  style={{ textDecoration: 'none', color: 'inherit' }}>
                   Explore the city's best spots with locals...
                 </Link>
               </div>
@@ -264,15 +264,15 @@ class Dashboard extends React.Component {
           </div>
         </div>
         <br/><br/>
-          <Modal
-            className='booking-modal'
-            isOpen={ this.state.modalOpen }
-            onRequestClose={ this.closeModal }
-            shouldCloseOnOverlayClick={ true }
-            shouldCloseOnEsc={ true }
-            style={ style }>
-            { userUpdate }
-          </Modal>
+        <Modal
+          className='booking-modal'
+          isOpen={ this.state.modalOpen }
+          onRequestClose={ this.closeModal }
+          shouldCloseOnOverlayClick={ true }
+          shouldCloseOnEsc={ true }
+          style={ style }>
+          { userUpdate }
+        </Modal>
       </div>
     );
   }

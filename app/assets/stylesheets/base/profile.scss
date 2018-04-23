@@ -2,26 +2,60 @@ div.profile {
   display: flex;
   font-size: 20px;
   box-shadow: 2px solid gray;
+  text-align: left;
 }
 
-section.profile-header h3, h4, div {
+section.profile-header {
   text-align: center;
+}
+
+div.profile-info {
+  display: flex;
+  padding: 0 20px;
+  margin: 10px 0;
+
+  div {
+    justify-content: space-around;
+  }
 }
 
 .profile-header {
   height: 500px;
   background-color: white;
-  margin: 40px;
+  border-radius: 2px;
+  box-shadow: 2px 2px 2px lightgrey;
+  margin: 20px 0 10px 10px;
   width: 20%;
   height: 590px;
 }
 
+.personal-information {
+  font-size: 56px;
+}
+
 div.profile-information {
   background-color: white;
-  margin: 40px;
-  width: 70%;
+  border-radius: 2px;
+  box-shadow: 2px 2px 2px lightgrey;
+  display: flex;
+  flex-direction: row;
+  margin: 20px;
+
+  button {
+    margin: 0 42%;
+  }
 }
 
 .profile-about-me {
   font-size: 24px;
+}
+
+.profile-title {
+  border-bottom: 1px solid #e6e6e6;
+  padding: 10px 30px;
+  text-align: center;
+}
+
+.profile-about-me-information {
+  padding: 10px 30px;
 }

@@ -1,12 +1,10 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
-
 import ReviewContainer from '../review/review_container';
 
 class Profile extends React.Component {
   constructor(props) {
     super(props);
-
     this.state = {
       username: '',
       email: '',
@@ -18,8 +16,9 @@ class Profile extends React.Component {
       street: '',
       img_url: 'http://www.marletinc.com/wp-content/uploads/2017/09/demo-user.png'
     };
+
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.renderErrors = this.renderErrors.bind(this);
+    // this.renderErrors = this.renderErrors.bind(this);
   }
 
   componentDidMount () {
@@ -34,7 +33,6 @@ class Profile extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-
     let user = {
       username: this.props.currentUser.username,
       email: this.props.currentUser.email,
@@ -63,12 +61,7 @@ class Profile extends React.Component {
       home
     } = this.props.currentUser;
 
-    let guests;
-    if (hosting) {
-      guests = "Accepting Guests";
-    } else {
-      guests = "Not Accepting Guests";
-    }
+    let guests = hosting ? "Accepting Guests" : "Not Accepting Guests";
 
     let image;
     if (img_url) {
@@ -83,57 +76,56 @@ class Profile extends React.Component {
         <div className='profile'>
           <section className='profile-header'>
             <div>
-              {image}
+              { image }
             </div>
             <h3 className='user-profile'>
-              {username}
+              { username }
             </h3>
             <br/>
-            <h4 className='street-home'> {street} {home} </h4>
-            <h4 className='home'> San Francisco, CA, USA </h4>
+            <h4 className='street-home'> { street } { home } </h4>
+            <h4 className='home'>San Francisco, CA, USA</h4>
             <br/>
-            <div> {guests} </div>
+            <div>{ guests }</div>
           </section>
 
           <div className='profile-information' id='profile-info'>
-            <section className='about-me'>
+            <section className='profile'>
               <div className='profile-title'>
                 About Me
               </div>
-              <div className='profile-information'>
+              <div className='profile-info'>
                 <h4>
-                  Email :
+                  Email:
+                </h4>
+                <div>{ email }</div>
+              </div>
+              <div className='profile-info'>
+                <h4>
+                  Phone:
                 </h4>
                 <br/>
-                { email }
+                <div>{ phone }</div>
               </div>
-              <div className='profile-information'>
-                <h4>
-                  Phone :
-                </h4>
-                <br/>
-                { phone }
-              </div>
-              <div className='profile-information'>
+              <div className='profile-info'>
                 <h4>
                   Age:
                 </h4>
                 <br/>
-                { age }
+                <div>{ age }</div>
               </div>
               <div className='profile-about-me-information profile-about-me'>
                 { about_me }
               </div>
-            </section>
             <button
               className='search-color-button'
               type='submit'
               value='Update'>
               Update
             </button>
+          </section>
           </div>
         </div>
-      <br/><br/><br/>
+        <br/><br/><br/>
       </div>
     );
   }
