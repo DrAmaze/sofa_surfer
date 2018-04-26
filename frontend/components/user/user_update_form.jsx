@@ -83,7 +83,7 @@ class UserUpdateForm extends React.Component {
             </label>
             <br/><br/>
             <label>
-              Phone
+              Phone (##########)
               <br/>
               <input type="text"
                 value={ this.state.phone }
@@ -94,7 +94,7 @@ class UserUpdateForm extends React.Component {
             </label>
             <br/><br/>
             <label>
-              age
+              Age
               <br/>
               <input type="number"
                 value={ this.state.age}
@@ -105,7 +105,7 @@ class UserUpdateForm extends React.Component {
             </label>
             <br/><br/>
             <label>
-              image url
+              Image URL
               <br/>
               <input type="text"
                 value={ this.state.img_url }

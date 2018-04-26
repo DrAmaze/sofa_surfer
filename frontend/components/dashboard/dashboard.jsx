@@ -18,7 +18,7 @@ class Dashboard extends React.Component {
       location_id: 0,
       about_me: '',
       street: '',
-      img_url: 'http://www.marletinc.com/wp-content/uploads/2017/09/demo-user.png',
+      img_url: 'https://cdn2.iconfinder.com/data/icons/lil-faces/239/lil-face-19-512.png',
       modalOpen: false
     };
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -68,6 +68,12 @@ class Dashboard extends React.Component {
       home,
       about_me
     } = this.props.currentUser;
+    debugger
+    if (!img_url) {
+      img_url = 'http://www.iconninja.com/files/411/435/758/casual-girl-user-female-avatar-person-icon.svg';
+      this.props.currentUser.img_url = img_url;
+    }
+    let image = <img src={ img_url } alt='user image' />;
 
     const style = {
       overlay : {
@@ -177,12 +183,6 @@ class Dashboard extends React.Component {
       phoneNumber = '';
     }
 
-    let image;
-    if (img_url) {
-      image = <img src={ img_url } alt='user image' />;
-    } else {
-      image = <img src='http://www.iconninja.com/files/411/435/758/casual-girl-user-female-avatar-person-icon.svg' alt='blank image' />;
-    }
     return (
       <div>
         <br/><br/><br/>
