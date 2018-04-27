@@ -68,12 +68,17 @@ class Dashboard extends React.Component {
       home,
       about_me
     } = this.props.currentUser;
-    debugger
+
     if (!img_url) {
       img_url = 'http://www.iconninja.com/files/411/435/758/casual-girl-user-female-avatar-person-icon.svg';
       this.props.currentUser.img_url = img_url;
     }
     let image = <img src={ img_url } alt='user image' />;
+
+    if (!street) {
+      street = '';
+      this.props.currentUser.street = street;
+    }
 
     const style = {
       overlay : {
@@ -93,7 +98,6 @@ class Dashboard extends React.Component {
         background      : 'white',
         borderRadius    : '5px',
         width           : '70%',
-        height          : '555px',
         marginLeft      : 'auto',
         marginRight     : 'auto',
       }
@@ -198,8 +202,8 @@ class Dashboard extends React.Component {
               { username }
             </h3>
             <br/>
-            <h4 className='street-home'> {street} {home} </h4>
-            <h4 className='home'> San Francisco, CA, USA </h4>
+            <h4 className='street-home'>{ street }, { home }</h4>
+            <h4 className='home'>San Francisco, CA, USA</h4>
             <br/>
             <div>{ guests }</div>
             <br/>

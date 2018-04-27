@@ -67,7 +67,6 @@ class Booking extends React.Component {
         background      : 'white',
         borderRadius    : '5px',
         width           : '70%',
-        height          : '555px',
         marginLeft      : 'auto',
         marginRight     : 'auto',
       }

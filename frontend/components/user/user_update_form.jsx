@@ -83,6 +83,17 @@ class UserUpdateForm extends React.Component {
             </label>
             <br/><br/>
             <label>
+              Street
+              <br/>
+              <input type="text"
+                value={ this.state.street }
+                onChange={ this.update('street') }
+                className="booking-input"
+                placeholder={ this.state.street }
+              />
+            </label>
+            <br/><br/>
+            <label>
               Phone (##########)
               <br/>
               <input type="text"

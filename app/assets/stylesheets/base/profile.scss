@@ -3,6 +3,7 @@ div.profile {
   display: flex;
   font-size: 20px;
   text-align: left;
+  text-transform: capitalize;
   margin: 20px 0 0 0;
 }
 
@@ -72,11 +73,9 @@ div.profile-information {
     box-shadow: 2px 2px 2px lightgrey;
     margin: 0 10px 0 10px;
     padding: 10px;
-    text-align: center;
     justify-content: space-around;
   }
 }
-
 
 .profile-about-me {
   font-size: 24px;

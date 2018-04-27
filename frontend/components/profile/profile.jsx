@@ -108,7 +108,6 @@ class Profile extends React.Component {
         background      : 'white',
         borderRadius    : '5px',
         width           : '70%',
-        height          : '555px',
         marginLeft      : 'auto',
         marginRight     : 'auto',
       }
@@ -133,7 +132,7 @@ class Profile extends React.Component {
               { username }
             </h3>
             <br/>
-            <h4 className='street-home'> { street } { home } </h4>
+            <h4 className='street-home'>{ street }, { home }</h4>
             <h4 className='home' id='profile-home'>San Francisco, CA, USA</h4>
             <br/>
           </section>
