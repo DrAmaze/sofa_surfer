@@ -134,46 +134,54 @@ class Profile extends React.Component {
             </h3>
             <br/>
             <h4 className='street-home'> { street } { home } </h4>
-            <h4 className='home'>San Francisco, CA, USA</h4>
+            <h4 className='home' id='profile-home'>San Francisco, CA, USA</h4>
             <br/>
-            <div>{ guests }</div>
           </section>
 
-          <div className='profile-information' id='profile-info'>
-            <section className='profile'>
-              <div className='profile-title'>
-                About Me
+          <div className='right-profile-col'>
+            <section className='guests'>
+              <div>
+                { guests }
               </div>
-              <div className='profile-info'>
-                <h4>
-                  Email:
-                </h4>
-                <div>{ email }</div>
-              </div>
-              <div className='profile-info'>
-                <h4>
-                  Phone:
-                </h4>
-                <br/>
-                <div>{ phoneNumber }</div>
-              </div>
-              <div className='profile-info'>
-                <h4>
-                  Age:
-                </h4>
-                <br/>
-                <div>{ age }</div>
-              </div>
-              <div className='profile-about-me-information profile-about-me'>
-                { about_me }
-              </div>
-            <button
-              className='search-color-button'
-              onClick={ this.openModal }
-              >
-              Edit
-            </button>
-          </section>
+              <button
+                className='search-color-button'
+                onClick={ this.openModal }
+                >
+                Edit
+              </button>
+            </section>
+
+            <div className='profile-information' id='profile-info'>
+
+              <section className='profile'>
+                <div className='profile-title'>
+                  About Me
+                </div>
+                <div className='profile-info'>
+                  <h4>
+                    Email:
+                  </h4>
+                  <div> { email }</div>
+                </div>
+                <div className='profile-info'>
+                  <h4>
+                    Phone:
+                  </h4>
+                  <br/>
+                  <div>{ phoneNumber }</div>
+                </div>
+                <div className='profile-info'>
+                  <h4>
+                    Age:
+                  </h4>
+                  <br/>
+                  <div> { age }</div>
+                </div>
+                <div className='profile-about-me-information profile-about-me'>
+                  { about_me }
+                </div>
+            </section>
+            </div>
           </div>
         </div>
         <br/><br/><br/>
