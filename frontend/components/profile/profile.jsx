@@ -36,6 +36,11 @@ class Profile extends React.Component {
     });
   }
 
+  toggleHosting(host) {
+    this.setState({ hosting: host });
+    this.props.updateUser(this.state.user);
+  }
+
   handleUpdateUser(e) {
     this.setState({ modalOpen: true });
   }
@@ -144,9 +149,9 @@ class Profile extends React.Component {
               </div>
               <button
                 className='search-color-button'
-                onClick={ this.openModal }
+                onClick={ this.update('hosting') }
                 >
-                Edit
+                Change Hosting Availability
               </button>
             </section>
 
@@ -179,6 +184,12 @@ class Profile extends React.Component {
                 <div className='profile-about-me-information profile-about-me'>
                   { about_me }
                 </div>
+                <button
+                  className='search-color-button'
+                  onClick={ this.openModal }
+                  >
+                  Edit
+                </button>
             </section>
             </div>
           </div>
