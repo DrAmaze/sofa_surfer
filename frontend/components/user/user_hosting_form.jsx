@@ -22,7 +22,7 @@ class UserHostingForm extends React.Component {
     let guests = hosting ? "Accepting Guests" : "Not Accepting Guests";
 
     this.state.hosting = !this.state.hosting;
-debugger
+
     return (
       <section className='guests'>
         <div>
