@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import Modal from 'react-modal';
 import UserUpdateFormContainer from '../user/user_update_form_container';
+import UserHostingForm from '../user/user_hosting_form_container';
 import ReviewContainer from '../review/review_container';
 
 class Profile extends React.Component {
@@ -118,6 +119,11 @@ class Profile extends React.Component {
       }
     };
 
+    const userHosting = <UserHostingForm
+      updateUser={ this.updateUser }
+      user={ this.props.currentUser }
+    />;
+
     const userUpdate = <UserUpdateFormContainer
       closeModal={ this.closeModal }
       handleUpdateUser={ this.handleUpdateUser }
@@ -143,17 +149,8 @@ class Profile extends React.Component {
           </section>
 
           <div className='right-profile-col'>
-            <section className='guests'>
-              <div>
-                { guests }
-              </div>
-              <button
-                className='search-color-button'
-                onClick={ this.update('hosting') }
-                >
-                Change Hosting Availability
-              </button>
-            </section>
+
+            { userHosting }
 
             <div className='profile-information' id='profile-info'>
 
