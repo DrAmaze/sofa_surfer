@@ -26,7 +26,7 @@
   box-shadow: 2px 2px 2px lightgray;
   display: flex;
   flex-direction: column;
-  height: 55%;
+  height: 60%;
   margin: 5px;
   min-width: 200px;
 }
@@ -94,15 +94,28 @@
   list-style: none;
 }
 
+section.dashboard-hosting {
+  box-shadow: none;
+  height: 80px;
+
+  section {
+    box-shadow: none;
+    margin-left: 0;
+    vertical-align: middle;
+    width: 100%;
+
+    button {
+      margin-top: 8px;
+      padding: 5px 30px 40px;
+    }
+  }
+
+
+}
+
 .dash-title {
   border-bottom: 1px solid #e6e6e6;
   padding: 10px 30px;
-}
-
-.box-about-me {
-  // display: flex;
-  // flex-direction: row;
-  // position: relative;
 }
 
 .user-attributes {
@@ -113,7 +126,6 @@
 .personal-user-information {
   width: 20%;
 }
-
 
 .personal-user-information {
   font-size: 14px;

@@ -5,6 +5,7 @@ import SpotPreviewItem from './dashboard_spot_preview';
 import BookingPreviewItem from './dashboard_booking_preview';
 import UserUpdateFormContainer from '../user/user_update_form_container';
 import Search from '../search/search_container';
+import UserHostingForm from '../user/user_hosting_form_container';
 
 class Dashboard extends React.Component {
   constructor(props) {
@@ -204,8 +205,11 @@ class Dashboard extends React.Component {
             <br/>
             <h4 className='street-home'>{ street }, { home }</h4>
             <h4 className='home'>San Francisco, CA, USA</h4>
+
             <br/>
-            <div>{ guests }</div>
+            <section className='dashboard-hosting'>
+              <UserHostingForm />
+            </section>
             <br/>
           </section>
 
@@ -234,6 +238,8 @@ class Dashboard extends React.Component {
                 { bookingPreview }
               </div>
             </section>
+
+
 
             <section className='box-about-me' id='reviews'>
               <div className='dash-title'>
@@ -279,6 +285,7 @@ class Dashboard extends React.Component {
                 </div>
               </div>
             </section>
+
           </div>
         </div>
         <br/><br/>
