@@ -19,15 +19,19 @@ class UserHostingForm extends React.Component {
 
   render () {
     let { hosting } = this.props.currentUser;
-    let guests = hosting ? "Accepting Guests" : "Not Accepting Guests";
+    let guests;
+    if (hosting) {
+      guests = <div className='yes-hosting'>Accepting Guests</div>;
+    } else {
+      guests = <div className='not-hosting'>Not Accepting Guests</div>;
+    }
+
 
     this.state.hosting = !this.state.hosting;
 
     return (
       <section className='guests'>
-        <div>
-          { guests }
-        </div>
+        { guests }
         <button
           className='search-color-button'
           onClick={ this.handleUpdateHosting }

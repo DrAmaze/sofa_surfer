@@ -100,10 +100,17 @@ section.dashboard-hosting {
 
   section {
     box-shadow: none;
-    color: #41b866;
     margin-left: 0;
     vertical-align: middle;
     width: 100%;
+
+    div.yes-hosting {
+      color: #41b866;
+    }
+
+    div.not-hosting {
+      color: red;
+    }
 
     button {
       margin-top: 8px;
