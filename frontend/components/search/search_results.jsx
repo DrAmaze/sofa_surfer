@@ -17,6 +17,8 @@ class SearchResults extends React.Component {
           key={i}
           user={ user } />
       ));
+    } else {
+      userItems = <div></div>;
     }
     if (spots.length > 0) {
       spotItems = spots.map((spot, i) => (
@@ -26,7 +28,6 @@ class SearchResults extends React.Component {
       ));
     } else {
       spotItems = <div></div>;
-      userItems = <div></div>;
     }
 
     return (
