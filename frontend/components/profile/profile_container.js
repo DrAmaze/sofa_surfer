@@ -3,13 +3,18 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 import Profile from './profile';
 import { fetchReviews, fetchUser, updateUser } from '../../actions/user_actions';
-import { selectMyReviews, profileErrors } from '../../reducers/selectors';
+import { selectMyReviews, profileErrors, selectUser } from '../../reducers/selectors';
 
-const mapStateToProps = state => ({
-  currentUser: state.session.currentUser,
-  reviews: selectMyReviews(state),
-  errors: state.errors.profile_errors,
-});
+const mapStateToProps = (state, { match }) => {
+  const userId = parseInt(match.params.userId);
+  return {
+    currentUser: state.session.currentUser,
+    reviews: selectMyReviews(state),
+    errors: state.errors.profile_errors,
+    person: selectUser(state.entities, userId),
+    userId
+  };
+};
 
 const mapDispatchToProps = dispatch => ({
   fetchReviews: () => dispatch(fetchReviews()),

@@ -19,3 +19,8 @@ export const selectMyReviews = state => values(state.entities.reviews);
 export const selectAllUsers = state => {
   return values(state.entities.users);
 };
+
+export const selectUser = ({ users }, id) => {
+  const user = users[id] || {};
+  return user;
+};

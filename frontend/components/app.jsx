@@ -3,8 +3,7 @@ import { Provider } from 'react-redux';
 import {
   Route,
   Switch,
-  Link,
-  HashRouter
+  Link
 } from 'react-router-dom';
 
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
@@ -32,6 +31,7 @@ const App = () => (
     <Switch>
       <AuthRoute exact path='/' component={ Splash } />
       <ProtectedRoute path='/dashboard' component={ Dashboard } />
+      <ProtectedRoute path='/users/:userId' component={ Profile } />
       <ProtectedRoute path="/locations/:spotId" component={ SpotShow } />
       <ProtectedRoute path='/locations' component={ SpotIndex } />
       <ProtectedRoute path='/bookings' component={ Bookings } />

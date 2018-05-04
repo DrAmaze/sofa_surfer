@@ -29,6 +29,13 @@ class Profile extends React.Component {
 
   componentDidMount () {
     this.props.fetchReviews();
+    this.props.fetchUser(this.props.userId);
+  }
+
+  componentWillReceiveProps (nextProps) {
+    if (this.props.userId !== nextProps.userId) {
+      this.props.fetchUser(nextProps.userId);
+    }
   }
 
   update(field) {
@@ -70,10 +77,28 @@ class Profile extends React.Component {
       about_me,
       street,
       img_url,
-      home
+      home,
     } = this.props.currentUser;
 
-    let guests = hosting ? "Accepting Guests" : "Not Accepting Guests";
+    let button;
+    let userHosting;
+    if (this.props.currentUser.id === this.props.person.id) {
+      button = <button
+        className='search-color-button'
+        onClick={ this.openModal }
+        >
+        Edit
+      </button>;
+      userHosting = <UserHostingForm
+        updateUser={ this.updateUser }
+        user={ this.props.currentUser }
+      />;
+    } else {
+      button = <div></div>;
+
+      let guests = hosting ? "Accepting Guests" : "Not Accepting Guests";
+      userHosting = <div>{ guests }</div>;
+    }
 
     let image;
     if (img_url) {
@@ -118,11 +143,6 @@ class Profile extends React.Component {
         marginRight     : 'auto',
       }
     };
-
-    const userHosting = <UserHostingForm
-      updateUser={ this.updateUser }
-      user={ this.props.currentUser }
-    />;
 
     const userUpdate = <UserUpdateFormContainer
       closeModal={ this.closeModal }
@@ -181,12 +201,7 @@ class Profile extends React.Component {
                 <div className='profile-about-me-information profile-about-me'>
                   { about_me }
                 </div>
-                <button
-                  className='search-color-button'
-                  onClick={ this.openModal }
-                  >
-                  Edit
-                </button>
+                { button }
             </section>
             </div>
           </div>

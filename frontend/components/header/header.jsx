@@ -15,7 +15,7 @@ class Header extends React.Component {
       modalOpen: false
     };
 
-    this.toggleHosting = this.toggleHosting.bind(this);
+    // this.toggleHosting = this.toggleHosting.bind(this);
     this.closeModal = this.closeModal.bind(this);
     this.openModal = this.openModal.bind(this);
     this.handleSignup = this.handleSignup.bind(this);
@@ -44,12 +44,12 @@ class Header extends React.Component {
     this.setState({ modalOpen: true, formType: 'login' });
   }
 
-  toggleHosting(e) {
-    e.preventDefault();
-    merge({}, this.props.currentUser, {
-      hosting: !this.props.currentUser.hosting
-    });
-  }
+  // toggleHosting(e) {
+  //   e.preventDefault();
+  //   merge({}, this.props.currentUser, {
+  //     hosting: !this.props.currentUser.hosting
+  //   });
+  // }
 
   render () {
     const style = {
@@ -94,7 +94,7 @@ class Header extends React.Component {
         <li className='navbar-logged-in'>
           <ul className='navbar-right'>
             <li>
-              <Link to={ `/` }>
+              <Link to={ `/users/${ this.props.currentUser.id }` }>
                 Profile
               </Link>
             </li>
@@ -109,7 +109,7 @@ class Header extends React.Component {
               </Link>
             </li>
             <li>
-              <span onClick={this.props.logout}>Log Out</span>
+              <span onClick={ this.props.logout }>Log Out</span>
             </li>
           </ul>
         </li>
