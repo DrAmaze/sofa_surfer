@@ -16,16 +16,16 @@ class UserSearchResultItem extends React.Component {
     } else {
       image = <img src='https://staticcdn.selio.com/adoos-static/img/user_default.png' alt='blank image' />;
     }
-
+    
     return (
       <li className='user-search-result-item'>
 
         <div className='user-search-result-image'>
-          {image}
+          { image }
         </div>
         <div className='basic-user-info'>
           <h3> Username: </h3><p>{ username }</p>
-          <h3> Email: </h3><p>{ email } </p>
+          <h3> Email: </h3><p>{ email }</p>
         </div>
       </li>
     );

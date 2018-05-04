@@ -26,7 +26,6 @@ class UserHostingForm extends React.Component {
       guests = <div className='not-hosting'>Not Accepting Guests</div>;
     }
 
-
     this.state.hosting = !this.state.hosting;
 
     return (
