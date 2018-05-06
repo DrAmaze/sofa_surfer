@@ -102,13 +102,15 @@
 
 .user-search-form form span input,
 .email input,
-.username input {
-  border-radius: 3px;
-  border: 1px solid #929dad;
-  width: 100%;
-  padding: 10px 0 10px 2%;
-  text-align: center;
-  font-size: 16px;
+.username {
+  input {
+    border-radius: 3px;
+    border: 1px solid #929dad;
+    width: 100%;
+    padding: 10px 0 10px 2%;
+    text-align: left;
+    font-size: 16px;
+  }
 }
 
 .username, .email {

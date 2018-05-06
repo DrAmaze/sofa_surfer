@@ -79,7 +79,7 @@ class Profile extends React.Component {
       img_url,
       home,
     } = this.props.currentUser;
-
+    
     let button;
     let userHosting;
     if (this.props.currentUser.id === this.props.person.id) {

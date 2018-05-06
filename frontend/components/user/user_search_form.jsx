@@ -41,7 +41,7 @@ class UserSearch extends React.Component {
             </span>
             <input
               type='text'
-              onChange={this.update('searchTerm')} />
+              onChange={ this.update('searchTerm') } />
           </div>
 
           <div className='number-guests'>
