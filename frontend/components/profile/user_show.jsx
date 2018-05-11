@@ -1,31 +1,14 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
-import Modal from 'react-modal';
 import UserUpdateFormContainer from '../user/user_update_form_container';
 import UserHostingForm from '../user/user_hosting_form_container';
 import ReviewContainer from '../review/review_container';
-import UserShowContainer from './user_show_container';
 
 class Profile extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      username: '',
-      email: '',
-      phone: '',
-      age: 0,
-      hosting: false,
-      location_id: 0,
-      about_me: '',
-      street: '',
-      img_url: 'http://www.marletinc.com/wp-content/uploads/2017/09/demo-user.png',
-      modalOpen: false
     };
-
-    this.handleSubmit = this.handleSubmit.bind(this);
-    this.closeModal = this.closeModal.bind(this);
-    this.openModal = this.openModal.bind(this);
-    // this.renderErrors = this.renderErrors.bind(this);
   }
 
   componentDidMount () {
@@ -37,34 +20,6 @@ class Profile extends React.Component {
     if (this.props.userId !== nextProps.userId) {
       this.props.fetchUser(nextProps.userId);
     }
-  }
-
-  update(field) {
-    return e => this.setState({
-      [field]: e.target.value
-    });
-  }
-
-  toggleHosting(host) {
-    this.setState({ hosting: host });
-    this.props.updateUser(this.state.user);
-  }
-
-  handleUpdateUser(e) {
-    this.setState({ modalOpen: true });
-  }
-
-  closeModal() {
-    this.setState({ modalOpen: false });
-  }
-
-  openModal() {
-    this.setState({ modalOpen: true });
-  }
-
-  handleSubmit(e) {
-    e.preventDefault();
-    this.props.updateUser(this.state.user);
   }
 
   render () {
@@ -79,27 +34,11 @@ class Profile extends React.Component {
       street,
       img_url,
       home,
-    } = this.props.currentUser;
+    } = this.props.person;
 
-    let button;
     let userHosting;
-    if (this.props.currentUser.id === this.props.person.id) {
-      button = <button
-        className='search-color-button'
-        onClick={ this.openModal }
-        >
-        Edit
-      </button>;
-      userHosting = <UserHostingForm
-        updateUser={ this.updateUser }
-        user={ this.props.currentUser }
-      />;
-    } else {
-      button = <div></div>;
-
-      let guests = hosting ? "Accepting Guests" : "Not Accepting Guests";
-      userHosting = <div>{ guests }</div>;
-    }
+    let guests = hosting ? "Accepting Guests" : "Not Accepting Guests";
+    userHosting = <div>{ guests }</div>;
 
     let image;
     if (img_url) {
@@ -122,37 +61,7 @@ class Profile extends React.Component {
       phoneNumber = '';
     }
 
-    const style = {
-      overlay : {
-        position        : 'fixed',
-        top             : 0,
-        left            : 0,
-        right           : 0,
-        bottom          : 0,
-        backgroundColor : 'rgba(25, 25, 25, 0.90)',
-        zIndex          : 10
-      },
-      content : {
-        position        : 'relative',
-        top             : '10px',
-        border          : '1px solid #ccc',
-        zIndex          : 11,
-        background      : 'white',
-        borderRadius    : '5px',
-        width           : '70%',
-        marginLeft      : 'auto',
-        marginRight     : 'auto',
-      }
-    };
-
-    const userUpdate = <UserUpdateFormContainer
-      closeModal={ this.closeModal }
-      handleUpdateUser={ this.handleUpdateUser }
-      updateUser={ this.updateUser }
-      user={ this.props.currentUser }
-    />;
-
-  return (this.props.currentUser.id !== this.props.person.id) ? <UserShowContainer /> :
+    return (
       <div>
         <br/><br/><br/>
         <div className='profile'>
@@ -177,7 +86,7 @@ class Profile extends React.Component {
 
               <section className='profile'>
                 <div className='profile-title'>
-                  About Me
+                  About
                 </div>
                 <div className='profile-info'>
                   <h4>
@@ -202,22 +111,13 @@ class Profile extends React.Component {
                 <div className='profile-about-me-information profile-about-me'>
                   { about_me }
                 </div>
-                { button }
             </section>
             </div>
           </div>
         </div>
         <br/><br/><br/>
-        <Modal
-          className='booking-modal'
-          isOpen={ this.state.modalOpen }
-          onRequestClose={ this.closeModal }
-          shouldCloseOnOverlayClick={ true }
-          shouldCloseOnEsc={ true }
-          style={ style }>
-          { userUpdate }
-        </Modal>
-      </div>;
+      </div>
+    );
   }
 }
 
