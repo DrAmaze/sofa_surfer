@@ -1,7 +1,7 @@
 export const login = user => (
   $.ajax({
     method: 'POST',
-    url: 'api/session',
+    url: `${ window.location.origin }/api/session`,
     data: user
   })
 );
