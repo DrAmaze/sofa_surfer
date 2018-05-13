@@ -183,7 +183,7 @@ class Profile extends React.Component {
                   <h4>
                     Email:
                   </h4>
-                  <div> { email }</div>
+                  <div>{ email }</div>
                 </div>
                 <div className='profile-info'>
                   <h4>
