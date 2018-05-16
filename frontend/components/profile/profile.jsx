@@ -197,7 +197,7 @@ class Profile extends React.Component {
                     Age:
                   </h4>
                   <br/>
-                  <div> { age }</div>
+                  <div>{ age }</div>
                 </div>
                 <div className='profile-about-me-information profile-about-me'>
                   { about_me }
