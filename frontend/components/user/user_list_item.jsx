@@ -1,9 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class UserListItem extends React.Component {
   render () {
     const { user } = this.props;
     const {
+      id,
       username,
       email,
       phone,
@@ -35,10 +37,13 @@ class UserListItem extends React.Component {
 
     return (
       <li className='spot-host'>
-
-        <div className='user-image'>
-          { image }
-        </div>
+        <Link
+          to={{ pathname: `/users/${ id }` }}
+          style={{ textDecoration: 'inherit', color: 'inherit' }}>
+          <div className='user-image'>
+            { image }
+          </div>
+        </Link>
         <div className='host-info'>
           <h3>{ username }</h3>
           <div> Email: { email } </div>
