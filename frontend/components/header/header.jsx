@@ -122,7 +122,7 @@ class Header extends React.Component {
         </li>
         <li>
           <ul className='navbar-right'>
-            <li onClick={ () => window.scrollTo(0, 1600) }>
+            <li onClick={ () => window.scroll({ top: 1600, left: 0, behavior: 'smooth' }) }>
               How it works
             </li>
             <li className='join'>
