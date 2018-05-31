@@ -25,7 +25,6 @@ class Dashboard extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.closeModal = this.closeModal.bind(this);
     this.openModal = this.openModal.bind(this);
-    this.handleUpdateUser = this.handleUpdateUser.bind(this);
   }
 
   componentDidMount() {
@@ -37,10 +36,6 @@ class Dashboard extends React.Component {
     return e => this.setState({
       [field]: e.target.value
     });
-  }
-
-  handleUpdateUser(e) {
-    this.setState({ modalOpen: true });
   }
 
   closeModal() {
@@ -103,9 +98,10 @@ class Dashboard extends React.Component {
         marginRight     : 'auto',
       }
     };
+
     const userUpdate = <UserUpdateFormContainer
       closeModal={ this.closeModal }
-      handleUpdateUser={ this.handleUpdateUser }
+      handleUpdateUser={ this.openModal }
       updateUser={ this.updateUser }
       user={ this.props.currentUser }
     />;
@@ -122,7 +118,7 @@ class Dashboard extends React.Component {
 
     if (this.props.spots.length > 0) {
       let previews1, previews2, previews3;
-
+      // how to ensure not repeat values in looping
       if(spots.length >= 3) {
         previews1 = parseInt(Math.random() * spots.length);
         while (previews2 === previews1 || !previews2) {
@@ -136,7 +132,7 @@ class Dashboard extends React.Component {
         let spot2 = spots[previews2];
         let spot3 = spots[previews3];
         spotsPreview = <div className='spot-preview'>
-            <SpotPreviewItem key={1} spot={spot1}/>
+            <SpotPreviewItem key={1} spot={spot1} />
             <SpotPreviewItem key={2} spot={spot2} />
             <SpotPreviewItem key={3} spot={spot3} />
           </div>;
@@ -148,25 +144,36 @@ class Dashboard extends React.Component {
     let { bookings } = this.props;
     let bookingPreview;
     if (bookings.length > 0) {
-      if (bookings.length === 1) {
-        bookingPreview =
-          <ul className='booking-preview'>
-            <BookingPreviewItem key={bookings[0].id} booking={bookings[0]}/>
-          </ul>;
-      } else if (bookings.length === 2) {
-        bookingPreview =
-          <ul className='booking-preview'>
-            <BookingPreviewItem key={bookings[0].id} booking={bookings[0]}/>
-            <BookingPreviewItem key={bookings[1].id} booking={bookings[1]}/>
-          </ul>;
-      } else {
-      bookingPreview =
-        <ul className='booking-preview'>
-          <BookingPreviewItem key={bookings[0].id} booking={bookings[0]}/>
-          <BookingPreviewItem key={bookings[1].id} booking={bookings[1]}/>
-          <BookingPreviewItem key={bookings[2].id} booking={bookings[2]}/>
-        </ul>;
+      bookingPreview = [];
+      for (let i = 0; i < 3; i++) {
+        if (bookings.length >= i) {
+          bookingPreview.push(<BookingPreviewItem key={bookings[i].id} booking={bookings[i]}/>);
+        } else {
+          break;
+        }
       }
+      // bookingPreview =  previewItems.map(item => { return item; });
+      // console.log(bookingPreview);
+      // make loop
+      // if (bookings.length === 1) {
+      //   bookingPreview =
+      //     <ul className='booking-preview'>
+      //       <BookingPreviewItem key={bookings[0].id} booking={bookings[0]}/>
+      //     </ul>;
+      // } else if (bookings.length === 2) {
+      //   bookingPreview =
+      //     <ul className='booking-preview'>
+      //       <BookingPreviewItem key={bookings[0].id} booking={bookings[0]}/>
+      //       <BookingPreviewItem key={bookings[1].id} booking={bookings[1]}/>
+      //     </ul>;
+      // } else {
+      // bookingPreview =
+      //   <ul className='booking-preview'>
+      //     <BookingPreviewItem key={bookings[0].id} booking={bookings[0]}/>
+      //     <BookingPreviewItem key={bookings[1].id} booking={bookings[1]}/>
+      //     <BookingPreviewItem key={bookings[2].id} booking={bookings[2]}/>
+      //   </ul>;
+      // }
     } else {
       bookingPreview =
         <div className='no-trips'>
@@ -180,8 +187,8 @@ class Dashboard extends React.Component {
       phoneNumber = ['('];
       for(let i = 0; i < digits.length; i++) {
         phoneNumber.push(digits[i]);
-        if(i == 2) { phoneNumber.push(') '); }
-        if(i == 5) { phoneNumber.push('-'); }
+        if(i === 2) { phoneNumber.push(') '); }
+        if(i === 5) { phoneNumber.push('-'); }
       }
       phoneNumber.join('');
     } else {
@@ -235,11 +242,11 @@ class Dashboard extends React.Component {
                 </Link>
               </div>
               <div className='booking-preview-item'>
-                { bookingPreview }
+                <ul className='booking-preview'>
+                  { bookingPreview }
+                </ul>
               </div>
             </section>
-
-
 
             <section className='box-about-me' id='reviews'>
               <div className='dash-title'>
