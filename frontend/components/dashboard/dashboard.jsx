@@ -26,6 +26,7 @@ class Dashboard extends React.Component {
     this.closeModal = this.closeModal.bind(this);
     this.openModal = this.openModal.bind(this);
     this.formatPhoneNumber = this.formatPhoneNumber.bind(this);
+    this.generateThreeRandomIndicies - this.generateThreeRandomIndicies.bind(this);
   }
 
   componentDidMount() {
@@ -69,6 +70,21 @@ class Dashboard extends React.Component {
     }
 
     return phoneNumber;
+  }
+
+  generateThreeRandomIndicies(max) {
+    let numbers = [];
+    numbers.push(parseInt(Math.random() * max));
+
+    let x = parseInt(Math.random() * max);
+    if (numbers.includes(x)) x === max - 1 ? x = 0 : x++;
+    numbers.push(x);
+
+    x = parseInt(Math.random() * max);
+    if (numbers.includes(x)) x >= max - 2 ? x = 1 : x += 2;
+    numbers.push(x);
+
+    return numbers;
   }
 
   render () {
@@ -115,22 +131,15 @@ class Dashboard extends React.Component {
     let { spots } = this.props;
     let spotsPreview;
     if (this.props.spots.length > 0) {
-      let previews1, previews2, previews3;
-      // how to ensure not repeat values in looping
-      if(spots.length >= 3) {
-        previews1 = parseInt(Math.random() * spots.length);
-        while (previews2 === previews1 || !previews2) {
-          previews2 = parseInt(Math.random() * spots.length);
-        }
-        while (previews3 === previews2 || previews3 === previews1 || !previews3) {
-          previews3 = parseInt(Math.random() * spots.length);
-        }
 
-        spotsPreview = <div className='spot-preview'>
-            <SpotPreviewItem key={1} spot={spots[previews1]} />
-            <SpotPreviewItem key={2} spot={spots[previews2]} />
-            <SpotPreviewItem key={3} spot={spots[previews3]} />
-          </div>;
+      if(spots.length >= 3) {
+      let indices = this.generateThreeRandomIndicies(spots.length);
+
+      spotsPreview = <div className='spot-preview'>
+          <SpotPreviewItem key={1} spot={spots[indices[0]]} />
+          <SpotPreviewItem key={2} spot={spots[indices[1]]} />
+          <SpotPreviewItem key={3} spot={spots[indices[2]]} />
+        </div>;
       } else {
         spotsPreview = '';
       }
