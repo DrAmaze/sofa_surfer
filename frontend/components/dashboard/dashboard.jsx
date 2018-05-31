@@ -96,7 +96,7 @@ class Dashboard extends React.Component {
       this.props.currentUser.street = street;
     }
 
-    const style = modalStyle;
+    const style = modalUserUpdateStyle;
 
     const userUpdate = <UserUpdateFormContainer
       closeModal={ this.closeModal }
