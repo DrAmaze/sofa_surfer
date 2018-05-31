@@ -152,28 +152,6 @@ class Dashboard extends React.Component {
           break;
         }
       }
-      // bookingPreview =  previewItems.map(item => { return item; });
-      // console.log(bookingPreview);
-      // make loop
-      // if (bookings.length === 1) {
-      //   bookingPreview =
-      //     <ul className='booking-preview'>
-      //       <BookingPreviewItem key={bookings[0].id} booking={bookings[0]}/>
-      //     </ul>;
-      // } else if (bookings.length === 2) {
-      //   bookingPreview =
-      //     <ul className='booking-preview'>
-      //       <BookingPreviewItem key={bookings[0].id} booking={bookings[0]}/>
-      //       <BookingPreviewItem key={bookings[1].id} booking={bookings[1]}/>
-      //     </ul>;
-      // } else {
-      // bookingPreview =
-      //   <ul className='booking-preview'>
-      //     <BookingPreviewItem key={bookings[0].id} booking={bookings[0]}/>
-      //     <BookingPreviewItem key={bookings[1].id} booking={bookings[1]}/>
-      //     <BookingPreviewItem key={bookings[2].id} booking={bookings[2]}/>
-      //   </ul>;
-      // }
     } else {
       bookingPreview =
         <div className='no-trips'>
