@@ -27,29 +27,9 @@ class BookingIndexItem extends React.Component {
   }
 
   render () {
-    const style = {
-      overlay : {
-        position        : 'fixed',
-        top             : 0,
-        left            : 0,
-        right           : 0,
-        bottom          : 0,
-        backgroundColor : 'rgba(25, 25, 25, 0.90)',
-        zIndex          : 10
-      },
-      content : {
-        position        : 'relative',
-        top             : '10px',
-        border          : '1px solid #ccc',
-        zIndex          : 11,
-        background      : 'white',
-        borderRadius    : '5px',
-        width           : '70%',
-        height          : '555px',
-        marginLeft      : 'auto',
-        marginRight     : 'auto',
-      }
-    };
+    const style = modalBookingIndexItemStyle;
+    console.log(modalBookingIndexItemStyle);
+    console.log('hi', modalUserUpdateStyle);
 
     let { fetchUser, booking } = this.props;
     // const host = fetchUser(this.props.booking.host_id);
