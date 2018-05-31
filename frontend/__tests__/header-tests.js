@@ -9,6 +9,8 @@ const EnzymeAdapter = require('enzyme-adapter-react-16');
 Enzyme.configure({ adapter: new EnzymeAdapter() });
 
 describe('<HeaderContainer>', () => {
+  global.modalSessionStyle = {};
+
   it('renders Join and Log In buttons', () => {
     const wrapper = shallow(<Header clearSearch={ () => {} }/>);
     expect(wrapper.find('button').length).toEqual(2);

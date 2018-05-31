@@ -9,6 +9,8 @@ const EnzymeAdapter = require('enzyme-adapter-react-16');
 Enzyme.configure({ adapter: new EnzymeAdapter() });
 
 describe('<BookingContainer>', () => {
+  global.modalUserUpdateStyle = {};
+  
   it('renders <ReactModal>', () => {
     const wrapper = shallow(<Booking fetchUsers={ () => {} } fetchBookings={ () => {} } />);
     expect(wrapper.find(Modal).length).toEqual(1);
