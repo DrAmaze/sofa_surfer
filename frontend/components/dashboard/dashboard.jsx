@@ -25,6 +25,7 @@ class Dashboard extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.closeModal = this.closeModal.bind(this);
     this.openModal = this.openModal.bind(this);
+    this.formatPhoneNumber = this.formatPhoneNumber.bind(this);
   }
 
   componentDidMount() {
@@ -49,6 +50,25 @@ class Dashboard extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     this.props.updateUser(this.props.user);
+  }
+
+  formatPhoneNumber() {
+    let phoneNumber;
+    let { phone } = this.props.currentUser;
+    if (phone) {
+      let digits = phone.split('');
+      phoneNumber = ['('];
+      for(let i = 0; i < digits.length; i++) {
+        phoneNumber.push(digits[i]);
+        if(i === 2) { phoneNumber.push(') '); }
+        if(i === 5) { phoneNumber.push('-'); }
+      }
+      phoneNumber.join('');
+    } else {
+      phoneNumber = '';
+    }
+
+    return phoneNumber;
   }
 
   render () {
@@ -126,15 +146,13 @@ class Dashboard extends React.Component {
         }
         while (previews3 === previews2 || previews3 === previews1 || !previews3) {
           previews3 = parseInt(Math.random() * spots.length);
+          console.log(previews3);
         }
 
-        let spot1 = spots[previews1];
-        let spot2 = spots[previews2];
-        let spot3 = spots[previews3];
         spotsPreview = <div className='spot-preview'>
-            <SpotPreviewItem key={1} spot={spot1} />
-            <SpotPreviewItem key={2} spot={spot2} />
-            <SpotPreviewItem key={3} spot={spot3} />
+            <SpotPreviewItem key={1} spot={spots[previews1]} />
+            <SpotPreviewItem key={2} spot={spots[previews2]} />
+            <SpotPreviewItem key={3} spot={spots[previews3]} />
           </div>;
       } else {
         spotsPreview = '';
@@ -159,19 +177,7 @@ class Dashboard extends React.Component {
         </div>;
     }
 
-    let phoneNumber;
-    if (phone) {
-      let digits = phone.split('');
-      phoneNumber = ['('];
-      for(let i = 0; i < digits.length; i++) {
-        phoneNumber.push(digits[i]);
-        if(i === 2) { phoneNumber.push(') '); }
-        if(i === 5) { phoneNumber.push('-'); }
-      }
-      phoneNumber.join('');
-    } else {
-      phoneNumber = '';
-    }
+    let phoneNumber = this.formatPhoneNumber();
 
     return (
       <div>
