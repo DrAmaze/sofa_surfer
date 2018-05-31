@@ -96,28 +96,7 @@ class Dashboard extends React.Component {
       this.props.currentUser.street = street;
     }
 
-    const style = {
-      overlay : {
-        position        : 'fixed',
-        top             : 0,
-        left            : 0,
-        right           : 0,
-        bottom          : 0,
-        backgroundColor : 'rgba(25, 25, 25, 0.90)',
-        zIndex          : 10
-      },
-      content : {
-        position        : 'relative',
-        top             : '10px',
-        border          : '1px solid #ccc',
-        zIndex          : 11,
-        background      : 'white',
-        borderRadius    : '5px',
-        width           : '70%',
-        marginLeft      : 'auto',
-        marginRight     : 'auto',
-      }
-    };
+    const style = modalStyle;
 
     const userUpdate = <UserUpdateFormContainer
       closeModal={ this.closeModal }
@@ -135,7 +114,6 @@ class Dashboard extends React.Component {
 
     let { spots } = this.props;
     let spotsPreview;
-
     if (this.props.spots.length > 0) {
       let previews1, previews2, previews3;
       // how to ensure not repeat values in looping
@@ -146,7 +124,6 @@ class Dashboard extends React.Component {
         }
         while (previews3 === previews2 || previews3 === previews1 || !previews3) {
           previews3 = parseInt(Math.random() * spots.length);
-          console.log(previews3);
         }
 
         spotsPreview = <div className='spot-preview'>
