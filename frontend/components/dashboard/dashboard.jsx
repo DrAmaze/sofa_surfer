@@ -112,7 +112,12 @@ class Dashboard extends React.Component {
       this.props.currentUser.street = street;
     }
 
-    const style = modalUserUpdateStyle; // from global
+    let guests;
+    if (hosting) {
+      guests = "Accepting Guests";
+    } else {
+      guests = "Not Accepting Guests";
+    }
 
     const userUpdate = <UserUpdateFormContainer
       closeModal={ this.closeModal }
@@ -121,12 +126,7 @@ class Dashboard extends React.Component {
       user={ this.props.currentUser }
     />;
 
-    let guests;
-    if (hosting) {
-      guests = "Accepting Guests";
-    } else {
-      guests = "Not Accepting Guests";
-    }
+    const style = modalUserUpdateStyle; // from global
 
     let { spots } = this.props;
     let spotsPreview;
