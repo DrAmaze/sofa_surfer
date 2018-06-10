@@ -18,6 +18,7 @@ This bulk project was designed and constructed in less than two weeks; however, 
 * Filter hosts by username, email, and other user information to meet the needs of your trip.
 * Users can create, read, update, and destroy bookings with other users.
 * Users can update their user information.
+* Read other user information by viewing their profiles.
 
 ### Search
 
