@@ -45,32 +45,50 @@ This was accomplished by building a search function in the backend of the user a
         end
     end
 
-This was troubling due to the fact that I had to parse both the locations and the users for a variety of different model attributes.  My solution to create two separate requests led to easily-read code and usability throughout the application.
+This was troubling due to the fact that I had to parse both the locations and the users for a variety of different model attributes. My solution to create two separate requests led to easily-read code and usability throughout the application.
 
 ### Dashboard
 
-The dashboard feature is dynamic in that it offers the user a glimpse at the variety of functionality available to them thorughout the application.  It enables the user to update their information, view their current trips, and glance at an ever-changing preview of neighborhoods around San Francisco.
+The dashboard feature is dynamic in that it offers the user a glimpse at the variety of functionality available to them throughout the application. It enables the user to update their information, view their current trips, and glance at an ever-changing preview of neighborhoods around San Francisco.
 
 ![](app/assets/images/dashboard.png)
 
-This presented a variety of issues including making various requests to the backend.  This necessitated code optimization and minimalist styling so as to not overwhelm the user.  The create, read, update functionality of the user sits in a React modal component, adding to the functionality and minimalism of the page.  
+This presented a variety of issues including making various requests to the backend. This necessitated code optimization and minimalist styling so as to not overwhelm the user.  The create, read, update functionality of the user sits in a React modal component, adding to the functionality and minimalism of the page.  
 
 Another challenge presented was the generating of the random neighborhoods. This was accomplished with a simple randomness function based on the number of locations.
 
+    generateThreeRandomIndicies(max) {
+      let numbers = [];
+      numbers.push(parseInt(Math.random() * max));
+
+      let x = parseInt(Math.random() * max);
+      if (numbers.includes(x)) x === max - 1 ? x = 0 : x++;
+      numbers.push(x);
+
+      x = parseInt(Math.random() * max);
+      if (numbers.includes(x)) x >= max - 2 ? x = 1 : x += 2;
+      numbers.push(x);
+
+      return numbers;
+    }
+
+In the render function:
+
+    let { spots } = this.props;
     let spotsPreview;
-
     if (this.props.spots.length > 0) {
-      let previews = parseInt(Math.random() * locations.length);
-      let spot1 = spots[previews];
-      let spot2 = spots[previews+1];
-      let spot3 = spots[previews+2];
 
-      spotsPreview = spots.length > 3 ?
-        <div className='spot-preview'>
-          <SpotPreviewItem key={spot1.id} spot={spot1}/>
-          <SpotPreviewItem key={spot2.id} spot={spot2} />
-          <SpotPreviewItem key={spot3.id} spot={spot3} />
-        </div> : '';
+      if(spots.length >= 3) {
+      let indices = this.generateThreeRandomIndicies(spots.length);
+
+      spotsPreview = <div className='spot-preview'>
+          <SpotPreviewItem key={1} spot={spots[indices[0]]} />
+          <SpotPreviewItem key={2} spot={spots[indices[1]]} />
+          <SpotPreviewItem key={3} spot={spots[indices[2]]} />
+        </div>;
+      } else {
+        spotsPreview = '';
+      }
     }
 
 ## Project Design
