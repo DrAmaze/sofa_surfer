@@ -1,11 +1,11 @@
-[![tested with jest](https://img.shields.io/badge/tested_with-jest-99424f.svg)](https://github.com/facebook/jest)
+[![tested with Jest](https://img.shields.io/badge/tested_with-jest-99424f.svg)](https://github.com/facebook/jest)
 [![tested with RSpec](https://img.shields.io/badge/tested_with-RSpec-99424f.svg)](https://github.com/rspec/rspec)
 
 # Sofa Surfer
 
 [SofaSurfer Live](https://sofasurfer.herokuapp.com/)
 
-Sofa Surfer is a free lodging website for those who want to explore the various corners of San Francisco, with locals who know the area, inspired by CouchSurfing.  It utilizes Rails/PostgresSQL backend with React.js and Redux on the frontend.
+Sofa Surfer is a free lodging website for those who want to explore the various corners of San Francisco, with locals who know the area, inspired by www.CouchSurfing.com.  It utilizes a Rails/PostgresSQL backend with React.js and Redux on the frontend.
 
 This bulk project was designed and constructed in less than two weeks; however, I plan to continue making improvements in the future.
 
