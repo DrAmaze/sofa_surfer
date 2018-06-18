@@ -106,5 +106,5 @@ Frontend Redux states are set up in a way such that there are separate reducers 
 ## Possible Future Features
 
 * User to user reviews
-* Additional styling
-* Updated search/filter functionality
+* Additional styling to make website more dynamic
+* Connect with Google Maps API
