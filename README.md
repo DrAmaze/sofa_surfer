@@ -93,7 +93,7 @@ In the render function:
 
 ## Project Design
 
-SofaSurfer is designed with minimalism and functionality as its primary intentions. The various routes available to the user leave them feeling compelled to not only explore the site, but also the city of San Francisco.  Keeping code functional is prioritized as the timeframe for production was limited.  Smooth, bug-free navigation is imperative to this site's success.  
+SofaSurfer is designed with minimalism and functionality as its primary intentions. The NavBar has links to each of the features available on the application. The various routes available to the user leave them feeling compelled to not only explore the site, but also the city of San Francisco. Keeping code functional is prioritized as the timeframe for production was limited. Smooth, bug-free navigation is imperative to this site's success.  
 
 There are several pages (i.e. the locations index page) that rely on the beauty of the city for the elegance of the site, while the functional booking page encourages the user to fill the page with their own exciting adventures.
 
