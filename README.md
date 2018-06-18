@@ -108,3 +108,4 @@ Frontend Redux states are set up in a way such that there are separate reducers 
 * User to user reviews
 * Additional styling to make website more dynamic
 * Connect with Google Maps API
+* Complete testing -> go beyond unit tests
