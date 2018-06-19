@@ -103,7 +103,7 @@ Rails is used for this site due to its support for relational databases and REST
 
 Frontend Redux states are set up in a way such that there are separate reducers and actions for locations, bookings, dashboard, search, users, headers, and footers, and errors. This normalizes the state, easing the task of keeping things up-to-date with changes in the database.
 
-## Possible Future Features
+## Future Features
 
 * User to user reviews
 * Additional styling to make website more dynamic
